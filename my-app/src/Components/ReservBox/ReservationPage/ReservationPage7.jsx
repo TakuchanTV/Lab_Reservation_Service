@@ -16,7 +16,7 @@ import { Ids } from "../IdModules";
 
 
  export const ReservationPage7 = () => {
-  　const navigate = useNavigate();
+  const navigate = useNavigate();
     const [params, setParams] = useSearchParams();
     const text13 = params.get('q') || '';
     const text14 = params.get('r') || '';

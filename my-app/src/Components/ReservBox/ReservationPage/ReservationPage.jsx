@@ -18,7 +18,7 @@ import { UseText2 } from "../ReservCustomhooks/UseText2";
   //ReservationPage.jsx//
 
  export const ReservationPage = () => {
-  　const navigate = useNavigate();
+    const navigate = useNavigate();
     const [params, setParams] = useSearchParams();
     const text = params.get('q') || '';
     const text2 = params.get('r') || '';
