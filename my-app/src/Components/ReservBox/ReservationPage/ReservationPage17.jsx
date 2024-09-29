@@ -19,7 +19,7 @@ import { UseText2 } from "../ReservCustomhooks/UseText2";
 
 
  export const ReservationPage17 = () => {
-  　const navigate = useNavigate();
+  const navigate = useNavigate();
   const [params, setParams] = useSearchParams();
   const text33 = params.get('q') || '';
     const text34 = params.get('r') || '';
