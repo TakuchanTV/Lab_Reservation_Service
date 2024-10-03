@@ -1,19 +1,24 @@
 
 
-//ReservationPage8.jsx//
+//ReservationPage8.tsx//
 
 import { useNavigate, useSearchParams } from "react-router-dom"
 import { Sbutton } from "../ReservationDevice";
 import styled from "styled-components";
-import { useCallback, useEffect, useState } from "react";
 import { SelectTimes } from "../SelectTimes";
-import { SelectColor } from "../SelectColor";
 import { FormTextarea } from "../FormTextarea";
 import {SelectDays2} from "../SelectDays2"
 import { Ids } from "../IdModules";
+import React, {ChangeEvent} from "react";
+
   //ReservationPage8.jsx//
 
-
+  interface Props {
+    BgColor?: string,
+    textColor?: string,
+    hoverBgColor?: string,
+    hovertextColor?: string,
+  }
 
  export const ReservationPage8 = () => {
   const navigate = useNavigate();
@@ -22,21 +27,21 @@ import { Ids } from "../IdModules";
     const text16 = params.get('r') || '';
     const SelectColor8 = params.get('color') || '';
 
-    const textInput = (e) => {
+    const textInput = (e:ChangeEvent<HTMLInputElement>) => {
       setParams(prevParams => ({
         ...Object.fromEntries(prevParams),
         q: e.target.value
       }))
     };
     
-    const textInput2 = (e) => {
+    const textInput2 = (e:ChangeEvent<HTMLInputElement>) => {
       setParams(prevParams => ({
         ...Object.fromEntries(prevParams),
         r: e.target.value
       }))
     };
 
-    const handleColor = (e) => {
+    const handleColor = (e:ChangeEvent<HTMLInputElement>) => {
       setParams(prevParams => ({
         ...Object.fromEntries(prevParams),
         color: e.target.value
@@ -60,7 +65,7 @@ import { Ids } from "../IdModules";
     })
    }
     return (
-      <>
+      <div>
         <div>
           <h3>新規予約</h3>  
           <h4>管理者からのメッセージ</h4>
@@ -103,7 +108,7 @@ import { Ids } from "../IdModules";
           </ResrvButtondiv>
           <Sbutton onClick={returnButton} >戻る</Sbutton>
         </div>
-  </>
+  </div>
     )
 }
 const SUl = styled.ul`
@@ -118,7 +123,7 @@ const STh = styled.th`
 const STr = styled.tr`
   margin-right: 40px;
 `
- const SResevButton = styled.button`
+ const SResevButton = styled.button<Props>`
   margin: 5px;
   border-radius: 16px;
   text-align  : center ;
