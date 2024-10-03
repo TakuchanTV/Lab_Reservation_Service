@@ -68,7 +68,7 @@ interface Props {
     })
    }
     return (
-      <>
+      <div>
         <div>
           <h3>新規予約</h3>  
           <h4>管理者からのメッセージ</h4>
@@ -111,7 +111,7 @@ interface Props {
           </ResrvButtondiv>
           <Sbutton onClick={returnButton} >戻る</Sbutton>
         </div>
-  </>
+  </div>
     )
 }
 const SUl = styled.ul`
