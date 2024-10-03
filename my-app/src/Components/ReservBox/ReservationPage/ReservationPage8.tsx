@@ -11,7 +11,6 @@ import {SelectDays2} from "../SelectDays2"
 import { Ids } from "../IdModules";
 import React, {ChangeEvent} from "react";
 
-  //ReservationPage8.jsx//
 
   interface Props {
     BgColor?: string,
