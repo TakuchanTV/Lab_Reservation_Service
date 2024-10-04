@@ -3,11 +3,12 @@
 import styled from "styled-components"
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import React from "react";
+import { useEffect } from "react";
+
 
 
 interface Props {
   STdColor:string,
-  
 };
 
 interface Props2 {
@@ -15,13 +16,10 @@ interface Props2 {
   textColor:string,
   hoverBgColor:string,
   hovertextColor:string
-
-  
-}
+};
 
 export const ReservationTimeTable = () => {
   const location = useLocation();
-
   
   
   interface Texts {
@@ -47,6 +45,11 @@ interface Location extends Texts, SelectColors {}
 
   const navigate = useNavigate();
 
+  // const MyComponents = () => {
+  //   useEffect(() => {
+  //     loadStoredData()
+  //   },[])
+  // }
 
   const handleClick = () => {
     if(window.confirm("前のページに戻りますか")) {
@@ -57,6 +60,30 @@ interface Location extends Texts, SelectColors {}
     
   }
 
+  const handleStored = () => {
+    const texts: Texts = locationState;
+    const colors: SelectColors = locationState;
+    localStorage.setItem("Texts",JSON.stringify(texts));
+    localStorage.setItem("SelectColors",JSON.stringify(colors))
+
+    console.log("Saved Texts:", JSON.parse(localStorage.getItem("Texts") || "{}"));
+  console.log("Saved SelectColors:", JSON.parse(localStorage.getItem("SelectColors") || "{}"));
+}
+
+// const loadStoredData = () => {
+//   const storedTexts = localStorage.getItem("Texts");
+//   const storedColors = localStorage.getItem("SelectColors");
+
+//   if (storedTexts && storedColors) {
+//     const texts: Texts = JSON.parse(storedTexts);
+//     const colors: SelectColors = JSON.parse(storedColors);
+
+//     // 取得したデータを使用して必要な処理を行う
+//     console.log("Loaded Texts:", texts);
+//     console.log("Loaded SelectColors:", colors);
+//   }
+// }
+   
    return(
     <div>
       <STable border={1}>
@@ -166,7 +193,7 @@ interface Location extends Texts, SelectColors {}
           </div> 
       </STable>
 
-      <Sbutton BgColor="" hoverBgColor="green" textColor="" hovertextColor="">保存します</Sbutton>
+      <Sbutton BgColor="" hoverBgColor="green" textColor="" hovertextColor="" onClick={handleStored}>保存します</Sbutton>
     </div>
    ) 
 }
@@ -217,7 +244,7 @@ interface Location extends Texts, SelectColors {}
    position: fixed;
    top: 110px;
    right: -275px;
-   display: none;
+   /* display: none; */
  `
 
 
