@@ -1,42 +1,39 @@
-//ReservationTimeTable.jsx//
+//ReservationTimeTable.tsx//
 
 import styled from "styled-components"
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import React from "react";
 
 
 export const ReservationTimeTable = () => {
   const location = useLocation();
-  const { text, text2, text3, text4, text5, text6, text7, text8,text9,text10,
-    text11, text12, text13, text14, text15, text16, text17, text18,text19,text20,
-     text21, text22, text23,text24, text25, text26, text27, text28, text29, text30,
-     text31, text32, text33, text34, 
+  
+  interface Location{
+    text:string, text2:string,text3:string, text4:string, text5:string, 
+    text6:string, text7:string, text8:string,text9:string,text10:string,
+      text11:string, text12:string, text13:string, text14:string, text15:string, 
+      text16:string, text17:string, text18:string,text19:string,text20:string,
+       text21:string, text22:string, text23:string,text24:string, text25:string, 
+       text26:string, text27:string, text28:string, text29:string, text30:string,
+       text31:string, text32:string, text33:string, text34:string,
 
-     SelectColor, SelectColor2, SelectColor3, SelectColor4,SelectColor5,SelectColor6,
-     SelectColor7, SelectColor8, SelectColor9, SelectColor10, SelectColor11, SelectColor12,
-     SelectColor13, SelectColor14, SelectColor15, SelectColor16, SelectColor17, 
-     } = location.state || {};
+       SelectColor:string, SelectColor2:string,SelectColor3:string, SelectColor4:string,SelectColor5:string, 
+       SelectColor6:string,SelectColor7:string, SelectColor8:string,SelectColor9:string, SelectColor10:string,
+       SelectColor11:string, SelectColor12:string,SelectColor13:string, SelectColor14:string,SelectColor15:string, 
+       SelectColor16:string,SelectColor17:string, 
+  }
+  
+   interface Props {
+    STdColor:string
+   }
+
+  const locationState:Location = location.state
+  
   console.log(location);
 
   const navigate = useNavigate();
 
-  const [stored, setStored] = useState(() => ({
-   text: localStorage.getItem('text') || text,
-   text2: localStorage.getItem('text2') || text2,
-   SelectColor: localStorage.getItem('SelectColor') || SelectColor,
-  }
-  ))
-
-  useEffect(() => {
-    
-    localStorage.setItem('text',stored.text)
-    localStorage.setItem('text2',stored.text2)
-    localStorage.setItem('SelectColor',stored.SelectColor)
-  },[stored])
-
- console.log('text', stored.text)
- console.log('text2', stored.text2)
- console.log('SelectColor', stored.SelectColor)
+  
 
   const handleClick = () => {
     if(window.confirm("前のページに戻りますか")) {
@@ -47,152 +44,147 @@ export const ReservationTimeTable = () => {
     
   }
 
- 
-   
-     
-  
-
    return(
-    <>
+    <div>
       <STable border={1}>
        <div>
         <tr>
-         <STd STdColor={stored.SelectColor} onClick={handleClick} >
-            {stored.text} {stored.text2}
+         <STd STdColor={locationState.SelectColor} >
+            {locationState.text} {locationState.text2}
           <br />
           </STd>
          </tr>
           <tr>
-            <STd STdColor={SelectColor2}>
+            <STd STdColor={locationState.SelectColor2}>
              <NavLink to= {-1}>
-             {text3}  {text4}
+             {locationState.text3}  {locationState.text4}
              </NavLink> 
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={SelectColor3}>
+            <STd STdColor={locationState.SelectColor3}>
               <NavLink to={-1}>
-              {text5}  {text6}
+              {locationState.text5}  {locationState.text6}
               </NavLink>
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={SelectColor4}>
+            <STd STdColor={locationState.SelectColor4}>
             <NavLink to={-1}>
-              {text7}  {text8}
+              {locationState.text7}  {locationState.text8}
               </NavLink>
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={SelectColor5}>
+            <STd STdColor={locationState.SelectColor5}>
             <NavLink to={-1}>
-              {text9}  {text10}
+              {locationState.text9}  {locationState.text10}
               </NavLink>
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={SelectColor6}>
+            <STd STdColor={locationState.SelectColor6}>
             <NavLink to={-1}>
-              {text11}  {text12}
+              {locationState.text11}  {locationState.text12}
               </NavLink>
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={SelectColor7}>
+            <STd STdColor={locationState.SelectColor7}>
             <NavLink to={-1}>
-              {text13}  {text14}
+              {locationState.text13}  {locationState.text14}
               </NavLink>
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={SelectColor8}>
+            <STd STdColor={locationState.SelectColor8}>
             <NavLink to={-1}>
-              {text15}  {text16}
+              {locationState.text15}  {locationState.text16}
               </NavLink>
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={SelectColor9}>
+            <STd STdColor={locationState.SelectColor9}>
             <NavLink to={-1}>
-              {text17}  {text18}
+              {locationState.text17}  {locationState.text18}
             </NavLink>            
               <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={SelectColor10}>
+            <STd STdColor={locationState.SelectColor10}>
             <NavLink to={-1}>
-              {text19}  {text20}
+              {locationState.text19}  {locationState.text20}
               </NavLink>
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={SelectColor11}>
+            <STd STdColor={locationState.SelectColor11}>
             <NavLink to={-1}>
-              {text21}  {text22}
+              {locationState.text21}  {locationState.text22}
               </NavLink>
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={SelectColor12}>
+            <STd STdColor={locationState.SelectColor12}>
             <NavLink to={-1}>
-              {text23}  {text24}
+              {locationState.text23}  {locationState.text24}
               </NavLink>
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={SelectColor13}>
+            <STd STdColor={locationState.SelectColor13}>
             <NavLink to={-1}>
-              {text25}  {text26}
+              {locationState.text25}  {locationState.text26}
               </NavLink>
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={SelectColor14}>
+            <STd STdColor={locationState.SelectColor14}>
             <NavLink to={-1}>
-              {text27}  {text28}
+              {locationState.text27}  {locationState.text28}
               </NavLink>
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={SelectColor15}>
+            <STd STdColor={locationState.SelectColor15}>
             <NavLink to={-1}>
-              {text29}  {text30}
+              {locationState.text29}  {locationState.text30}
               </NavLink>
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={SelectColor16}>
+            <STd STdColor={locationState.SelectColor16}>
             <NavLink to={-1}>
-              {text31}  {text32}
+              {locationState.text31}  {locationState.text32}
               </NavLink>
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={SelectColor17}>
+            <STd STdColor={locationState.SelectColor17}>
             <NavLink to={-1}>
-              {text33}  {text34}
+              {locationState.text33}  {locationState.text34}
               </NavLink>
             <br />
             </STd>
           </tr>
           </div> 
       </STable>
-    </>
+    </div>
    ) 
 }
 
@@ -217,7 +209,7 @@ export const ReservationTimeTable = () => {
     
   `
 
- const STd = styled.td`
+ const STd = styled.td<Props>`
   padding: 15.467px;
   padding-right: 600px;
   background-color: ${props => props.STdColor || 'white'};
@@ -230,16 +222,16 @@ export const ReservationTimeTable = () => {
  
  
 
- export const Sbutton = styled.button`
-  border-radius: 16px;
-  background-color: ${props => props.BgColor || 'white'};
-   color: ${props => props.textColor || 'black'};
-   &:hover{
-    cursor: pointer;
-    background-color: ${props => props.hoverBgColor || 'white'};
-    color: ${props => props.hovertextColor || 'black'};
-   };
- `
+//  export const Sbutton = styled.button`
+//   border-radius: 16px;
+//   background-color: ${props => props.BgColor || 'white'};
+//    color: ${props => props.textColor || 'black'};
+//    &:hover{
+//     cursor: pointer;
+//     background-color: ${props => props.hoverBgColor || 'white'};
+//     color: ${props => props.hovertextColor || 'black'};
+//    };
+//  `
 
 
 // const [stored, setStored] = useState({
