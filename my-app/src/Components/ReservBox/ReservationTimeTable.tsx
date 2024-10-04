@@ -6,8 +6,18 @@ import React from "react";
 
 
 interface Props {
-  STdColor:string;
+  STdColor:string,
+  
 };
+
+interface Props2 {
+  BgColor:string,
+  textColor:string,
+  hoverBgColor:string,
+  hovertextColor:string
+
+  
+}
 
 export const ReservationTimeTable = () => {
   const location = useLocation();
@@ -155,6 +165,8 @@ interface Location extends Texts, SelectColors {}
           </tr>
           </div> 
       </STable>
+
+      <Sbutton BgColor="" hoverBgColor="green" textColor="" hovertextColor="">保存します</Sbutton>
     </div>
    ) 
 }
@@ -192,16 +204,21 @@ interface Location extends Texts, SelectColors {}
  
  
 
-//  export const Sbutton = styled.button`
-//   border-radius: 16px;
-//   background-color: ${props => props.BgColor || 'white'};
-//    color: ${props => props.textColor || 'black'};
-//    &:hover{
-//     cursor: pointer;
-//     background-color: ${props => props.hoverBgColor || 'white'};
-//     color: ${props => props.hovertextColor || 'black'};
-//    };
-//  `
+ export const Sbutton = styled.button<Props2>`
+  border-radius: 16px;
+  background-color: ${props => props.BgColor || 'white'};
+   color: ${props => props.textColor || 'black'};
+   &:hover{
+    cursor: pointer;
+    background-color: ${props => props.hoverBgColor || 'white'};
+    color: ${props => props.hovertextColor || 'black'};
+   };
+
+   position: fixed;
+   top: 110px;
+   right: -275px;
+   display: none;
+ `
 
 
 // const [stored, setStored] = useState({
