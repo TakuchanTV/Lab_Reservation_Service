@@ -3,7 +3,6 @@
 import styled from "styled-components"
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { ReservationPage } from "./ReservationPage/ReservationPage";
 
 
 export const ReservationTimeTable = () => {
