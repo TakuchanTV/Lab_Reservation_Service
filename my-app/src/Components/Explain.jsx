@@ -4,8 +4,7 @@ import { Sbutton, Sdiv, StyledCalender } from "./CalenderCss"
 import { useState,useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import { ReservationList } from "./ReservBox/ReservationDevice"
-import { ReservationTimeTable } from "./ReservBox/ReservationTimeTable"
-import { UseText2 } from "./ReservBox/ReservCustomhooks/UseText2"
+import { ReservationTimeTable } from "./ReservBox/ReservationTimeTable.tsx"
 export const ShowText = () => {
 
 
