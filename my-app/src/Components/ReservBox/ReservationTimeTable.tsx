@@ -14,7 +14,7 @@ export const ReservationTimeTable = () => {
 
   
   
-  interface Location {
+  interface Texts {
     text:string, text2:string,text3:string, text4:string, text5:string, 
     text6:string, text7:string, text8:string,text9:string,text10:string,
       text11:string, text12:string, text13:string, text14:string, text15:string, 
@@ -22,21 +22,21 @@ export const ReservationTimeTable = () => {
        text21:string, text22:string, text23:string,text24:string, text25:string, 
        text26:string, text27:string, text28:string, text29:string, text30:string,
        text31:string, text32:string, text33:string, text34:string,
-
-       SelectColor:string, SelectColor2:string,SelectColor3:string, SelectColor4:string,SelectColor5:string, 
-       SelectColor6:string,SelectColor7:string, SelectColor8:string,SelectColor9:string, SelectColor10:string,
-       SelectColor11:string, SelectColor12:string,SelectColor13:string, SelectColor14:string,SelectColor15:string, 
-       SelectColor16:string,SelectColor17:string, 
-
   };
 
+  interface SelectColors {
+    SelectColor:string, SelectColor2:string,SelectColor3:string, SelectColor4:string,SelectColor5:string, 
+    SelectColor6:string,SelectColor7:string, SelectColor8:string,SelectColor9:string, SelectColor10:string,
+    SelectColor11:string, SelectColor12:string,SelectColor13:string, SelectColor14:string,SelectColor15:string, 
+    SelectColor16:string,SelectColor17:string, 
+  }
+
+interface Location extends Texts, SelectColors {}
+
   const locationState:Location = location.state
-  
-  console.log(location);
 
   const navigate = useNavigate();
 
-  
 
   const handleClick = () => {
     if(window.confirm("前のページに戻りますか")) {
