@@ -21,6 +21,8 @@ interface Props2 {
 export const ReservationTimeTable = () => {
   const location = useLocation();
   
+  const navigate = useNavigate();
+
   
   interface Texts {
     text:string, text2:string,text3:string, text4:string, text5:string, 
@@ -41,9 +43,13 @@ export const ReservationTimeTable = () => {
 
 interface Location extends Texts, SelectColors {}
 
-  const locationState:Location = location.state
+  const locationState:Location | null = location.state
 
-  const navigate = useNavigate();
+  if (!locationState) {
+    console.error("Location.state is null or undifined");
+    return null;
+  }
+
 
   // const MyComponents = () => {
   //   useEffect(() => {
