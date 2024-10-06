@@ -116,91 +116,91 @@ export const ReservationTimeTable = () => {
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor3 ||locationState.SelectColor3}>
+            <STd STdColor={colors?.SelectColor3 || locationState.SelectColor3}>
               {texts?.text5 ||locationState.text5}  {texts?.text6 ||locationState.text6}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={locationState.SelectColor4}>
-              {locationState.text7}  {locationState.text8}
+            <STd STdColor={colors?.SelectColor4 || locationState.SelectColor4}>
+              {texts?.text7 ||locationState.text7}  {texts?.text8 ||locationState.text8}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={locationState.SelectColor5}>
-              {locationState.text9}  {locationState.text10}
+            <STd STdColor={colors?.SelectColor5 || locationState.SelectColor5}>
+              {texts?.text9 ||locationState.text9}  {texts?.text10 ||locationState.text10}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={locationState.SelectColor6}>
+            <STd STdColor={colors?.SelectColor6 || locationState.SelectColor6}>
               {locationState.text11}  {locationState.text12}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={locationState.SelectColor7}>
+            <STd STdColor={colors?.SelectColor7 || locationState.SelectColor7}>
               {locationState.text13}  {locationState.text14}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={locationState.SelectColor8}>
+            <STd STdColor={colors?.SelectColor8 || locationState.SelectColor8}>
               {locationState.text15}  {locationState.text16}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={locationState.SelectColor9}>
+            <STd STdColor={colors?.SelectColor9 || locationState.SelectColor9}>
               {locationState.text17}  {locationState.text18}
               <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={locationState.SelectColor10}>
+            <STd STdColor={colors?.SelectColor10 || locationState.SelectColor10}>
               {locationState.text19}  {locationState.text20}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={locationState.SelectColor11}>
+            <STd STdColor={colors?.SelectColor11 || locationState.SelectColor11}>
               {locationState.text21}  {locationState.text22}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={locationState.SelectColor12}>
+            <STd STdColor={colors?.SelectColor12 || locationState.SelectColor12}>
               {locationState.text23}  {locationState.text24}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={locationState.SelectColor13}>
+            <STd STdColor={colors?.SelectColor13 || locationState.SelectColor13}>
               {locationState.text25}  {locationState.text26}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={locationState.SelectColor14}>
+            <STd STdColor={colors?.SelectColor14 || locationState.SelectColor14}>
               {locationState.text27}  {locationState.text28}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={locationState.SelectColor15}>
+            <STd STdColor={colors?.SelectColor15 || locationState.SelectColor15}>
               {locationState.text29}  {locationState.text30}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={locationState.SelectColor16}>
+            <STd STdColor={colors?.SelectColor16 || locationState.SelectColor16}>
               {locationState.text31}  {locationState.text32}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={locationState.SelectColor17}>
+            <STd STdColor={colors?.SelectColor17 || locationState.SelectColor17}>
               {locationState.text33}  {locationState.text34}
             <br />
             </STd>
