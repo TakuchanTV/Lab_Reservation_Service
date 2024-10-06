@@ -2,7 +2,7 @@
 
 import styled from "styled-components"
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
-import React from "react";
+import React, { useState } from "react";
 import { useEffect } from "react";
 
 
@@ -35,23 +35,27 @@ interface SelectColors {
   SelectColor16:string,SelectColor17:string, 
 }
 
+interface Location extends Texts, SelectColors {}
 
 export const ReservationTimeTable = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  
-  
-  console.log("Saved Texts:", JSON.parse(localStorage.getItem("Texts") || "{}"));
-  console.log("Saved SelectColors:", JSON.parse(localStorage.getItem("SelectColors") || "{}"));
+  const [texts, setTexts] = useState<Texts | null>(null);
+  const [colors, setColors] = useState<SelectColors | null>(null);
 
-  
+  useEffect(() => {
+    const storedTexts = localStorage.getItem("Texts");
+    const storedColors = localStorage.getItem("SelectColors");
 
-  
+    if (storedTexts && storedColors) {
+      setTexts(JSON.parse(storedTexts));
+      setColors(JSON.parse(storedColors));
+    }
+  },[])
 
-interface Location extends Texts, SelectColors {}
 
-  const locationState:Location | null = location.state
+  const locationState:Location | null = location.state;
 
   if (!locationState) {
     console.error("Location.state is null or undifined");
@@ -100,20 +104,20 @@ interface Location extends Texts, SelectColors {}
       <STable border={1}>
        <div>
         <tr>
-         <STd STdColor={locationState.SelectColor} >
-            {locationState.text} {locationState.text2}
+         <STd STdColor={colors?.SelectColor || locationState.SelectColor} >
+            {texts?.text || locationState.text} {texts?.text2 || locationState.text2}
           <br />
           </STd>
          </tr>
           <tr>
-            <STd STdColor={locationState.SelectColor2}>
-             {locationState.text3}  {locationState.text4}
+            <STd STdColor={colors?.SelectColor2 || locationState.SelectColor2}>
+             {texts?.text3 ||locationState.text3}  {texts?.text4 ||locationState.text4}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={locationState.SelectColor3}>
-              {locationState.text5}  {locationState.text6}
+            <STd STdColor={colors?.SelectColor3 ||locationState.SelectColor3}>
+              {texts?.text5 ||locationState.text5}  {texts?.text6 ||locationState.text6}
             <br />
             </STd>
           </tr>
