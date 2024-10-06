@@ -18,28 +18,36 @@ interface Props2 {
   hovertextColor:string
 };
 
+interface Texts {
+  text:string, text2:string,text3:string, text4:string, text5:string, 
+  text6:string, text7:string, text8:string,text9:string,text10:string,
+    text11:string, text12:string, text13:string, text14:string, text15:string, 
+    text16:string, text17:string, text18:string,text19:string,text20:string,
+     text21:string, text22:string, text23:string,text24:string, text25:string, 
+     text26:string, text27:string, text28:string, text29:string, text30:string,
+     text31:string, text32:string, text33:string, text34:string,
+};
+
+interface SelectColors {
+  SelectColor:string, SelectColor2:string,SelectColor3:string, SelectColor4:string,SelectColor5:string, 
+  SelectColor6:string,SelectColor7:string, SelectColor8:string,SelectColor9:string, SelectColor10:string,
+  SelectColor11:string, SelectColor12:string,SelectColor13:string, SelectColor14:string,SelectColor15:string, 
+  SelectColor16:string,SelectColor17:string, 
+}
+
+
 export const ReservationTimeTable = () => {
   const location = useLocation();
-  
   const navigate = useNavigate();
 
   
-  interface Texts {
-    text:string, text2:string,text3:string, text4:string, text5:string, 
-    text6:string, text7:string, text8:string,text9:string,text10:string,
-      text11:string, text12:string, text13:string, text14:string, text15:string, 
-      text16:string, text17:string, text18:string,text19:string,text20:string,
-       text21:string, text22:string, text23:string,text24:string, text25:string, 
-       text26:string, text27:string, text28:string, text29:string, text30:string,
-       text31:string, text32:string, text33:string, text34:string,
-  };
+  
+  console.log("Saved Texts:", JSON.parse(localStorage.getItem("Texts") || "{}"));
+  console.log("Saved SelectColors:", JSON.parse(localStorage.getItem("SelectColors") || "{}"));
 
-  interface SelectColors {
-    SelectColor:string, SelectColor2:string,SelectColor3:string, SelectColor4:string,SelectColor5:string, 
-    SelectColor6:string,SelectColor7:string, SelectColor8:string,SelectColor9:string, SelectColor10:string,
-    SelectColor11:string, SelectColor12:string,SelectColor13:string, SelectColor14:string,SelectColor15:string, 
-    SelectColor16:string,SelectColor17:string, 
-  }
+  
+
+  
 
 interface Location extends Texts, SelectColors {}
 
@@ -71,9 +79,6 @@ interface Location extends Texts, SelectColors {}
     const colors: SelectColors = locationState;
     localStorage.setItem("Texts",JSON.stringify(texts));
     localStorage.setItem("SelectColors",JSON.stringify(colors))
-
-    console.log("Saved Texts:", JSON.parse(localStorage.getItem("Texts") || "{}"));
-  console.log("Saved SelectColors:", JSON.parse(localStorage.getItem("SelectColors") || "{}"));
 }
 
 // const loadStoredData = () => {
