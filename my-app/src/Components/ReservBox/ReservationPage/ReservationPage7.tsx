@@ -6,9 +6,9 @@ import { useNavigate, useSearchParams } from "react-router-dom"
 import { Sbutton } from "../ReservationDevice";
 import styled from "styled-components";
 import { SelectTimes } from "../SelectTimes";
-import {SelectDays2} from "../SelectDays2"
 import { Ids } from "../IdModules";
 import React, {ChangeEvent} from "react";
+import { SelectDays } from "../ReservCustomhooks/SelectDays";
 
 
 interface Props {
@@ -77,7 +77,7 @@ interface Props {
           </SUl>
           <table border={1}   color="bule">
             <STr>
-               <STh>日付</STh>  <td><SelectDays2 /></td> 
+               <STh>日付</STh>  <td><SelectDays /></td> 
             </STr>
             <STr>
                <STh>時刻</STh>  <STd><Selectdiv><SelectTimes /><SelectTimes /></Selectdiv></STd>

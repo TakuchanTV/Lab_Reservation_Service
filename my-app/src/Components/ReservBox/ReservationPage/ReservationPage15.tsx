@@ -9,7 +9,7 @@ import { useCallback, useEffect, useState } from "react";
 import { SelectTimes } from "../SelectTimes";
 import { SelectColor } from "../SelectColor";
 import { FormTextarea } from "../FormTextarea";
-import {SelectDays2} from "../SelectDays2"
+import { SelectDays } from "../ReservCustomhooks/SelectDays";
 import { Ids } from "../IdModules";
 import React, {ChangeEvent} from "react";
 
@@ -79,7 +79,7 @@ interface Props {
           </SUl>
           <table border={1}   color="bule">
             <STr>
-               <STh>日付</STh>  <td><SelectDays2 /></td> 
+               <STh>日付</STh>  <td><SelectDays /></td> 
             </STr>
             <STr>
                <STh>時刻</STh>  <STd><Selectdiv><SelectTimes /><SelectTimes /></Selectdiv></STd>
