@@ -8,7 +8,7 @@ export const SelectTimes = () => {
     }
     return (
         <form>
-           <SInput type="text" value={times} onChange={handleTimes} /> 
+           <SInput type="time" value={times} onChange={handleTimes} /> 
         </form>
     )
 }
