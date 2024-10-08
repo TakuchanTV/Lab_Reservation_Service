@@ -98,6 +98,7 @@ export const ReservationTimeTable = () => {
 //     console.log("Loaded SelectColors:", colors);
 //   }
 // }
+
    
    return(
     <div>
@@ -283,3 +284,25 @@ export const ReservationTimeTable = () => {
 // localStorage.setItem('SelectColor',stored.SelectColor)
 
 // },[stored])
+
+
+
+// const loadStoredData = () => {
+//   const storedTexts = localStorage.getItem("Texts");
+//   const storedColors = localStorage.getItem("SelectColors");
+
+//   if (storedTexts && storedColors) {
+//     const texts: Texts = JSON.parse(storedTexts);
+//     const colors: SelectColors = JSON.parse(storedColors);
+
+//     // 取得したデータを使用して必要な処理を行う
+//     console.log("Loaded Texts:", texts);
+//     console.log("Loaded SelectColors:", colors);
+//   }
+// }
+
+// const MyComponents = () => {
+  //   useEffect(() => {
+  //     loadStoredData()
+  //   },[])
+  // }
