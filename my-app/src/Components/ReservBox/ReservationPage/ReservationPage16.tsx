@@ -5,7 +5,7 @@
 import { useNavigate, useSearchParams } from "react-router-dom"
 import { Sbutton } from "../ReservationDevice";
 import styled from "styled-components";
-import { SelectTimes } from "../SelectTimes";
+import { SelectTimes } from "../ReservCustomhooks/SelectTimes";
 import { FormTextarea } from "../FormTextarea";
 import { SelectDays } from "../ReservCustomhooks/SelectDays";
 import { Ids } from "../IdModules";

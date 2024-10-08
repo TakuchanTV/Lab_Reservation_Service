@@ -6,7 +6,7 @@ import styled from "styled-components";
 import { FormTextarea } from "../FormTextarea";
 import { Ids } from "../IdModules";
 import React, {ChangeEvent} from "react";
-import { SelectTimes } from "../SelectTimes";
+import { SelectTimes } from "../ReservCustomhooks/SelectTimes";
 import { SelectDays } from "../ReservCustomhooks/SelectDays";
 
 

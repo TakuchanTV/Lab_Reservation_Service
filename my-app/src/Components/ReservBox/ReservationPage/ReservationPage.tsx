@@ -6,8 +6,8 @@ import { Sbutton } from "../ReservationDevice";
 import styled from "styled-components";
 import { Ids } from "../IdModules";
 import React, { ChangeEvent } from "react";
-import { SelectTimes } from "../SelectTimes";
 import { SelectDays } from "../ReservCustomhooks/SelectDays";
+import { SelectTimes } from "../ReservCustomhooks/SelectTimes";
 
 
 
