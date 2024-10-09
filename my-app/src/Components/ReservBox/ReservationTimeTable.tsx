@@ -93,6 +93,8 @@ export const ReservationTimeTable = () => {
     
 }
 
+
+
 // const loadStoredData = () => {
 //   const storedTexts = localStorage.getItem("Texts");
 //   const storedColors = localStorage.getItem("SelectColors");
@@ -218,6 +220,7 @@ export const ReservationTimeTable = () => {
       </STable>
 
       <Sbutton BgColor="" hoverBgColor="green" textColor="" hovertextColor="" onClick={handleStored}>保存します</Sbutton>
+      <Sbutton2 BgColor="" hoverBgColor="green" textColor="" hovertextColor="" onClick={handleStored}>削除します</Sbutton2>
     </div>
    ) 
 }
@@ -270,6 +273,21 @@ export const ReservationTimeTable = () => {
    right: -275px;
    /* display: none; */
  `
+ export const Sbutton2 = styled.button<Props2>`
+ border-radius: 16px;
+ background-color: ${props => props.BgColor || 'white'};
+  color: ${props => props.textColor || 'black'};
+  &:hover{
+   cursor: pointer;
+   background-color: ${props => props.hoverBgColor || 'white'};
+   color: ${props => props.hovertextColor || 'black'};
+  };
+
+  position: fixed;
+  top: 110px;
+  right: -380px;
+  /* display: none; */
+`
 
 
 // const [stored, setStored] = useState({
