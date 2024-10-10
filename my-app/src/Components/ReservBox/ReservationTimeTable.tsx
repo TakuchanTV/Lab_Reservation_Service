@@ -119,10 +119,9 @@ const handleDeleted = () => {
    return(
     <div>
       <STable border={1}>
-       <div>
         <tr>
-         <STd STdColor={colors?.SelectColor || locationState.SelectColor} >
-            {texts?.text || locationState.text} {texts?.text2 || locationState.text2}
+         <STd STdColor={colors?.SelectColor || "white"} >
+            {texts?.text || "予約欄です"} {texts?.text2 || "予約欄です"}
           <br />
           </STd>
          </tr>
@@ -222,7 +221,6 @@ const handleDeleted = () => {
             <br />
             </STd>
           </tr>
-          </div> 
       </STable>
 
       <Sbutton BgColor="" hoverBgColor="green" textColor="" hovertextColor="" onClick={handleStored}>保存します</Sbutton>
