@@ -99,6 +99,264 @@ const handleDeleted = () => {
  setColors(null);
 }
 
+const BacktoPage = () => {
+if(window.confirm("予約のページに戻りますか?")){
+  const updatedTexts = {...texts};
+  const updatedColors = {...colors};
+ 
+  delete updatedTexts.text;
+  delete updatedTexts.text2;
+  delete updatedColors.SelectColor;
+
+  localStorage.setItem("Texts",JSON.stringify(updatedTexts));
+  localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
+
+  navigate("/ReservationPage")
+}
+}
+
+const BacktoPage2 = () => {
+  if(window.confirm("予約のページに戻りますか?")){
+    const updatedTexts = {...texts};
+    const updatedColors = {...colors};
+   
+    delete updatedTexts.text3;
+    delete updatedTexts.text4;
+    delete updatedColors.SelectColor2;
+  
+    localStorage.setItem("Texts",JSON.stringify(updatedTexts));
+    localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
+  
+    navigate("/ReservationPage2")
+  }
+  }
+const BacktoPage3 = () => {
+  if(window.confirm("予約のページに戻りますか?")){
+    const updatedTexts = {...texts};
+    const updatedColors = {...colors};
+   
+    delete updatedTexts.text5;
+    delete updatedTexts.text6;
+    delete updatedColors.SelectColor3;
+  
+    localStorage.setItem("Texts",JSON.stringify(updatedTexts));
+    localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
+  
+    navigate("/ReservationPage3")
+  }
+  }
+const BacktoPage4 = () => {
+  if(window.confirm("予約のページに戻りますか?")){
+    const updatedTexts = {...texts};
+    const updatedColors = {...colors};
+   
+    delete updatedTexts.text7;
+    delete updatedTexts.text8;
+    delete updatedColors.SelectColor3;
+  
+    localStorage.setItem("Texts",JSON.stringify(updatedTexts));
+    localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
+  
+    navigate("/ReservationPage4")
+  }
+  }
+const BacktoPage5 = () => {
+  if(window.confirm("予約のページに戻りますか?")){
+    const updatedTexts = {...texts};
+    const updatedColors = {...colors};
+   
+    delete updatedTexts.text9;
+    delete updatedTexts.text10;
+    delete updatedColors.SelectColor4;
+  
+    localStorage.setItem("Texts",JSON.stringify(updatedTexts));
+    localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
+  
+    navigate("/ReservationPage5")
+  }
+  }
+const BacktoPage6 = () => {
+  if(window.confirm("予約のページに戻りますか?")){
+    const updatedTexts = {...texts};
+    const updatedColors = {...colors};
+   
+    delete updatedTexts.text11;
+    delete updatedTexts.text12;
+    delete updatedColors.SelectColor5;
+  
+    localStorage.setItem("Texts",JSON.stringify(updatedTexts));
+    localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
+  
+    navigate("/ReservationPage6")
+  }
+  }
+const BacktoPage7 = () => {
+  if(window.confirm("予約のページに戻りますか?")){
+    const updatedTexts = {...texts};
+    const updatedColors = {...colors};
+   
+    delete updatedTexts.text13;
+    delete updatedTexts.text14;
+    delete updatedColors.SelectColor6;
+  
+    localStorage.setItem("Texts",JSON.stringify(updatedTexts));
+    localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
+  
+    navigate("/ReservationPage7")
+  }
+  }
+const BacktoPage8 = () => {
+  if(window.confirm("予約のページに戻りますか?")){
+    const updatedTexts = {...texts};
+    const updatedColors = {...colors};
+   
+    delete updatedTexts.text15;
+    delete updatedTexts.text16;
+    delete updatedColors.SelectColor7;
+  
+    localStorage.setItem("Texts",JSON.stringify(updatedTexts));
+    localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
+  
+    navigate("/ReservationPage8")
+  }
+  }
+const BacktoPage9 = () => {
+  if(window.confirm("予約のページに戻りますか?")){
+    const updatedTexts = {...texts};
+    const updatedColors = {...colors};
+   
+    delete updatedTexts.text17;
+    delete updatedTexts.text18;
+    delete updatedColors.SelectColor8;
+  
+    localStorage.setItem("Texts",JSON.stringify(updatedTexts));
+    localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
+  
+    navigate("/ReservationPage9")
+  }
+  }
+const BacktoPage10 = () => {
+  if(window.confirm("予約のページに戻りますか?")){
+    const updatedTexts = {...texts};
+    const updatedColors = {...colors};
+   
+    delete updatedTexts.text19;
+    delete updatedTexts.text20;
+    delete updatedColors.SelectColor9;
+  
+    localStorage.setItem("Texts",JSON.stringify(updatedTexts));
+    localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
+  
+    navigate("/ReservationPage10")
+  }
+  }
+const BacktoPage11 = () => {
+  if(window.confirm("予約のページに戻りますか?")){
+    const updatedTexts = {...texts};
+    const updatedColors = {...colors};
+   
+    delete updatedTexts.text21;
+    delete updatedTexts.text22;
+    delete updatedColors.SelectColor10;
+  
+    localStorage.setItem("Texts",JSON.stringify(updatedTexts));
+    localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
+  
+    navigate("/ReservationPage11")
+  }
+  }
+const BacktoPage12 = () => {
+  if(window.confirm("予約のページに戻りますか?")){
+    const updatedTexts = {...texts};
+    const updatedColors = {...colors};
+   
+    delete updatedTexts.text23;
+    delete updatedTexts.text24;
+    delete updatedColors.SelectColor11;
+  
+    localStorage.setItem("Texts",JSON.stringify(updatedTexts));
+    localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
+  
+    navigate("/ReservationPage12")
+  }
+  }
+const BacktoPage13 = () => {
+  if(window.confirm("予約のページに戻りますか?")){
+    const updatedTexts = {...texts};
+    const updatedColors = {...colors};
+   
+    delete updatedTexts.text25;
+    delete updatedTexts.text26;
+    delete updatedColors.SelectColor12;
+  
+    localStorage.setItem("Texts",JSON.stringify(updatedTexts));
+    localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
+  
+    navigate("/ReservationPage13")
+  }
+  }
+const BacktoPage14 = () => {
+  if(window.confirm("予約のページに戻りますか?")){
+    const updatedTexts = {...texts};
+    const updatedColors = {...colors};
+   
+    delete updatedTexts.text27;
+    delete updatedTexts.text28;
+    delete updatedColors.SelectColor13;
+  
+    localStorage.setItem("Texts",JSON.stringify(updatedTexts));
+    localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
+  
+    navigate("/ReservationPage14")
+  }
+  }
+const BacktoPage15 = () => {
+  if(window.confirm("予約のページに戻りますか?")){
+    const updatedTexts = {...texts};
+    const updatedColors = {...colors};
+   
+    delete updatedTexts.text29;
+    delete updatedTexts.text30;
+    delete updatedColors.SelectColor14;
+  
+    localStorage.setItem("Texts",JSON.stringify(updatedTexts));
+    localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
+  
+    navigate("/ReservationPage15")
+  }
+  }
+const BacktoPage16 = () => {
+  if(window.confirm("予約のページに戻りますか?")){
+    const updatedTexts = {...texts};
+    const updatedColors = {...colors};
+   
+    delete updatedTexts.text31;
+    delete updatedTexts.text32;
+    delete updatedColors.SelectColor15;
+  
+    localStorage.setItem("Texts",JSON.stringify(updatedTexts));
+    localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
+  
+    navigate("/ReservationPage16")
+  }
+  }
+const BacktoPage17 = () => {
+  if(window.confirm("予約のページに戻りますか?")){
+    const updatedTexts = {...texts};
+    const updatedColors = {...colors};
+   
+    delete updatedTexts.text33;
+    delete updatedTexts.text34;
+    delete updatedColors.SelectColor16;
+  
+    localStorage.setItem("Texts",JSON.stringify(updatedTexts));
+    localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
+  
+    navigate("/ReservationPage17")
+  }
+  }
+
+
 
 
 // const loadStoredData = () => {
@@ -121,103 +379,103 @@ const handleDeleted = () => {
       <STable border={1}>
        <div>
         <tr>
-         <STd STdColor={colors?.SelectColor || locationState.SelectColor} >
+         <STd STdColor={colors?.SelectColor || locationState.SelectColor} onClick={BacktoPage} >
             {texts?.text || locationState.text} {texts?.text2 || locationState.text2}
           <br />
           </STd>
          </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor2 || locationState.SelectColor2}>
+            <STd STdColor={colors?.SelectColor2 || locationState.SelectColor2} onClick={BacktoPage2}>
              {texts?.text3 ||locationState.text3}  {texts?.text4 ||locationState.text4}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor3 || locationState.SelectColor3}>
+            <STd STdColor={colors?.SelectColor3 || locationState.SelectColor3} onClick={BacktoPage3}>
               {texts?.text5 ||locationState.text5}  {texts?.text6 ||locationState.text6}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor4 || locationState.SelectColor4}>
+            <STd STdColor={colors?.SelectColor4 || locationState.SelectColor4} onClick={BacktoPage4}>
               {texts?.text7 ||locationState.text7}  {texts?.text8 ||locationState.text8}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor5 || locationState.SelectColor5}>
+            <STd STdColor={colors?.SelectColor5 || locationState.SelectColor5} onClick={BacktoPage5}>
               {texts?.text9 ||locationState.text9}  {texts?.text10 ||locationState.text10}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor6 || locationState.SelectColor6}>
+            <STd STdColor={colors?.SelectColor6 || locationState.SelectColor6} onClick={BacktoPage6}>
               {texts?.text11 || locationState.text11}  {texts?.text12 ||locationState.text12}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor7 || locationState.SelectColor7}>
+            <STd STdColor={colors?.SelectColor7 || locationState.SelectColor7} onClick={BacktoPage7}>
               {texts?.text13 ||locationState.text13}  {texts?.text14 ||locationState.text14}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor8 || locationState.SelectColor8}>
+            <STd STdColor={colors?.SelectColor8 || locationState.SelectColor8} onClick={BacktoPage8}>
               {texts?.text15 ||locationState.text15}  {texts?.text16 ||locationState.text16}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor9 || locationState.SelectColor9}>
+            <STd STdColor={colors?.SelectColor9 || locationState.SelectColor9} onClick={BacktoPage9}>
               {texts?.text17 ||locationState.text17}  {texts?.text18 ||locationState.text18}
               <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor10 || locationState.SelectColor10}>
+            <STd STdColor={colors?.SelectColor10 || locationState.SelectColor10} onClick={BacktoPage10}>
               {texts?.text19 ||locationState.text19}  {texts?.text20 ||locationState.text20}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor11 || locationState.SelectColor11}>
+            <STd STdColor={colors?.SelectColor11 || locationState.SelectColor11} onClick={BacktoPage11}>
               {texts?.text21 ||locationState.text21}  {texts?.text22 ||locationState.text22}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor12 || locationState.SelectColor12}>
+            <STd STdColor={colors?.SelectColor12 || locationState.SelectColor12} onClick={BacktoPage12}>
               {texts?.text23 ||locationState.text23}  {texts?.text24 ||locationState.text24}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor13 || locationState.SelectColor13}>
+            <STd STdColor={colors?.SelectColor13 || locationState.SelectColor13} onClick={BacktoPage13}>
               {texts?.text25 ||locationState.text25}  {texts?.text26 ||locationState.text26}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor14 || locationState.SelectColor14}>
+            <STd STdColor={colors?.SelectColor14 || locationState.SelectColor14} onClick={BacktoPage14}>
               {texts?.text27 ||locationState.text27}  {texts?.text28 ||locationState.text28}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor15 || locationState.SelectColor15}>
+            <STd STdColor={colors?.SelectColor15 || locationState.SelectColor15} onClick={BacktoPage15}>
               {texts?.text29 ||locationState.text29}  {texts?.text30 ||locationState.text30}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor16 || locationState.SelectColor16}>
+            <STd STdColor={colors?.SelectColor16 || locationState.SelectColor16} onClick={BacktoPage16}>
               {texts?.text31 ||locationState.text31}  {texts?.text32 ||locationState.text32}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor17 || locationState.SelectColor17}>
+            <STd STdColor={colors?.SelectColor17 || locationState.SelectColor17} onClick={BacktoPage17}>
               {texts?.text33 ||locationState.text33}  {texts?.text34 ||locationState.text34}
             <br />
             </STd>
