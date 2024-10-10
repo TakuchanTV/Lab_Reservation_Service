@@ -9,6 +9,7 @@ import { SelectTimes } from "../ReservCustomhooks/SelectTimes";
 import { Ids } from "../IdModules";
 import React, {ChangeEvent} from "react";
 import { SelectDays } from "../ReservCustomhooks/SelectDays";
+import { FormTextarea } from "../FormTextarea";
 
 
 interface Props {
@@ -99,9 +100,7 @@ interface Props {
                </td>     
             </STr>
             <STr>
-              <STh>備考</STh> <td><input type="color" value={SelectColor7}  
-               onChange={handleColor} />
-               </td>   
+              <STh>備考</STh> <td><FormTextarea /></td>   
             </STr>
           </table>
           <ResrvButtondiv>
