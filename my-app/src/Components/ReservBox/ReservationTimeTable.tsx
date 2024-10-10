@@ -5,8 +5,6 @@ import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import { useEffect } from "react";
 
-
-
 interface Props {
   STdColor:string,
 };
@@ -154,73 +152,73 @@ const handleDeleted = () => {
           </tr>
           <tr>
             <STd STdColor={colors?.SelectColor6 || locationState.SelectColor6}>
-              {locationState.text11}  {locationState.text12}
+              {texts?.text11 || locationState.text11}  {texts?.text12 ||locationState.text12}
             <br />
             </STd>
           </tr>
           <tr>
             <STd STdColor={colors?.SelectColor7 || locationState.SelectColor7}>
-              {locationState.text13}  {locationState.text14}
+              {texts?.text13 ||locationState.text13}  {texts?.text14 ||locationState.text14}
             <br />
             </STd>
           </tr>
           <tr>
             <STd STdColor={colors?.SelectColor8 || locationState.SelectColor8}>
-              {locationState.text15}  {locationState.text16}
+              {texts?.text15 ||locationState.text15}  {texts?.text16 ||locationState.text16}
             <br />
             </STd>
           </tr>
           <tr>
             <STd STdColor={colors?.SelectColor9 || locationState.SelectColor9}>
-              {locationState.text17}  {locationState.text18}
+              {texts?.text17 ||locationState.text17}  {texts?.text18 ||locationState.text18}
               <br />
             </STd>
           </tr>
           <tr>
             <STd STdColor={colors?.SelectColor10 || locationState.SelectColor10}>
-              {locationState.text19}  {locationState.text20}
+              {texts?.text19 ||locationState.text19}  {texts?.text20 ||locationState.text20}
             <br />
             </STd>
           </tr>
           <tr>
             <STd STdColor={colors?.SelectColor11 || locationState.SelectColor11}>
-              {locationState.text21}  {locationState.text22}
+              {texts?.text21 ||locationState.text21}  {texts?.text22 ||locationState.text22}
             <br />
             </STd>
           </tr>
           <tr>
             <STd STdColor={colors?.SelectColor12 || locationState.SelectColor12}>
-              {locationState.text23}  {locationState.text24}
+              {texts?.text23 ||locationState.text23}  {texts?.text24 ||locationState.text24}
             <br />
             </STd>
           </tr>
           <tr>
             <STd STdColor={colors?.SelectColor13 || locationState.SelectColor13}>
-              {locationState.text25}  {locationState.text26}
+              {texts?.text25 ||locationState.text25}  {texts?.text26 ||locationState.text26}
             <br />
             </STd>
           </tr>
           <tr>
             <STd STdColor={colors?.SelectColor14 || locationState.SelectColor14}>
-              {locationState.text27}  {locationState.text28}
+              {texts?.text27 ||locationState.text27}  {texts?.text28 ||locationState.text28}
             <br />
             </STd>
           </tr>
           <tr>
             <STd STdColor={colors?.SelectColor15 || locationState.SelectColor15}>
-              {locationState.text29}  {locationState.text30}
+              {texts?.text29 ||locationState.text29}  {texts?.text30 ||locationState.text30}
             <br />
             </STd>
           </tr>
           <tr>
             <STd STdColor={colors?.SelectColor16 || locationState.SelectColor16}>
-              {locationState.text31}  {locationState.text32}
+              {texts?.text31 ||locationState.text31}  {texts?.text32 ||locationState.text32}
             <br />
             </STd>
           </tr>
           <tr>
             <STd STdColor={colors?.SelectColor17 || locationState.SelectColor17}>
-              {locationState.text33}  {locationState.text34}
+              {texts?.text33 ||locationState.text33}  {texts?.text34 ||locationState.text34}
             <br />
             </STd>
           </tr>
