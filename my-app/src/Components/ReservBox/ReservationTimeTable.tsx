@@ -99,6 +99,23 @@ const handleDeleted = () => {
  setColors(null);
 }
 
+const BacktoPage = () => {
+if(window.confirm("予約のページに戻りますか?")){
+  const updatedTexts = {...texts};
+  const updatedColors = {...colors};
+ 
+  delete updatedTexts.text;
+  delete updatedTexts.text2;
+  delete updatedColors.SelectColor;
+
+  localStorage.setItem("Texts",JSON.stringify(updatedTexts));
+  localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
+
+
+  navigate("/ReservationPage")
+}
+}
+
 
 
 // const loadStoredData = () => {
@@ -121,7 +138,7 @@ const handleDeleted = () => {
       <STable border={1}>
        <div>
         <tr>
-         <STd STdColor={colors?.SelectColor || locationState.SelectColor} >
+         <STd STdColor={colors?.SelectColor || locationState.SelectColor} onClick={BacktoPage} >
             {texts?.text || locationState.text} {texts?.text2 || locationState.text2}
           <br />
           </STd>
