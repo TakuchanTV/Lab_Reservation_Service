@@ -93,6 +93,14 @@ export const ReservationTimeTable = () => {
     
 }
 
+const handleDeleted = () => {
+ localStorage.removeItem("Texts");
+ localStorage.removeItem("SelectColors")
+
+ setTexts(null);
+ setColors(null);
+}
+
 
 
 // const loadStoredData = () => {
@@ -220,7 +228,7 @@ export const ReservationTimeTable = () => {
       </STable>
 
       <Sbutton BgColor="" hoverBgColor="green" textColor="" hovertextColor="" onClick={handleStored}>保存します</Sbutton>
-      <Sbutton2 BgColor="" hoverBgColor="green" textColor="" hovertextColor="" onClick={handleStored}>削除します</Sbutton2>
+      <Sbutton2 BgColor="" hoverBgColor="green" textColor="" hovertextColor="" onClick={handleDeleted}>削除します</Sbutton2>
     </div>
    ) 
 }
