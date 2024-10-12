@@ -481,8 +481,9 @@ const BacktoPage17 = () => {
           </tr>
       </STable>
 
-      <Sbutton BgColor="" hoverBgColor="green" textColor="" hovertextColor="" onClick={handleStored}>保存します</Sbutton>
-      <Sbutton2 BgColor="" hoverBgColor="green" textColor="" hovertextColor="" onClick={handleDeleted}>削除します</Sbutton2>
+      <Storedbutton BgColor="" hoverBgColor="green" textColor="" hovertextColor="" onClick={handleStored}>保存します</Storedbutton>
+      {/* <Sbutton2 BgColor="" hoverBgColor="green" textColor="" hovertextColor="" onClick={handleDeleted}>削除します</Sbutton2> */}
+      <Sbutton BgColor="" hoverBgColor="green" textColor="" hovertextColor="" onClick={handleDeleted}>削除します</Sbutton>
     </div>
    ) 
 }
@@ -519,23 +520,7 @@ const BacktoPage17 = () => {
  `
  
  
-
- export const Sbutton = styled.button<Props2>`
-  border-radius: 16px;
-  background-color: ${props => props.BgColor || 'white'};
-   color: ${props => props.textColor || 'black'};
-   &:hover{
-    cursor: pointer;
-    background-color: ${props => props.hoverBgColor || 'white'};
-    color: ${props => props.hovertextColor || 'black'};
-   };
-
-   position: fixed;
-   top: 110px;
-   right: -275px;
-   /* display: none; */
- `
- export const Sbutton2 = styled.button<Props2>`
+ export const Storedbutton = styled.button<Props2>`
  border-radius: 16px;
  background-color: ${props => props.BgColor || 'white'};
   color: ${props => props.textColor || 'black'};
@@ -547,50 +532,40 @@ const BacktoPage17 = () => {
 
   position: fixed;
   top: 110px;
-  right: -380px;
+  right: -350px;
+  /* display: none; */
+`
+ 
+//  export const Sbutton2 = styled.button<Props2>`
+//  border-radius: 16px;
+//  background-color: ${props => props.BgColor || 'white'};
+//   color: ${props => props.textColor || 'black'};
+//   &:hover{
+//    cursor: pointer;
+//    background-color: ${props => props.hoverBgColor || 'white'};
+//    color: ${props => props.hovertextColor || 'black'};
+//   };
+
+//   position: fixed;
+//   top: 110px;
+//   right: -380px;
+//   /* display: none; */
+// `
+export const Sbutton = styled.button<Props2>`
+ border-radius: 16px;
+ background-color: ${props => props.BgColor || 'white'};
+  color: ${props => props.textColor || 'black'};
+  &:hover{
+   cursor: pointer;
+   background-color: ${props => props.hoverBgColor || 'white'};
+   color: ${props => props.hovertextColor || 'black'};
+  };
+
+  position: fixed;
+  top: 110px;
+  right: -180px;
   /* display: none; */
 `
 
 
-// const [stored, setStored] = useState({
-//   text: "",
-//   text2: "",
-//   SelectColor : "",
-// });
 
-// useEffect(() => {
-// setStored({
-//   text: localStorage.getItem('text',text) || text,
-//   text2: localStorage.getItem('text2',text2) || text2,
-//   SelectColor: localStorage.getItem('SelectColor',SelectColor) || SelectColor
-// });
-// },[text,text2,SelectColor])
-
-// useEffect(() => {
-// localStorage.setItem('text',stored.text)
-// localStorage.setItem('text2',stored.text2)
-// localStorage.setItem('SelectColor',stored.SelectColor)
-
-// },[stored])
-
-
-
-// const loadStoredData = () => {
-//   const storedTexts = localStorage.getItem("Texts");
-//   const storedColors = localStorage.getItem("SelectColors");
-
-//   if (storedTexts && storedColors) {
-//     const texts: Texts = JSON.parse(storedTexts);
-//     const colors: SelectColors = JSON.parse(storedColors);
-
-//     // 取得したデータを使用して必要な処理を行う
-//     console.log("Loaded Texts:", texts);
-//     console.log("Loaded SelectColors:", colors);
-//   }
-// }
-
-// const MyComponents = () => {
-  //   useEffect(() => {
-  //     loadStoredData()
-  //   },[])
-  // }
