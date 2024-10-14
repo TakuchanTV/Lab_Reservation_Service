@@ -63,58 +63,16 @@ export const ReservationTimeTable = () => {
     const button17 = document.getElementById("reservebutton17") as HTMLInputElement
 
     if (button) {
-      if (locationState?.text|| locationState?.text2 || locationState?.text3 
-        || locationState?.text4  || locationState?.text5 || locationState?.text6 || locationState?.text7
-        || locationState?.text8 || locationState?.text9 || locationState?.text10 || locationState?.text11
-        || locationState?.text12 || locationState?.text13 || locationState?.text13 || locationState?.text14 ||
-        locationState?.text15 || locationState?.text16 || locationState?.text17 || locationState?.text18 || locationState?.text19 ||
-        locationState?.text20 || locationState?.text21 || locationState?.text22 || locationState?.text23 || locationState?.text24 ||
-        locationState?.text25 || locationState?.text26 || locationState?.text27 || locationState?.text28 || locationState?.text29 || 
-        locationState?.text30 || locationState?.text31 || locationState?.text32 || locationState?.text33 || locationState?.text34 ||
-        locationState?.SelectColor || locationState?.SelectColor2  || locationState?.SelectColor3 || locationState?.SelectColor4 || locationState?.SelectColor5
-        || locationState?.SelectColor6 || locationState?.SelectColor7 || locationState?.SelectColor8 || locationState?.SelectColor9 || locationState?.SelectColor10
-        || locationState?.SelectColor11 || locationState?.SelectColor12 || locationState?.SelectColor13 || locationState?.SelectColor14 || locationState?.SelectColor15
-        || locationState?.SelectColor16 || locationState?.SelectColor17
-
-      ) {
+      if (locationState?.text|| locationState?.text2 || locationState?.SelectColor) {
         button.style.display = "block"
-        button2.style.display = "block"
-        button3.style.display = "block"
-        button4.style.display = "block"
-        button5.style.display = "block"
-        button6.style.display = "block"
-        button7.style.display = "block"
-        button8.style.display = "block"
-        button9.style.display = "block"
-        button10.style.display = "block"
-        button11.style.display = "block"
-        button12.style.display = "block"
-        button13.style.display = "block"
-        button14.style.display = "block"
-        button15.style.display = "block"
-        button16.style.display = "block"
-        button17.style.display = "block"
-        console.log("button is block")
       }else {
         button.style.display = "none"
-        button2.style.display = "none"
-        button3.style.display = "none"
-        button4.style.display = "none"
-        button5.style.display = "none"
-        button6.style.display = "none"
-        button7.style.display = "none"
-        button8.style.display = "none"
-        button9.style.display = "none"
-        button10.style.display = "none"
-        button11.style.display = "none"
-        button12.style.display = "none"
-        button13.style.display = "none"
-        button14.style.display = "none"
-        button15.style.display = "none"
-        button16.style.display = "none"
-        button17.style.display = "none"
-        console.log("button is none")
       }
+      if (locationState?.text3 || locationState?.text4 || locationState?.SelectColor2){
+        button2.style.display = "block"
+      }else {
+        button2.style.display = "none"
+      } 
     }
     // const button = document.getElementById("reservebutton") as HTMLInputElement
     // if (texts|| colors) {
