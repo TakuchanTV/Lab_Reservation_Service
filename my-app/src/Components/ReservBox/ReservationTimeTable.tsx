@@ -80,17 +80,45 @@ export const ReservationTimeTable = () => {
         button.style.display = "block"
         button2.style.display = "block"
         button3.style.display = "block"
+        button4.style.display = "block"
+        button5.style.display = "block"
+        button6.style.display = "block"
+        button7.style.display = "block"
+        button8.style.display = "block"
+        button9.style.display = "block"
+        button10.style.display = "block"
+        button11.style.display = "block"
+        button12.style.display = "block"
+        button13.style.display = "block"
+        button14.style.display = "block"
+        button15.style.display = "block"
+        button16.style.display = "block"
+        button17.style.display = "block"
         console.log("button is block")
       }else {
         button.style.display = "none"
         button2.style.display = "none"
         button3.style.display = "none"
+        button4.style.display = "none"
+        button5.style.display = "none"
+        button6.style.display = "none"
+        button7.style.display = "none"
+        button8.style.display = "none"
+        button9.style.display = "none"
+        button10.style.display = "none"
+        button11.style.display = "none"
+        button12.style.display = "none"
+        button13.style.display = "none"
+        button14.style.display = "none"
+        button15.style.display = "none"
+        button16.style.display = "none"
+        button17.style.display = "none"
         console.log("button is none")
       }
     }
     // const button = document.getElementById("reservebutton") as HTMLInputElement
     // if (texts|| colors) {
-    //   button.style.display = "block"
+    //   button.style.display = ""
     //   console.log("button is block")
     // } else {
     //   button.style.display = "none"
@@ -479,91 +507,91 @@ const BacktoPage17 = () => {
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor3 || locationState.SelectColor3} onClick={BacktoPage3}>
+            <STd STdColor={colors?.SelectColor3 || locationState.SelectColor3}>
               {texts?.text5 ||locationState.text5}  {texts?.text6 ||locationState.text6}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor4 || locationState.SelectColor4} onClick={BacktoPage4}>
+            <STd STdColor={colors?.SelectColor4 || locationState.SelectColor4} >
               {texts?.text7 ||locationState.text7}  {texts?.text8 ||locationState.text8}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor5 || locationState.SelectColor5} onClick={BacktoPage5}>
+            <STd STdColor={colors?.SelectColor5 || locationState.SelectColor5} >
               {texts?.text9 ||locationState.text9}  {texts?.text10 ||locationState.text10}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor6 || locationState.SelectColor6} onClick={BacktoPage6}>
+            <STd STdColor={colors?.SelectColor6 || locationState.SelectColor6} >
               {texts?.text11 || locationState.text11}  {texts?.text12 ||locationState.text12}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor7 || locationState.SelectColor7} onClick={BacktoPage7}>
+            <STd STdColor={colors?.SelectColor7 || locationState.SelectColor7} >
               {texts?.text13 ||locationState.text13}  {texts?.text14 ||locationState.text14}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor8 || locationState.SelectColor8} onClick={BacktoPage8}>
+            <STd STdColor={colors?.SelectColor8 || locationState.SelectColor8} >
               {texts?.text15 ||locationState.text15}  {texts?.text16 ||locationState.text16}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor9 || locationState.SelectColor9} onClick={BacktoPage9}>
+            <STd STdColor={colors?.SelectColor9 || locationState.SelectColor9} >
               {texts?.text17 ||locationState.text17}  {texts?.text18 ||locationState.text18}
               <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor10 || locationState.SelectColor10} onClick={BacktoPage10}>
+            <STd STdColor={colors?.SelectColor10 || locationState.SelectColor10} >
               {texts?.text19 ||locationState.text19}  {texts?.text20 ||locationState.text20}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor11 || locationState.SelectColor11} onClick={BacktoPage11}>
+            <STd STdColor={colors?.SelectColor11 || locationState.SelectColor11} >
               {texts?.text21 ||locationState.text21}  {texts?.text22 ||locationState.text22}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor12 || locationState.SelectColor12} onClick={BacktoPage12}>
+            <STd STdColor={colors?.SelectColor12 || locationState.SelectColor12} >
               {texts?.text23 ||locationState.text23}  {texts?.text24 ||locationState.text24}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor13 || locationState.SelectColor13} onClick={BacktoPage13}>
+            <STd STdColor={colors?.SelectColor13 || locationState.SelectColor13} >
               {texts?.text25 ||locationState.text25}  {texts?.text26 ||locationState.text26}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor14 || locationState.SelectColor14} onClick={BacktoPage14}>
+            <STd STdColor={colors?.SelectColor14 || locationState.SelectColor14} >
               {texts?.text27 ||locationState.text27}  {texts?.text28 ||locationState.text28}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor15 || locationState.SelectColor15} onClick={BacktoPage15}>
+            <STd STdColor={colors?.SelectColor15 || locationState.SelectColor15} >
               {texts?.text29 ||locationState.text29}  {texts?.text30 ||locationState.text30}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor16 || locationState.SelectColor16} onClick={BacktoPage16}>
+            <STd STdColor={colors?.SelectColor16 || locationState.SelectColor16} >
               {texts?.text31 ||locationState.text31}  {texts?.text32 ||locationState.text32}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor17 || locationState.SelectColor17} onClick={BacktoPage17}>
+            <STd STdColor={colors?.SelectColor17 || locationState.SelectColor17} >
               {texts?.text33 ||locationState.text33}  {texts?.text34 ||locationState.text34}
             <br />
             </STd>
@@ -572,9 +600,26 @@ const BacktoPage17 = () => {
 
       <Storedbutton BgColor="" hoverBgColor="green" textColor="" hovertextColor="" onClick={handleStored}>保存します</Storedbutton>
       <Deletebutton BgColor="" hoverBgColor="green" textColor="" hovertextColor="" onClick={handleDeleted}>削除します</Deletebutton>
+      <div>
       <Sbutton id="reservebutton"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage}>予約を変更する</Sbutton>
       <Sbutton2 id="reservebutton2"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage2}>予約を変更する</Sbutton2>
       <Sbutton3 id="reservebutton3"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage3}>予約を変更する</Sbutton3>
+      <Sbutton4 id="reservebutton4"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage4}>予約を変更する</Sbutton4>
+      <Sbutton5 id="reservebutton5"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage5}>予約を変更する</Sbutton5>
+      <Sbutton6 id="reservebutton6"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage6}>予約を変更する</Sbutton6>
+      <Sbutton7 id="reservebutton7"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage7}>予約を変更する</Sbutton7>
+      <Sbutton8 id="reservebutton8"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage8}>予約を変更する</Sbutton8>
+      <Sbutton9 id="reservebutton9"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage9}>予約を変更する</Sbutton9>
+      <Sbutton10 id="reservebutton10"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage10}>予約を変更する</Sbutton10>
+      <Sbutton11 id="reservebutton11"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage11}>予約を変更する</Sbutton11>
+      <Sbutton12 id="reservebutton12"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage12}>予約を変更する</Sbutton12>
+      <Sbutton13 id="reservebutton13"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage13}>予約を変更する</Sbutton13>
+      <Sbutton14 id="reservebutton14"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage14}>予約を変更する</Sbutton14>
+      <Sbutton15 id="reservebutton15"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage15}>予約を変更する</Sbutton15>
+      <Sbutton16 id="reservebutton16"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage16}>予約を変更する</Sbutton16>
+      <Sbutton17 id="reservebutton17"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage17}>予約を変更する</Sbutton17>
+      </div>
+      
     </div>
    ) 
 }
@@ -654,7 +699,8 @@ export const Sbutton = styled.button<Props2>`
 
   position: fixed;
   top: 110px;
-  right: -300px;
+  right: -180px;
+  margin-bottom: 5px;
   /* display: none; */
 `
 export const Sbutton2 = styled.button<Props2>`
@@ -668,8 +714,9 @@ export const Sbutton2 = styled.button<Props2>`
   };
 
   position: fixed;
-  top: 145px;
-  right: -300px;
+  top: 150px;
+  right: -180px;
+  margin-bottom: 5px;
   /* display: none; */
 `
 export const Sbutton3 = styled.button<Props2>`
@@ -683,10 +730,238 @@ export const Sbutton3 = styled.button<Props2>`
   };
 
   position: fixed;
-  top: 180px;
-  right: -300px;
+  top: 185px;
+  right: -180px;
+  margin-bottom: 5px;
   /* display: none; */
 `
+export const Sbutton4 = styled.button<Props2>`
+ border-radius: 16px;
+ background-color: ${props => props.BgColor || 'white'};
+  color: ${props => props.textColor || 'black'};
+  &:hover{
+   cursor: pointer;
+   background-color: ${props => props.hoverBgColor || 'white'};
+   color: ${props => props.hovertextColor || 'black'};
+  };
+
+  position: fixed;
+  top: 223px;
+  right: -180px;
+  margin-bottom: 5px;
+  /* display: none; */
+`
+export const Sbutton5 = styled.button<Props2>`
+ border-radius: 16px;
+ background-color: ${props => props.BgColor || 'white'};
+  color: ${props => props.textColor || 'black'};
+  &:hover{
+   cursor: pointer;
+   background-color: ${props => props.hoverBgColor || 'white'};
+   color: ${props => props.hovertextColor || 'black'};
+  };
+
+  position: fixed;
+  top: 260px;
+  right: -180px;
+  margin-bottom: 5px;
+  /* display: none; */
+`
+export const Sbutton6 = styled.button<Props2>`
+ border-radius: 16px;
+ background-color: ${props => props.BgColor || 'white'};
+  color: ${props => props.textColor || 'black'};
+  &:hover{
+   cursor: pointer;
+   background-color: ${props => props.hoverBgColor || 'white'};
+   color: ${props => props.hovertextColor || 'black'};
+  };
+
+  position: fixed;
+  top: 295px;
+  right: -180px;
+  margin-bottom: 5px;
+  /* display: none; */
+`
+export const Sbutton7 = styled.button<Props2>`
+ border-radius: 16px;
+ background-color: ${props => props.BgColor || 'white'};
+  color: ${props => props.textColor || 'black'};
+  &:hover{
+   cursor: pointer;
+   background-color: ${props => props.hoverBgColor || 'white'};
+   color: ${props => props.hovertextColor || 'black'};
+  };
+
+  position: fixed;
+  top: 333px;
+  right: -180px;
+  margin-bottom: 5px;
+  /* display: none; */
+`
+export const Sbutton8 = styled.button<Props2>`
+ border-radius: 16px;
+ background-color: ${props => props.BgColor || 'white'};
+  color: ${props => props.textColor || 'black'};
+  &:hover{
+   cursor: pointer;
+   background-color: ${props => props.hoverBgColor || 'white'};
+   color: ${props => props.hovertextColor || 'black'};
+  };
+
+  position: fixed;
+  top: 370px;
+  right: -180px;
+  margin-bottom: 5px;
+  /* display: none; */
+`
+export const Sbutton9 = styled.button<Props2>`
+ border-radius: 16px;
+ background-color: ${props => props.BgColor || 'white'};
+  color: ${props => props.textColor || 'black'};
+  &:hover{
+   cursor: pointer;
+   background-color: ${props => props.hoverBgColor || 'white'};
+   color: ${props => props.hovertextColor || 'black'};
+  };
+
+  position: fixed;
+  top: 408px;
+  right: -180px;
+  margin-bottom: 5px;
+  /* display: none; */
+`
+export const Sbutton10 = styled.button<Props2>`
+ border-radius: 16px;
+ background-color: ${props => props.BgColor || 'white'};
+  color: ${props => props.textColor || 'black'};
+  &:hover{
+   cursor: pointer;
+   background-color: ${props => props.hoverBgColor || 'white'};
+   color: ${props => props.hovertextColor || 'black'};
+  };
+
+  position: fixed;
+  top: 445px;
+  right: -180px;
+  margin-bottom: 5px;
+  /* display: none; */
+`
+export const Sbutton11 = styled.button<Props2>`
+ border-radius: 16px;
+ background-color: ${props => props.BgColor || 'white'};
+  color: ${props => props.textColor || 'black'};
+  &:hover{
+   cursor: pointer;
+   background-color: ${props => props.hoverBgColor || 'white'};
+   color: ${props => props.hovertextColor || 'black'};
+  };
+
+  position: fixed;
+  top: 482px;
+  right: -180px;
+  margin-bottom: 5px;
+  /* display: none; */
+`
+export const Sbutton12 = styled.button<Props2>`
+ border-radius: 16px;
+ background-color: ${props => props.BgColor || 'white'};
+  color: ${props => props.textColor || 'black'};
+  &:hover{
+   cursor: pointer;
+   background-color: ${props => props.hoverBgColor || 'white'};
+   color: ${props => props.hovertextColor || 'black'};
+  };
+
+  position: fixed;
+  top: 520px;
+  right: -180px;
+  margin-bottom: 5px;
+  /* display: none; */
+`
+export const Sbutton13 = styled.button<Props2>`
+ border-radius: 16px;
+ background-color: ${props => props.BgColor || 'white'};
+  color: ${props => props.textColor || 'black'};
+  &:hover{
+   cursor: pointer;
+   background-color: ${props => props.hoverBgColor || 'white'};
+   color: ${props => props.hovertextColor || 'black'};
+  };
+
+  position: fixed;
+  top: 555px;
+  right: -180px;
+  margin-bottom: 5px;
+  /* display: none; */
+`
+export const Sbutton14 = styled.button<Props2>`
+ border-radius: 16px;
+ background-color: ${props => props.BgColor || 'white'};
+  color: ${props => props.textColor || 'black'};
+  &:hover{
+   cursor: pointer;
+   background-color: ${props => props.hoverBgColor || 'white'};
+   color: ${props => props.hovertextColor || 'black'};
+  };
+
+  position: fixed;
+  top: 592px;
+  right: -180px;
+  margin-bottom: 5px;
+  /* display: none; */
+`
+export const Sbutton15 = styled.button<Props2>`
+ border-radius: 16px;
+ background-color: ${props => props.BgColor || 'white'};
+  color: ${props => props.textColor || 'black'};
+  &:hover{
+   cursor: pointer;
+   background-color: ${props => props.hoverBgColor || 'white'};
+   color: ${props => props.hovertextColor || 'black'};
+  };
+
+  position: fixed;
+  top: 630px;
+  right: -180px;
+  margin-bottom: 5px;
+  /* display: none; */
+`
+export const Sbutton16 = styled.button<Props2>`
+ border-radius: 16px;
+ background-color: ${props => props.BgColor || 'white'};
+  color: ${props => props.textColor || 'black'};
+  &:hover{
+   cursor: pointer;
+   background-color: ${props => props.hoverBgColor || 'white'};
+   color: ${props => props.hovertextColor || 'black'};
+  };
+
+  position: fixed;
+  top: 667px;
+  right: -180px;
+  margin-bottom: 5px;
+  /* display: none; */
+`
+export const Sbutton17 = styled.button<Props2>`
+ border-radius: 16px;
+ background-color: ${props => props.BgColor || 'white'};
+  color: ${props => props.textColor || 'black'};
+  &:hover{
+   cursor: pointer;
+   background-color: ${props => props.hoverBgColor || 'white'};
+   color: ${props => props.hovertextColor || 'black'};
+  };
+
+  position: fixed;
+  top: 705px;
+  right: -180px;
+  margin-bottom: 5px;
+  /* display: none; */
+`
+
+
+
 
  
 
