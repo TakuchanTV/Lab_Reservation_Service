@@ -55,7 +55,6 @@ export const ReservationTimeTable = () => {
     const button9 = document.getElementById("reservebutton9") as HTMLInputElement
     const button10 = document.getElementById("reservebutton10") as HTMLInputElement
     const button11 = document.getElementById("reservebutton11") as HTMLInputElement
-    const button11 = document.getElementById("reservebutton11") as HTMLInputElement
     const button12 = document.getElementById("reservebutton12") as HTMLInputElement
     const button13 = document.getElementById("reservebutton13") as HTMLInputElement
     const button14 = document.getElementById("reservebutton14") as HTMLInputElement
@@ -64,9 +63,19 @@ export const ReservationTimeTable = () => {
     const button17 = document.getElementById("reservebutton17") as HTMLInputElement
 
     if (button) {
-      if (locationState?.text|| locationState?.text2 || locationState?.SelectColor ||locationState?.text3 
-        || locationState?.text4 || locationState?.SelectColor2 || locationState?.text5 || locationState?.text6 || 
-        locationState?.SelectColor3 
+      if (locationState?.text|| locationState?.text2 || locationState?.text3 
+        || locationState?.text4  || locationState?.text5 || locationState?.text6 || locationState?.text7
+        || locationState?.text8 || locationState?.text9 || locationState?.text10 || locationState?.text11
+        || locationState?.text12 || locationState?.text13 || locationState?.text13 || locationState?.text14 ||
+        locationState?.text15 || locationState?.text16 || locationState?.text17 || locationState?.text18 || locationState?.text19 ||
+        locationState?.text20 || locationState?.text21 || locationState?.text22 || locationState?.text23 || locationState?.text24 ||
+        locationState?.text25 || locationState?.text26 || locationState?.text27 || locationState?.text28 || locationState?.text29 || 
+        locationState?.text30 || locationState?.text31 || locationState?.text32 || locationState?.text33 || locationState?.text34 ||
+        locationState?.SelectColor || locationState?.SelectColor2  || locationState?.SelectColor3 || locationState?.SelectColor4 || locationState?.SelectColor5
+        || locationState?.SelectColor6 || locationState?.SelectColor7 || locationState?.SelectColor8 || locationState?.SelectColor9 || locationState?.SelectColor10
+        || locationState?.SelectColor11 || locationState?.SelectColor12 || locationState?.SelectColor13 || locationState?.SelectColor14 || locationState?.SelectColor15
+        || locationState?.SelectColor16 || locationState?.SelectColor17
+
       ) {
         button.style.display = "block"
         button2.style.display = "block"
