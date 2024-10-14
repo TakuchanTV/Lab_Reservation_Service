@@ -46,17 +46,36 @@ export const ReservationTimeTable = () => {
     
     const button = document.getElementById("reservebutton") as HTMLInputElement
     const button2 = document.getElementById("reservebutton2") as HTMLInputElement
+    const button3 = document.getElementById("reservebutton3") as HTMLInputElement
+    const button4 = document.getElementById("reservebutton4") as HTMLInputElement
+    const button5 = document.getElementById("reservebutton5") as HTMLInputElement
+    const button6 = document.getElementById("reservebutton6") as HTMLInputElement
+    const button7 = document.getElementById("reservebutton7") as HTMLInputElement
+    const button8 = document.getElementById("reservebutton8") as HTMLInputElement
+    const button9 = document.getElementById("reservebutton9") as HTMLInputElement
+    const button10 = document.getElementById("reservebutton10") as HTMLInputElement
+    const button11 = document.getElementById("reservebutton11") as HTMLInputElement
+    const button11 = document.getElementById("reservebutton11") as HTMLInputElement
+    const button12 = document.getElementById("reservebutton12") as HTMLInputElement
+    const button13 = document.getElementById("reservebutton13") as HTMLInputElement
+    const button14 = document.getElementById("reservebutton14") as HTMLInputElement
+    const button15 = document.getElementById("reservebutton15") as HTMLInputElement
+    const button16 = document.getElementById("reservebutton16") as HTMLInputElement
+    const button17 = document.getElementById("reservebutton17") as HTMLInputElement
 
     if (button) {
-      if (locationState?.text|| locationState?.text2 || locationState?.SelectColor ||
-        locationState?.text3 || locationState?.text4 || locationState?.SelectColor2
+      if (locationState?.text|| locationState?.text2 || locationState?.SelectColor ||locationState?.text3 
+        || locationState?.text4 || locationState?.SelectColor2 || locationState?.text5 || locationState?.text6 || 
+        locationState?.SelectColor3 
       ) {
         button.style.display = "block"
         button2.style.display = "block"
+        button3.style.display = "block"
         console.log("button is block")
       }else {
         button.style.display = "none"
         button2.style.display = "none"
+        button3.style.display = "none"
         console.log("button is none")
       }
     }
@@ -546,6 +565,7 @@ const BacktoPage17 = () => {
       <Deletebutton BgColor="" hoverBgColor="green" textColor="" hovertextColor="" onClick={handleDeleted}>削除します</Deletebutton>
       <Sbutton id="reservebutton"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage}>予約を変更する</Sbutton>
       <Sbutton2 id="reservebutton2"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage2}>予約を変更する</Sbutton2>
+      <Sbutton3 id="reservebutton3"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage3}>予約を変更する</Sbutton3>
     </div>
    ) 
 }
@@ -639,7 +659,22 @@ export const Sbutton2 = styled.button<Props2>`
   };
 
   position: fixed;
-  top: 150px;
+  top: 145px;
+  right: -300px;
+  /* display: none; */
+`
+export const Sbutton3 = styled.button<Props2>`
+ border-radius: 16px;
+ background-color: ${props => props.BgColor || 'white'};
+  color: ${props => props.textColor || 'black'};
+  &:hover{
+   cursor: pointer;
+   background-color: ${props => props.hoverBgColor || 'white'};
+   color: ${props => props.hovertextColor || 'black'};
+  };
+
+  position: fixed;
+  top: 180px;
   right: -300px;
   /* display: none; */
 `
