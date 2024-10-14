@@ -43,6 +43,32 @@ export const ReservationTimeTable = () => {
   const [colors, setColors] = useState<SelectColors | null>(null);
 
   useEffect(() => {
+    
+    const button = document.getElementById("reservebutton") as HTMLInputElement
+    const button2 = document.getElementById("reservebutton2") as HTMLInputElement
+
+    if (button) {
+      if (locationState?.text|| locationState?.text2 || locationState?.SelectColor ||
+        locationState?.text3 || locationState?.text4 || locationState?.SelectColor2
+      ) {
+        button.style.display = "block"
+        button2.style.display = "block"
+        console.log("button is block")
+      }else {
+        button.style.display = "none"
+        button2.style.display = "none"
+        console.log("button is none")
+      }
+    }
+    // const button = document.getElementById("reservebutton") as HTMLInputElement
+    // if (texts|| colors) {
+    //   button.style.display = "block"
+    //   console.log("button is block")
+    // } else {
+    //   button.style.display = "none"
+    //   console.log("button is none")
+    // }  
+    
     const storedTexts = localStorage.getItem("Texts");
     const storedColors = localStorage.getItem("SelectColors");
 
@@ -51,8 +77,17 @@ export const ReservationTimeTable = () => {
       setColors(JSON.parse(storedColors));
     }
   },[])
-
-
+  
+  // useEffect(() => {
+  //   const button = document.getElementById("reservebutton")
+  //   if (texts?.text || texts?.text2 || colors?.SelectColor) {
+  //     if (button?.style.display === 'none') {
+  //       button.style.display = 'block' 
+  //     } 
+  //   }
+  // },[texts,colors])
+  
+  
   const locationState:Location | null = location.state;
 
   if (!locationState) {
@@ -60,6 +95,7 @@ export const ReservationTimeTable = () => {
     return null;
   }
 
+  
 
   // const MyComponents = () => {
   //   useEffect(() => {
@@ -98,6 +134,28 @@ const handleDeleted = () => {
  setTexts(null);
  setColors(null);
 }
+
+// window.addEventListener('onLoad', function () {
+//   const text:Texts = location.state;
+//   const text2:Texts = location.state;
+//   const SelectColor:SelectColors = location.state;
+//   const button = document.getElementById("reservebutton");
+//   console.log(button)
+//   // const Object = {
+//   //    text:locationState,
+//   //    text2:locationState,
+//   //    color:locationState
+//   // }
+
+//   if (text) {
+//     if (button?.style.display) {
+//  button.style.display = 'block'
+//     }
+//   }
+// })
+
+
+
 
 const BacktoPage = () => {
 if(window.confirm("予約のページに戻りますか?")){
@@ -356,6 +414,9 @@ const BacktoPage17 = () => {
   }
   }
 
+  
+
+
 
 
 
@@ -378,13 +439,13 @@ const BacktoPage17 = () => {
     <div>
       <STable border={1}>
         <tr>
-         <STd STdColor={colors?.SelectColor || locationState.SelectColor} onClick={BacktoPage} >
+         <STd STdColor={colors?.SelectColor || locationState.SelectColor}  >
             {texts?.text || locationState.text} {texts?.text2 || locationState.text2}
           <br />
           </STd>
          </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor2 || locationState.SelectColor2} onClick={BacktoPage2}>
+            <STd STdColor={colors?.SelectColor2 || locationState.SelectColor2} >
              {texts?.text3 ||locationState.text3}  {texts?.text4 ||locationState.text4}
             <br />
             </STd>
@@ -482,8 +543,9 @@ const BacktoPage17 = () => {
       </STable>
 
       <Storedbutton BgColor="" hoverBgColor="green" textColor="" hovertextColor="" onClick={handleStored}>保存します</Storedbutton>
-      {/* <Sbutton2 BgColor="" hoverBgColor="green" textColor="" hovertextColor="" onClick={handleDeleted}>削除します</Sbutton2> */}
-      <Sbutton BgColor="" hoverBgColor="green" textColor="" hovertextColor="" onClick={handleDeleted}>削除します</Sbutton>
+      <Deletebutton BgColor="" hoverBgColor="green" textColor="" hovertextColor="" onClick={handleDeleted}>削除します</Deletebutton>
+      <Sbutton id="reservebutton"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage}>予約を変更する</Sbutton>
+      <Sbutton2 id="reservebutton2"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage2}>予約を変更する</Sbutton2>
     </div>
    ) 
 }
@@ -532,25 +594,25 @@ const BacktoPage17 = () => {
 
   position: fixed;
   top: 110px;
-  right: -350px;
+  right: -400px;
   /* display: none; */
 `
- 
-//  export const Sbutton2 = styled.button<Props2>`
-//  border-radius: 16px;
-//  background-color: ${props => props.BgColor || 'white'};
-//   color: ${props => props.textColor || 'black'};
-//   &:hover{
-//    cursor: pointer;
-//    background-color: ${props => props.hoverBgColor || 'white'};
-//    color: ${props => props.hovertextColor || 'black'};
-//   };
+export const Deletebutton = styled.button<Props2>`
+border-radius: 16px;
+background-color: ${props => props.BgColor || 'white'};
+ color: ${props => props.textColor || 'black'};
+ &:hover{
+  cursor: pointer;
+  background-color: ${props => props.hoverBgColor || 'white'};
+  color: ${props => props.hovertextColor || 'black'};
+ };
 
-//   position: fixed;
-//   top: 110px;
-//   right: -380px;
-//   /* display: none; */
-// `
+ position: fixed;
+ top: 110px;
+ right: -500px;
+ /* display: none; */
+`
+
 export const Sbutton = styled.button<Props2>`
  border-radius: 16px;
  background-color: ${props => props.BgColor || 'white'};
@@ -563,9 +625,26 @@ export const Sbutton = styled.button<Props2>`
 
   position: fixed;
   top: 110px;
-  right: -180px;
+  right: -300px;
   /* display: none; */
 `
+export const Sbutton2 = styled.button<Props2>`
+ border-radius: 16px;
+ background-color: ${props => props.BgColor || 'white'};
+  color: ${props => props.textColor || 'black'};
+  &:hover{
+   cursor: pointer;
+   background-color: ${props => props.hoverBgColor || 'white'};
+   color: ${props => props.hovertextColor || 'black'};
+  };
+
+  position: fixed;
+  top: 150px;
+  right: -300px;
+  /* display: none; */
+`
+
+ 
 
 
 
