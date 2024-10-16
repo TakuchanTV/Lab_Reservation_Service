@@ -5,7 +5,11 @@ import { Link, useNavigate } from "react-router-dom"
 import { Ids } from "./IdModules";
 export const ReservationList = () => {
    const navigate = useNavigate();
-   const handleClick = () =>  {
+   const handleClick_1 = () =>  {
+    navigate("/ReservationPage");
+    localStorage.clear()
+   }
+   const handleClick = () => {
     navigate("/ReservationPage");
    }
    return(
@@ -17,7 +21,7 @@ export const ReservationList = () => {
            {Ids.leftOil}
             <br />
             <Link to="/ReservationPage" >
-               <Sbutton hoverBgColor="#e85252" onClick={handleClick} >予約する</Sbutton>
+               <Sbutton hoverBgColor="#e85252" onClick={handleClick_1} >予約する</Sbutton>
               </Link>
           </td>
          </tr>
