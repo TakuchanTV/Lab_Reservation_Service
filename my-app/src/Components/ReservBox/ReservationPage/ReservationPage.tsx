@@ -145,7 +145,7 @@ const STh = styled.th`
 const STr = styled.tr`
   margin-right: 40px;
 `
- const SResevButton = styled.button<Props>`
+ export const SResevButton = styled.button<Props>`
   margin: 5px;
   border-radius: 16px;
   text-align  : center ;

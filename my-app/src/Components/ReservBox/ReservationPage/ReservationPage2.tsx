@@ -63,8 +63,6 @@ interface Props {
         text3:text3 || '',
         text4:text4 || '',
         SelectColor2:SelectColor2 || '',
-
-
       }
     })
    }
