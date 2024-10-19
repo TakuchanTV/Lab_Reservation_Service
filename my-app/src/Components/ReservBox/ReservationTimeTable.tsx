@@ -1,7 +1,7 @@
 //ReservationTimeTable.tsx//
 
 import styled from "styled-components"
-import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import { useEffect } from "react";
 
@@ -70,56 +70,94 @@ export const ReservationTimeTable = () => {
 
     
     if (button) {
-      if (locationState?.text|| locationState?.text2 || locationState?.SelectColor) {
+      if (localStorage.hasOwnProperty("text") || localStorage.hasOwnProperty("text2") 
+      || localStorage.hasOwnProperty("SelectColor")) 
+      {
         const btn = button.style.display = "block"
-        localStorage.setItem("btn",btn)
-        console.log("保存されました")
+        localStorage.setItem("btn",btn);
+        
+        const existingText = JSON.parse(localStorage.getItem("text") || "{}");
+        const existingText2 = JSON.parse(localStorage.getItem("text2") || "{}");
+        const existingColor = JSON.parse(localStorage.getItem("SelectColor") || "{}");
+
+       if (existingText || existingText2 || existingColor) {
+        setTexts(prevTexts => ({
+          ...prevTexts,
+          text: existingText.text || prevTexts?.text,
+          text2: existingText2.text2 || prevTexts?.text2,
+          ...existingText,
+          ...existingText2
+
+        }));
+
+        setColors(prevColors => ({
+          ...prevColors,
+          SelectColor: existingColor.SelectColor || prevColors?.SelectColor,
+          ...existingColor
+        
+        }));
+        console.log("作動しています")
+       }else{
+        console.log("作動していません")
+       }
+      
+      
+
       }else {
         const btn = button.style.display = "none"
-        localStorage.removeItem(btn)
-        console.log("削除されました")
+        localStorage.removeItem(btn);
+        // console.log("削除されました");
       }
 
-      if (locationState?.text3 || locationState?.text4 || locationState?.SelectColor2){
+      if (localStorage.hasOwnProperty("text3") || localStorage.hasOwnProperty("text4") 
+        || localStorage.hasOwnProperty("SelectColor2")){
          const btn2 = button2.style.display = "block"
-        localStorage.setItem("btn2",btn2)
-        console.log("保存されました")
+        localStorage.setItem("btn2",btn2);
+        // console.log("保存されました2");
       }else {
         const btn2 =  button2.style.display = "none"
-        localStorage.removeItem(btn2)
+        localStorage.removeItem(btn2);
+        // console.log("削除されました2");
+
       } 
 
       if (locationState?.text5 || locationState?.text6 || locationState?.SelectColor3){
         const btn3 = button3.style.display = "block"
-        localStorage.setItem("btn3",btn3)
-        console.log("保存されました")
+        localStorage.setItem("btn3",btn3);
+        // console.log("保存されました3");
       }else {
         const btn3 =  button3.style.display = "none"
-        localStorage.removeItem(btn3)
+        localStorage.removeItem(btn3);
+        // console.log("削除されました3");
+
       }
 
       if (locationState?.text7 || locationState?.text8 || locationState?.SelectColor4){
         const btn4 = button4.style.display = "block"
-        localStorage.setItem("btn4",btn4)
-        console.log("保存されました")
+        localStorage.setItem("btn4",btn4);
+        // console.log("保存されました");
       }else {
         const btn4 =  button4.style.display = "none"
-        localStorage.removeItem(btn4)
+        localStorage.removeItem(btn4);
+        // console.log("削除されました4");
+
       }
 
       if (locationState?.text9 || locationState?.text10 || locationState?.SelectColor5){
         const btn5 = button5.style.display = "block"
-        localStorage.setItem("btn5",btn5)
-        console.log("保存されました")
+        localStorage.setItem("btn5",btn5);
+        // console.log("保存されました");
       }else {
         const btn5 =  button5.style.display = "none"
-        localStorage.removeItem(btn5)
+        localStorage.removeItem(btn5);
+        // console.log("削除されました5");
+
       }
 
       if (locationState?.text11 || locationState?.text12 || locationState?.SelectColor6){
         const btn6 = button6.style.display = "block"
         localStorage.setItem("btn6",btn6)
-        console.log("保存されました")
+        // console.log("保存されました")
       }else {
         const btn6 =  button6.style.display = "none"
         localStorage.removeItem(btn6)
@@ -128,7 +166,7 @@ export const ReservationTimeTable = () => {
       if (locationState?.text13 || locationState?.text14 || locationState?.SelectColor7){
         const btn7 = button7.style.display = "block"
         localStorage.setItem("btn7",btn7)
-        console.log("保存されました")
+        // console.log("保存されました")
       }else {
         const btn7 =  button7.style.display = "none"
         localStorage.removeItem(btn7)
@@ -137,7 +175,7 @@ export const ReservationTimeTable = () => {
       if (locationState?.text15 || locationState?.text16 || locationState?.SelectColor8){
         const btn8 = button8.style.display = "block"
         localStorage.setItem("btn8",btn8)
-        console.log("保存されました")
+        // console.log("保存されました")
       }else {
         const btn8 =  button8.style.display = "none"
         localStorage.removeItem(btn8)
@@ -146,7 +184,7 @@ export const ReservationTimeTable = () => {
       if (locationState?.text17 || locationState?.text18 || locationState?.SelectColor9){
         const btn9 = button9.style.display = "block"
         localStorage.setItem("btn9",btn9)
-        console.log("保存されました")
+        // console.log("保存されました")
       }else {
         const btn9 =  button9.style.display = "none"
         localStorage.removeItem(btn9)
@@ -155,7 +193,7 @@ export const ReservationTimeTable = () => {
       if (locationState?.text19 || locationState?.text20 || locationState?.SelectColor10){
         const btn10 = button10.style.display = "block"
         localStorage.setItem("btn10",btn10)
-        console.log("保存されました")
+        // console.log("保存されました")
       }else {
         const btn10 = button10.style.display = "none"
         localStorage.removeItem(btn10)
@@ -164,7 +202,7 @@ export const ReservationTimeTable = () => {
       if (locationState?.text21 || locationState?.text22 || locationState?.SelectColor11){
         const btn11 = button11.style.display = "block"
         localStorage.setItem("btn11",btn11)
-        console.log("保存されました")
+        // console.log("保存されました")
       }else {
         const btn11 =  button11.style.display = "none"
         localStorage.removeItem(btn11)
@@ -173,7 +211,7 @@ export const ReservationTimeTable = () => {
       if (locationState?.text23 || locationState?.text24 || locationState?.SelectColor12){
         const btn12 = button12.style.display = "block"
         localStorage.setItem("btn12",btn12)
-        console.log("保存されました")
+        // console.log("保存されました")
       }else {
         const btn12 =  button12.style.display = "none"
         localStorage.removeItem(btn12)
@@ -182,7 +220,7 @@ export const ReservationTimeTable = () => {
       if (locationState?.text25 || locationState?.text26 || locationState?.SelectColor13){
         const btn13 = button13.style.display = "block"
         localStorage.setItem("btn13",btn13)
-        console.log("保存されました")
+        // console.log("保存されました")
       }else {
         const btn13 =  button13.style.display = "none"
         localStorage.removeItem(btn13)
@@ -219,7 +257,41 @@ export const ReservationTimeTable = () => {
         const btn17 =  button17.style.display = "none"
         localStorage.removeItem(btn17)
       } 
+    }else{
+      console.log("buttonはfalse")
     }
+      
+
+    // const Storedtext = localStorage.getItem("text");
+    // const Storedtext2 = localStorage.getItem("text2");
+    // const StoredColor = localStorage.getItem("SelectColor",);
+
+    // if (Storedtext) {
+    //   (JSON.parse(Storedtext));
+    // }else{
+    //   console.log("Storedtextの意味がない")
+    // }
+    // if (Storedtext2) {
+    //   (JSON.parse(Storedtext2));
+    // }else{
+    //   console.log("Storedtext2の意味がない")
+    // }
+    // if (StoredColor) {
+    //   (JSON.parse(StoredColor));
+    // }else{
+    //   console.log("StoredColorの意味がない")
+    // }
+    
+    // const storedtext = JSON.parse(localStorage.getItem("text") || "{}");
+    // const storedtext2 = JSON.parse(localStorage.getItem("text2") || "{}");
+    // const storedColors = JSON.parse(localStorage.getItem("SelectColor") || "");
+   
+    // if (storedtext && storedColors) {
+    //   setTexts(storedtext);
+    //   setTexts(storedtext2);
+    //   setColors(storedColors);
+    // }
+    
     
     // const button = document.getElementById("reservebutton") as HTMLInputElement
     // if (texts|| colors) {
@@ -230,13 +302,9 @@ export const ReservationTimeTable = () => {
     //   console.log("button is none")
     // }  
     
-    const storedTexts = localStorage.getItem("Texts");
-    const storedColors = localStorage.getItem("SelectColors");
-   
-    if (storedTexts && storedColors) {
-      setTexts(JSON.parse(storedTexts));
-      setColors(JSON.parse(storedColors));
-    }
+    
+    
+    
     
     // const storedButton = localStorage.getItem("btn")?? "";
     // const storedButton2 = localStorage.getItem("btn2")?? "";
@@ -244,7 +312,7 @@ export const ReservationTimeTable = () => {
     // button.style.display = storedButton;
     // button2.style.display = storedButton2;
 
-  },[])
+    },[])
   
   // useEffect(() => {
   //   const button = document.getElementById("reservebutton")
@@ -281,19 +349,36 @@ export const ReservationTimeTable = () => {
   }
 
   const handleStored = () => {
-    const existingTexts = JSON.parse(localStorage.getItem("Texts") || "{}");
-    const existingColors = JSON.parse(localStorage.getItem("SelectColors") || "{}");
+    const existingText = JSON.parse(localStorage.getItem("text") || "{}");
+    const existingText2 = JSON.parse(localStorage.getItem("text2") || "{}");
+    const existingColor = JSON.parse(localStorage.getItem("SelectColor") || "{}");
 
     
     const texts: Texts = locationState;
     const colors: SelectColors = locationState;
     
 
-    const updatedTexts = {...existingTexts,...texts};
-    const updatedColors = {...existingColors,...colors};
+    const updatedText = {...existingText,...texts};
+    const updatedText2 = {...existingText2,...texts};
+    const updatedColors = {...existingColor,...colors};
     
-    localStorage.setItem("Texts",JSON.stringify(updatedTexts));
+    localStorage.setItem("Texts",JSON.stringify(updatedText));
+    localStorage.setItem("Texts",JSON.stringify(updatedText2));
     localStorage.setItem("SelectColors",JSON.stringify(updatedColors))
+    
+    // const existingTexts = JSON.parse(localStorage.getItem("Texts") || "{}");
+    // const existingColors = JSON.parse(localStorage.getItem("SelectColors") || "{}");
+
+    
+    // const texts: Texts = locationState;
+    // const colors: SelectColors = locationState;
+    
+
+    // const updatedTexts = {...existingTexts,...texts};
+    // const updatedColors = {...existingColors,...colors};
+    
+    // localStorage.setItem("Texts",JSON.stringify(updatedTexts));
+    // localStorage.setItem("SelectColors",JSON.stringify(updatedColors))
     
     
 
@@ -341,8 +426,9 @@ if(window.confirm("予約のページに戻りますか?")){
   delete updatedTexts.text2;
   delete updatedColors.SelectColor;
 
-  localStorage.setItem("Texts",JSON.stringify(updatedTexts));
-  localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
+  localStorage.setItem("text",JSON.stringify(updatedTexts));
+  localStorage.setItem("text2",JSON.stringify(updatedTexts));
+  localStorage.setItem("SelectColor",JSON.stringify(updatedColors));
 
   navigate("/ReservationPage")
 }
