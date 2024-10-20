@@ -67,7 +67,6 @@ export const ReservationTimeTable = () => {
     const button15 = document.getElementById("reservebutton15") as HTMLInputElement
     const button16 = document.getElementById("reservebutton16") as HTMLInputElement
     const button17 = document.getElementById("reservebutton17") as HTMLInputElement
-
     
     if (button) {
       if (localStorage.hasOwnProperty("text") || localStorage.hasOwnProperty("text2") 
@@ -79,29 +78,15 @@ export const ReservationTimeTable = () => {
         const existingText = JSON.parse(localStorage.getItem("text") || "{}");
         const existingText2 = JSON.parse(localStorage.getItem("text2") || "{}");
         const existingColor = JSON.parse(localStorage.getItem("SelectColor") || "{}");
-
-       if (existingText || existingText2 || existingColor) {
-        setTexts(prevTexts => ({
-          ...prevTexts,
-          text: existingText.text || prevTexts?.text,
-          text2: existingText2.text2 || prevTexts?.text2,
-          ...existingText,
-          ...existingText2
-
-        }));
-
-        setColors(prevColors => ({
-          ...prevColors,
-          SelectColor: existingColor.SelectColor || prevColors?.SelectColor,
-          ...existingColor
-        
-        }));
-        console.log("作動しています")
-       }else{
-        console.log("作動していません")
+       if (existingText) {
+        setTexts(existingText)
        }
-      
-      
+       if (existingText2) {
+        setTexts(existingText2)
+       }
+       if (existingColor) {
+        setColors(existingColor)
+       }
 
       }else {
         const btn = button.style.display = "none"
@@ -118,7 +103,6 @@ export const ReservationTimeTable = () => {
         const btn2 =  button2.style.display = "none"
         localStorage.removeItem(btn2);
         // console.log("削除されました2");
-
       } 
 
       if (locationState?.text5 || locationState?.text6 || locationState?.SelectColor3){
