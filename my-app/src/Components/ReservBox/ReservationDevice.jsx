@@ -70,7 +70,7 @@ export const ReservationList = () => {
       localStorage.removeItem("text31","text32","SelectColor16");
     };
     const handleClick_Stirrer = () => {
-      navigate("/ReservationPage117");
+      navigate("/ReservationPage17");
       localStorage.removeItem("text33","text34","SelectColor17");
     };
 
