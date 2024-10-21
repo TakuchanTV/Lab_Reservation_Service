@@ -78,6 +78,9 @@ export const ReservationTimeTable = () => {
         const existingText = JSON.parse(localStorage.getItem("text") || "{}");
         const existingText2 = JSON.parse(localStorage.getItem("text2") || "{}");
         const existingColor = JSON.parse(localStorage.getItem("SelectColor") || "{}");
+
+        handleStored();
+
        if (existingText) {
         setTexts(existingText)
        }
@@ -346,9 +349,9 @@ export const ReservationTimeTable = () => {
     const updatedText2 = {...existingText2,...texts};
     const updatedColors = {...existingColor,...colors};
     
-    localStorage.setItem("Texts",JSON.stringify(updatedText));
-    localStorage.setItem("Texts",JSON.stringify(updatedText2));
-    localStorage.setItem("SelectColors",JSON.stringify(updatedColors))
+    localStorage.setItem("text",JSON.stringify(updatedText));
+    localStorage.setItem("text2",JSON.stringify(updatedText2));
+    localStorage.setItem("SelectColor",JSON.stringify(updatedColors))
     
     // const existingTexts = JSON.parse(localStorage.getItem("Texts") || "{}");
     // const existingColors = JSON.parse(localStorage.getItem("SelectColors") || "{}");
