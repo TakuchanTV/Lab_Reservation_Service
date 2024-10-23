@@ -70,78 +70,72 @@ export const ReservationTimeTable = () => {
     
     if (button) {
       if (localStorage.hasOwnProperty("text") || localStorage.hasOwnProperty("text2") 
-      || localStorage.hasOwnProperty("SelectColor")) 
-      {
-        const btn = button.style.display = "block"
-        localStorage.setItem("btn",btn);
+      || localStorage.hasOwnProperty("SelectColor")) {
+         button.style.display = "block"
         
-        const existingText = JSON.parse(localStorage.getItem("text") || "{}");
-        const existingText2 = JSON.parse(localStorage.getItem("text2") || "{}");
-        const existingColor = JSON.parse(localStorage.getItem("SelectColor") || "{}");
-
         handleStored();
+        //  const existingText = JSON.parse(localStorage.getItem("text") || "{}");
+        //  const existingText2 = JSON.parse(localStorage.getItem("text2") || "{}");
+        //  const existingColor = JSON.parse(localStorage.getItem("SelectColor") || "{}");
 
-       if (existingText) {
-        setTexts(existingText)
-       }
-       if (existingText2) {
-        setTexts(existingText2)
-       }
-       if (existingColor) {
-        setColors(existingColor)
-       }
+        // if (existingText) {
+        //   setTexts(existingText)
+        //  }
+        //  if (existingText2) {
+        //   setTexts(existingText2)
+        //  }
+        //  if (existingColor) {
+        //   setColors(existingColor)
+        //  }
+  
 
       }else {
-        const btn = button.style.display = "none"
-        localStorage.removeItem(btn);
-        // console.log("削除されました");
+      button.style.display = "none"
       }
 
       if (localStorage.hasOwnProperty("text3") || localStorage.hasOwnProperty("text4") 
         || localStorage.hasOwnProperty("SelectColor2")){
          const btn2 = button2.style.display = "block"
         localStorage.setItem("btn2",btn2);
-        // console.log("保存されました2");
+        handleStored2();
       }else {
         const btn2 =  button2.style.display = "none"
         localStorage.removeItem(btn2);
-        // console.log("削除されました2");
       } 
 
-      if (locationState?.text5 || locationState?.text6 || locationState?.SelectColor3){
+      if (localStorage.hasOwnProperty("text5") || localStorage.hasOwnProperty("text6") 
+        || localStorage.hasOwnProperty("SelectColor3")){
         const btn3 = button3.style.display = "block"
         localStorage.setItem("btn3",btn3);
-        // console.log("保存されました3");
+        // handleStored3();
       }else {
         const btn3 =  button3.style.display = "none"
         localStorage.removeItem(btn3);
-        // console.log("削除されました3");
-
       }
 
-      if (locationState?.text7 || locationState?.text8 || locationState?.SelectColor4){
+      if (localStorage.hasOwnProperty("text7") || localStorage.hasOwnProperty("text8") 
+        || localStorage.hasOwnProperty("SelectColor4")){
         const btn4 = button4.style.display = "block"
         localStorage.setItem("btn4",btn4);
         // console.log("保存されました");
       }else {
         const btn4 =  button4.style.display = "none"
         localStorage.removeItem(btn4);
-        // console.log("削除されました4");
 
       }
 
-      if (locationState?.text9 || locationState?.text10 || locationState?.SelectColor5){
+      if (localStorage.hasOwnProperty("text9") || (localStorage.hasOwnProperty("text10")
+       || localStorage.hasOwnProperty("SelectColor5"))){
         const btn5 = button5.style.display = "block"
         localStorage.setItem("btn5",btn5);
-        // console.log("保存されました");
       }else {
         const btn5 =  button5.style.display = "none"
         localStorage.removeItem(btn5);
-        // console.log("削除されました5");
 
       }
 
-      if (locationState?.text11 || locationState?.text12 || locationState?.SelectColor6){
+      if (localStorage.hasOwnProperty("text11") || (localStorage.hasOwnProperty("text12")) ||
+       (localStorage.hasOwnProperty("SelectColor6"))){
         const btn6 = button6.style.display = "block"
         localStorage.setItem("btn6",btn6)
         // console.log("保存されました")
@@ -150,7 +144,8 @@ export const ReservationTimeTable = () => {
         localStorage.removeItem(btn6)
       }
 
-      if (locationState?.text13 || locationState?.text14 || locationState?.SelectColor7){
+      if ((localStorage.hasOwnProperty("text13")) || (localStorage.hasOwnProperty("text14")) ||
+       (localStorage.hasOwnProperty("SelectColor7"))){
         const btn7 = button7.style.display = "block"
         localStorage.setItem("btn7",btn7)
         // console.log("保存されました")
@@ -159,7 +154,8 @@ export const ReservationTimeTable = () => {
         localStorage.removeItem(btn7)
       }
 
-      if (locationState?.text15 || locationState?.text16 || locationState?.SelectColor8){
+      if (localStorage.hasOwnProperty("text15") || (localStorage.hasOwnProperty("text16")) ||
+       (localStorage.hasOwnProperty("SelectColor8"))){
         const btn8 = button8.style.display = "block"
         localStorage.setItem("btn8",btn8)
         // console.log("保存されました")
@@ -168,7 +164,8 @@ export const ReservationTimeTable = () => {
         localStorage.removeItem(btn8)
       }
 
-      if (locationState?.text17 || locationState?.text18 || locationState?.SelectColor9){
+      if ((localStorage.hasOwnProperty("text17")) || (localStorage.hasOwnProperty("text18")) ||
+       (localStorage.hasOwnProperty("SelectColor9"))){
         const btn9 = button9.style.display = "block"
         localStorage.setItem("btn9",btn9)
         // console.log("保存されました")
@@ -177,7 +174,8 @@ export const ReservationTimeTable = () => {
         localStorage.removeItem(btn9)
       }
 
-      if (locationState?.text19 || locationState?.text20 || locationState?.SelectColor10){
+      if ((localStorage.hasOwnProperty("text19")) || (localStorage.hasOwnProperty("text20")) ||
+       (localStorage.hasOwnProperty("SelectColor10"))){
         const btn10 = button10.style.display = "block"
         localStorage.setItem("btn10",btn10)
         // console.log("保存されました")
@@ -186,7 +184,8 @@ export const ReservationTimeTable = () => {
         localStorage.removeItem(btn10)
       }
 
-      if (locationState?.text21 || locationState?.text22 || locationState?.SelectColor11){
+      if ((localStorage.hasOwnProperty("text21")) || (localStorage.hasOwnProperty("text22")) ||
+       (localStorage.hasOwnProperty("SelectColor11"))){
         const btn11 = button11.style.display = "block"
         localStorage.setItem("btn11",btn11)
         // console.log("保存されました")
@@ -195,7 +194,8 @@ export const ReservationTimeTable = () => {
         localStorage.removeItem(btn11)
       }
 
-      if (locationState?.text23 || locationState?.text24 || locationState?.SelectColor12){
+      if ((localStorage.hasOwnProperty("text23")) || (localStorage.hasOwnProperty("text24")) ||
+       (localStorage.hasOwnProperty("SelectColor12"))){
         const btn12 = button12.style.display = "block"
         localStorage.setItem("btn12",btn12)
         // console.log("保存されました")
@@ -204,7 +204,8 @@ export const ReservationTimeTable = () => {
         localStorage.removeItem(btn12)
       }
 
-      if (locationState?.text25 || locationState?.text26 || locationState?.SelectColor13){
+      if ((localStorage.hasOwnProperty("text25")) || (localStorage.hasOwnProperty("text26")) ||
+       (localStorage.hasOwnProperty("SelectColor13"))){
         const btn13 = button13.style.display = "block"
         localStorage.setItem("btn13",btn13)
         // console.log("保存されました")
@@ -213,7 +214,8 @@ export const ReservationTimeTable = () => {
         localStorage.removeItem(btn13)
       }
 
-      if (locationState?.text27 || locationState?.text28 || locationState?.SelectColor14){
+      if ((localStorage.hasOwnProperty("text27")) || (localStorage.hasOwnProperty("text28")) ||
+       (localStorage.hasOwnProperty("SelectColor14"))){
         const btn14 =  button14.style.display = "block"
         localStorage.setItem("btn14",btn14)
       }else {
@@ -221,7 +223,8 @@ export const ReservationTimeTable = () => {
         localStorage.removeItem(btn14)
       }
 
-      if (locationState?.text29 || locationState?.text30 || locationState?.SelectColor15){
+      if ((localStorage.hasOwnProperty("text29")) || (localStorage.hasOwnProperty("text30")) ||
+       (localStorage.hasOwnProperty("SelectColor15"))){
         const btn15 =  button15.style.display = "block"
         localStorage.setItem("btn15",btn15)
       }else {
@@ -229,7 +232,8 @@ export const ReservationTimeTable = () => {
         localStorage.removeItem(btn15)
       }
 
-      if (locationState?.text31 || locationState?.text32 || locationState?.SelectColor16){
+      if ((localStorage.hasOwnProperty("text31")) || (localStorage.hasOwnProperty("text32")) ||
+       (localStorage.hasOwnProperty("SelectColor16"))){
         const btn16 =  button16.style.display = "block"
         localStorage.setItem("btn16",btn16)
       }else {
@@ -237,7 +241,8 @@ export const ReservationTimeTable = () => {
         localStorage.removeItem(btn16)
       }
 
-      if (locationState?.text33 || locationState?.text34 || locationState?.SelectColor17){
+      if ((localStorage.hasOwnProperty("text33")) || (localStorage.hasOwnProperty("text34")) ||
+       (localStorage.hasOwnProperty("SelectColor17"))){
         const btn17 =  button17.style.display = "block"
         localStorage.setItem("btn17",btn17)
       }else {
@@ -246,69 +251,10 @@ export const ReservationTimeTable = () => {
       } 
     }else{
       console.log("buttonはfalse")
-    }
-      
-
-    // const Storedtext = localStorage.getItem("text");
-    // const Storedtext2 = localStorage.getItem("text2");
-    // const StoredColor = localStorage.getItem("SelectColor",);
-
-    // if (Storedtext) {
-    //   (JSON.parse(Storedtext));
-    // }else{
-    //   console.log("Storedtextの意味がない")
-    // }
-    // if (Storedtext2) {
-    //   (JSON.parse(Storedtext2));
-    // }else{
-    //   console.log("Storedtext2の意味がない")
-    // }
-    // if (StoredColor) {
-    //   (JSON.parse(StoredColor));
-    // }else{
-    //   console.log("StoredColorの意味がない")
-    // }
-    
-    // const storedtext = JSON.parse(localStorage.getItem("text") || "{}");
-    // const storedtext2 = JSON.parse(localStorage.getItem("text2") || "{}");
-    // const storedColors = JSON.parse(localStorage.getItem("SelectColor") || "");
-   
-    // if (storedtext && storedColors) {
-    //   setTexts(storedtext);
-    //   setTexts(storedtext2);
-    //   setColors(storedColors);
-    // }
-    
-    
-    // const button = document.getElementById("reservebutton") as HTMLInputElement
-    // if (texts|| colors) {
-    //   button.style.display = ""
-    //   console.log("button is block")
-    // } else {
-    //   button.style.display = "none"
-    //   console.log("button is none")
-    // }  
-    
-    
-    
-    
-    
-    // const storedButton = localStorage.getItem("btn")?? "";
-    // const storedButton2 = localStorage.getItem("btn2")?? "";
-
-    // button.style.display = storedButton;
-    // button2.style.display = storedButton2;
-
-    },[])
+    } },
+    [])
   
-  // useEffect(() => {
-  //   const button = document.getElementById("reservebutton")
-  //   if (texts?.text || texts?.text2 || colors?.SelectColor) {
-  //     if (button?.style.display === 'none') {
-  //       button.style.display = 'block' 
-  //     } 
-  //   }
-  // },[texts,colors])
+  
   
   
   const locationState:Location | null = location.state;
@@ -319,60 +265,80 @@ export const ReservationTimeTable = () => {
   }
 
   
-
-  // const MyComponents = () => {
-  //   useEffect(() => {
-  //     loadStoredData()
-  //   },[])
-  // }
-
   const handleClick = () => {
     if(window.confirm("前のページに戻りますか")) {
       navigate("/ReservationPage")
     }else{
      
     }
-    
   }
 
   const handleStored = () => {
+    
     const existingText = JSON.parse(localStorage.getItem("text") || "{}");
     const existingText2 = JSON.parse(localStorage.getItem("text2") || "{}");
     const existingColor = JSON.parse(localStorage.getItem("SelectColor") || "{}");
-
+    
     
     const texts: Texts = locationState;
     const colors: SelectColors = locationState;
+   
+     
+    const updatedText =  { ...existingText, ...texts };
+    const updatedText2 = { ...existingText2, ...texts };
+    const updatedColor = { ...existingColor, ...colors };
+
+    localStorage.setItem("text", JSON.stringify(updatedText));
+    localStorage.setItem("text2", JSON.stringify(updatedText2));
+    localStorage.setItem("SelectColor", JSON.stringify(updatedColor));
+
+    setTexts(existingText);
+    setTexts(existingText2);
+    setColors(existingColor);
+
+   
+    };
     
 
-    const updatedText = {...existingText,...texts};
-    const updatedText2 = {...existingText2,...texts};
-    const updatedColors = {...existingColor,...colors};
-    
-    localStorage.setItem("text",JSON.stringify(updatedText));
-    localStorage.setItem("text2",JSON.stringify(updatedText2));
-    localStorage.setItem("SelectColor",JSON.stringify(updatedColors))
-    
-    // const existingTexts = JSON.parse(localStorage.getItem("Texts") || "{}");
-    // const existingColors = JSON.parse(localStorage.getItem("SelectColors") || "{}");
+    const handleStored2 = () => {
+      
+      const existingText3 = JSON.parse(localStorage.getItem("text3") || "{}");
+      const existingText4 = JSON.parse(localStorage.getItem("text4") || "{}");
+      const existingColor2 = JSON.parse(localStorage.getItem("SelectColor2") || "{}");
+      
 
-    
-    // const texts: Texts = locationState;
-    // const colors: SelectColors = locationState;
-    
+      const texts: Texts = locationState;
+      const colors: SelectColors = locationState;
 
-    // const updatedTexts = {...existingTexts,...texts};
-    // const updatedColors = {...existingColors,...colors};
-    
-    // localStorage.setItem("Texts",JSON.stringify(updatedTexts));
-    // localStorage.setItem("SelectColors",JSON.stringify(updatedColors))
-    
-    
+      const updatedText3 = { ...existingText3, ...texts };
+      const updatedText4 = { ...existingText4, ...texts };
+      const updatedColor2 = { ...existingColor2, ...colors };
+      localStorage.setItem("text3", JSON.stringify(updatedText3));
+      localStorage.setItem("text4", JSON.stringify(updatedText4));
+      localStorage.setItem("SelectColor2", JSON.stringify(updatedColor2));
 
+      setTexts(existingText3);
+      setTexts(existingText4);
+      setColors(existingColor2);
+};
+  
+  const handleStored3 = () => {
 
+  const existingText = JSON.parse(localStorage.getItem("text5") || "{}");
+  const existingText2 = JSON.parse(localStorage.getItem("text6") || "{}");
+  const existingColor = JSON.parse(localStorage.getItem("SelectColor3") || "{}");
+  
+  const texts: Texts = locationState;
+  const colors: SelectColors = locationState
 
-    
+  const updatedText = { ...existingText, ...texts };
+  const updatedText2 = { ...existingText2, ...texts };
+  const updatedColor = { ...existingColor, ...colors };
+  localStorage.setItem("text5", JSON.stringify(updatedText));
+  localStorage.setItem("text6", JSON.stringify(updatedText2));
+  localStorage.setItem("SelectColor3", JSON.stringify(updatedColor));
 }
+
 
 const handleDeleted = () => {
  localStorage.removeItem("Texts");
@@ -381,26 +347,6 @@ const handleDeleted = () => {
  setTexts(null);
  setColors(null);
 }
-
-// window.addEventListener('onLoad', function () {
-//   const text:Texts = location.state;
-//   const text2:Texts = location.state;
-//   const SelectColor:SelectColors = location.state;
-//   const button = document.getElementById("reservebutton");
-//   console.log(button)
-//   // const Object = {
-//   //    text:locationState,
-//   //    text2:locationState,
-//   //    color:locationState
-//   // }
-
-//   if (text) {
-//     if (button?.style.display) {
-//  button.style.display = 'block'
-//     }
-//   }
-// })
-
 
 
 
@@ -430,8 +376,9 @@ const BacktoPage2 = () => {
     delete updatedTexts.text4;
     delete updatedColors.SelectColor2;
   
-    localStorage.setItem("Texts",JSON.stringify(updatedTexts));
-    localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
+    localStorage.setItem("text3",JSON.stringify(updatedTexts));
+    localStorage.setItem("text4",JSON.stringify(updatedTexts));
+    localStorage.setItem("SelectColor2",JSON.stringify(updatedColors));
   
     navigate("/ReservationPage2")
   }
@@ -445,8 +392,9 @@ const BacktoPage3 = () => {
     delete updatedTexts.text6;
     delete updatedColors.SelectColor3;
   
-    localStorage.setItem("Texts",JSON.stringify(updatedTexts));
-    localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
+    localStorage.setItem("text5",JSON.stringify(updatedTexts));
+    localStorage.setItem("text6",JSON.stringify(updatedTexts));
+    localStorage.setItem("SelectColor3",JSON.stringify(updatedColors));
   
     navigate("/ReservationPage3")
   }
@@ -661,26 +609,6 @@ const BacktoPage17 = () => {
     navigate("/ReservationPage17")
   }
   }
-
-  
-
-
-
-
-
-// const loadStoredData = () => {
-//   const storedTexts = localStorage.getItem("Texts");
-//   const storedColors = localStorage.getItem("SelectColors");
-
-//   if (storedTexts && storedColors) {
-//     const texts: Texts = JSON.parse(storedTexts);
-//     const colors: SelectColors = JSON.parse(storedColors);
-
-//     // 取得したデータを使用して必要な処理を行う
-//     console.log("Loaded Texts:", texts);
-//     console.log("Loaded SelectColors:", colors);
-//   }
-// }
 
    
    return(
