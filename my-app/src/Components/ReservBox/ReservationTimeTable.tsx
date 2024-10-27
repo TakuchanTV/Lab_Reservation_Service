@@ -1,7 +1,7 @@
 //ReservationTimeTable.tsx//
 
 import styled from "styled-components"
-import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import { useEffect } from "react";
 
@@ -33,7 +33,13 @@ interface SelectColors {
   SelectColor16:string,SelectColor17:string, 
 }
 
-interface Location extends Texts, SelectColors {}
+interface  Button{
+button:string, button2:string, button3:string,button4:string, button5:string, button6:string, button7:string, button8:string,
+button9:string, button10:string,button11:string, button12:string, button13:string, button14:string, button15:string,
+button16:string, button17:string
+}
+
+interface Location extends Texts, SelectColors, Button {}
 
 export const ReservationTimeTable = () => {
   const location = useLocation();
@@ -43,16 +49,226 @@ export const ReservationTimeTable = () => {
   const [colors, setColors] = useState<SelectColors | null>(null);
 
   useEffect(() => {
-    const storedTexts = localStorage.getItem("Texts");
-    const storedColors = localStorage.getItem("SelectColors");
+    
+    const button = document.getElementById("reservebutton") as HTMLInputElement
+    const button2 = document.getElementById("reservebutton2") as HTMLInputElement
+    const button3 = document.getElementById("reservebutton3") as HTMLInputElement
+    const button4 = document.getElementById("reservebutton4") as HTMLInputElement
+    const button5 = document.getElementById("reservebutton5") as HTMLInputElement
+    const button6 = document.getElementById("reservebutton6") as HTMLInputElement
+    const button7 = document.getElementById("reservebutton7") as HTMLInputElement
+    const button8 = document.getElementById("reservebutton8") as HTMLInputElement
+    const button9 = document.getElementById("reservebutton9") as HTMLInputElement
+    const button10 = document.getElementById("reservebutton10") as HTMLInputElement
+    const button11 = document.getElementById("reservebutton11") as HTMLInputElement
+    const button12 = document.getElementById("reservebutton12") as HTMLInputElement
+    const button13 = document.getElementById("reservebutton13") as HTMLInputElement
+    const button14 = document.getElementById("reservebutton14") as HTMLInputElement
+    const button15 = document.getElementById("reservebutton15") as HTMLInputElement
+    const button16 = document.getElementById("reservebutton16") as HTMLInputElement
+    const button17 = document.getElementById("reservebutton17") as HTMLInputElement
+    
+    if (button) {
+      if (localStorage.hasOwnProperty("text") || localStorage.hasOwnProperty("text2") 
+      || localStorage.hasOwnProperty("SelectColor")) {
+         button.style.display = "block"
 
-    if (storedTexts && storedColors) {
-      setTexts(JSON.parse(storedTexts));
-      setColors(JSON.parse(storedColors));
-    }
-  },[])
+         const existingText = JSON.parse(localStorage.getItem("text") || "{}");
+         const existingText2 = JSON.parse(localStorage.getItem("text2") || "{}");
+         const existingColor = JSON.parse(localStorage.getItem("SelectColor") || "{}");
+        handleStored();
 
+        // if (existingText) {
+        //   setTexts(existingText)
+        //  }
+        //  if (existingText2) {
+        //   setTexts(existingText2)
+        //  }
+        //  if (existingColor) {
+        //   setColors(existingColor)
+        //  }
 
+      }else {
+      button.style.display = "none"
+      }
+
+      if (localStorage.hasOwnProperty("text3") || localStorage.hasOwnProperty("text4") 
+        || localStorage.hasOwnProperty("SelectColor2")){
+         button2.style.display = "block"
+
+         const existingText3 = JSON.parse(localStorage.getItem("text3") || "{}");
+         const existingText4 = JSON.parse(localStorage.getItem("text4") || "{}");
+         const existingColor2 = JSON.parse(localStorage.getItem("SelectColor2") || "{}");
+        handleStored2();
+        // if (existingText3) {
+        //   setTexts(existingText3)
+        //  }
+        //  if (existingText4) {
+        //   setTexts(existingText4)
+        //  }
+        //  if (existingColor2) {
+        //   setColors(existingColor2)
+        //  }
+        
+        
+      }else {
+        button2.style.display = "none"
+      } 
+
+      if (localStorage.hasOwnProperty("text5") || localStorage.hasOwnProperty("text6") 
+        || localStorage.hasOwnProperty("SelectColor3")){
+        const btn3 = button3.style.display = "block"
+        localStorage.setItem("btn3",btn3);
+        handleStored3();
+      }else {
+        const btn3 =  button3.style.display = "none"
+        localStorage.removeItem(btn3);
+      }
+
+      if (localStorage.hasOwnProperty("text7") || localStorage.hasOwnProperty("text8") 
+        || localStorage.hasOwnProperty("SelectColor4")){
+        const btn4 = button4.style.display = "block"
+        localStorage.setItem("btn4",btn4);
+        // console.log("保存されました");
+      }else {
+        const btn4 =  button4.style.display = "none"
+        localStorage.removeItem(btn4);
+
+      }
+
+      if (localStorage.hasOwnProperty("text9") || (localStorage.hasOwnProperty("text10")
+       || localStorage.hasOwnProperty("SelectColor5"))){
+        const btn5 = button5.style.display = "block"
+        localStorage.setItem("btn5",btn5);
+      }else {
+        const btn5 =  button5.style.display = "none"
+        localStorage.removeItem(btn5);
+
+      }
+
+      if (localStorage.hasOwnProperty("text11") || (localStorage.hasOwnProperty("text12")) ||
+       (localStorage.hasOwnProperty("SelectColor6"))){
+        const btn6 = button6.style.display = "block"
+        localStorage.setItem("btn6",btn6)
+        // console.log("保存されました")
+      }else {
+        const btn6 =  button6.style.display = "none"
+        localStorage.removeItem(btn6)
+      }
+
+      if ((localStorage.hasOwnProperty("text13")) || (localStorage.hasOwnProperty("text14")) ||
+       (localStorage.hasOwnProperty("SelectColor7"))){
+        const btn7 = button7.style.display = "block"
+        localStorage.setItem("btn7",btn7)
+        // console.log("保存されました")
+      }else {
+        const btn7 =  button7.style.display = "none"
+        localStorage.removeItem(btn7)
+      }
+
+      if (localStorage.hasOwnProperty("text15") || (localStorage.hasOwnProperty("text16")) ||
+       (localStorage.hasOwnProperty("SelectColor8"))){
+        const btn8 = button8.style.display = "block"
+        localStorage.setItem("btn8",btn8)
+        // console.log("保存されました")
+      }else {
+        const btn8 =  button8.style.display = "none"
+        localStorage.removeItem(btn8)
+      }
+
+      if ((localStorage.hasOwnProperty("text17")) || (localStorage.hasOwnProperty("text18")) ||
+       (localStorage.hasOwnProperty("SelectColor9"))){
+        const btn9 = button9.style.display = "block"
+        localStorage.setItem("btn9",btn9)
+        // console.log("保存されました")
+      }else {
+        const btn9 =  button9.style.display = "none"
+        localStorage.removeItem(btn9)
+      }
+
+      if ((localStorage.hasOwnProperty("text19")) || (localStorage.hasOwnProperty("text20")) ||
+       (localStorage.hasOwnProperty("SelectColor10"))){
+        const btn10 = button10.style.display = "block"
+        localStorage.setItem("btn10",btn10)
+        // console.log("保存されました")
+      }else {
+        const btn10 = button10.style.display = "none"
+        localStorage.removeItem(btn10)
+      }
+
+      if ((localStorage.hasOwnProperty("text21")) || (localStorage.hasOwnProperty("text22")) ||
+       (localStorage.hasOwnProperty("SelectColor11"))){
+        const btn11 = button11.style.display = "block"
+        localStorage.setItem("btn11",btn11)
+        // console.log("保存されました")
+      }else {
+        const btn11 =  button11.style.display = "none"
+        localStorage.removeItem(btn11)
+      }
+
+      if ((localStorage.hasOwnProperty("text23")) || (localStorage.hasOwnProperty("text24")) ||
+       (localStorage.hasOwnProperty("SelectColor12"))){
+        const btn12 = button12.style.display = "block"
+        localStorage.setItem("btn12",btn12)
+        // console.log("保存されました")
+      }else {
+        const btn12 =  button12.style.display = "none"
+        localStorage.removeItem(btn12)
+      }
+
+      if ((localStorage.hasOwnProperty("text25")) || (localStorage.hasOwnProperty("text26")) ||
+       (localStorage.hasOwnProperty("SelectColor13"))){
+        const btn13 = button13.style.display = "block"
+        localStorage.setItem("btn13",btn13)
+        // console.log("保存されました")
+      }else {
+        const btn13 =  button13.style.display = "none"
+        localStorage.removeItem(btn13)
+      }
+
+      if ((localStorage.hasOwnProperty("text27")) || (localStorage.hasOwnProperty("text28")) ||
+       (localStorage.hasOwnProperty("SelectColor14"))){
+        const btn14 =  button14.style.display = "block"
+        localStorage.setItem("btn14",btn14)
+      }else {
+        const btn14 =  button14.style.display = "none"
+        localStorage.removeItem(btn14)
+      }
+
+      if ((localStorage.hasOwnProperty("text29")) || (localStorage.hasOwnProperty("text30")) ||
+       (localStorage.hasOwnProperty("SelectColor15"))){
+        const btn15 =  button15.style.display = "block"
+        localStorage.setItem("btn15",btn15)
+      }else {
+        const btn15 =  button15.style.display = "none"
+        localStorage.removeItem(btn15)
+      }
+
+      if ((localStorage.hasOwnProperty("text31")) || (localStorage.hasOwnProperty("text32")) ||
+       (localStorage.hasOwnProperty("SelectColor16"))){
+        const btn16 =  button16.style.display = "block"
+        localStorage.setItem("btn16",btn16)
+      }else {
+        const btn16 =  button16.style.display = "none"
+        localStorage.removeItem(btn16)
+      }
+
+      if ((localStorage.hasOwnProperty("text33")) || (localStorage.hasOwnProperty("text34")) ||
+       (localStorage.hasOwnProperty("SelectColor17"))){
+        const btn17 =  button17.style.display = "block"
+        localStorage.setItem("btn17",btn17)
+      }else {
+        const btn17 =  button17.style.display = "none"
+        localStorage.removeItem(btn17)
+      } 
+    }else{
+      console.log("buttonはfalse")
+    } },
+    [])
+  
+  
+  
+  
   const locationState:Location | null = location.state;
 
   if (!locationState) {
@@ -60,36 +276,87 @@ export const ReservationTimeTable = () => {
     return null;
   }
 
-
-  // const MyComponents = () => {
-  //   useEffect(() => {
-  //     loadStoredData()
-  //   },[])
-  // }
-
+  
   const handleClick = () => {
     if(window.confirm("前のページに戻りますか")) {
       navigate("/ReservationPage")
     }else{
      
     }
-    
   }
 
   const handleStored = () => {
-    const existingTexts = JSON.parse(localStorage.getItem("Texts") || "{}");
-    const existingColors = JSON.parse(localStorage.getItem("SelectColors") || "{}");
     
+    const existingText = JSON.parse(localStorage.getItem("text") || "{}");
+    const existingText2 = JSON.parse(localStorage.getItem("text2") || "{}");
+    const existingColor = JSON.parse(localStorage.getItem("SelectColor") || "{}");
+
     const texts: Texts = locationState;
     const colors: SelectColors = locationState;
 
-    const updatedTexts = {...existingTexts,...texts}
-    const updatedColors = {...existingColors,...colors}
+    const updatedText =  { ...existingText,...texts};
+    const updatedText2 = { ...existingText2,...texts};
+    const updatedColor = { ...existingColor,...colors};
+
+    localStorage.setItem("text", JSON.stringify(updatedText));
+    localStorage.setItem("text2", JSON.stringify(updatedText2));
+    localStorage.setItem("SelectColor", JSON.stringify(updatedColor));
+    if (existingText) {
+      setTexts(existingText)
+     }
+     if (existingText2) {
+      setTexts(existingText2)
+     }
+     if (existingColor) {
+      setColors(existingColor)
+     }
     
-    localStorage.setItem("Texts",JSON.stringify(updatedTexts));
-    localStorage.setItem("SelectColors",JSON.stringify(updatedColors))
+  
+};
     
+
+    const handleStored2 = () => {
+      const existingText3 = JSON.parse(localStorage.getItem("text3") || "{}");
+      const existingText4 = JSON.parse(localStorage.getItem("text4") || "{}");
+      const existingColor2 = JSON.parse(localStorage.getItem("SelectColor2") || "{}");
+      
+
+      const texts: Texts = locationState;
+      const colors: SelectColors = locationState;
+      
+
+      const updatedText3 = { ...existingText3,...texts};
+      const updatedText4 = { ...existingText4,...texts};
+      const updatedColor2 = { ...existingColor2,...colors};
+
+      localStorage.setItem("text3", JSON.stringify(updatedText3));
+      localStorage.setItem("text4", JSON.stringify(updatedText4));
+      localStorage.setItem("SelectColor2", JSON.stringify(updatedColor2));
+
+     
+
+      
+};
+  
+  const handleStored3 = () => {
+
+  const existingText5 = JSON.parse(localStorage.getItem("text5") || "{}");
+  const existingText6 = JSON.parse(localStorage.getItem("text6") || "{}");
+  const existingColor3 = JSON.parse(localStorage.getItem("SelectColor3") || "{}");
+  
+  const texts: Texts = locationState;
+  const colors: SelectColors = locationState;
+
+  const updatedText5 = { ...existingText5, ...texts };
+  const updatedText6 = { ...existingText6, ...texts };
+  const updatedColor3 = { ...existingColor3, ...colors };
+
+  localStorage.setItem("text5", JSON.stringify(updatedText5));
+  localStorage.setItem("text6", JSON.stringify(updatedText6));
+  localStorage.setItem("SelectColor3", JSON.stringify(updatedColor3));
+ 
 }
+
 
 const handleDeleted = () => {
  localStorage.removeItem("Texts");
@@ -99,17 +366,20 @@ const handleDeleted = () => {
  setColors(null);
 }
 
+
+
 const BacktoPage = () => {
 if(window.confirm("予約のページに戻りますか?")){
   const updatedTexts = {...texts};
   const updatedColors = {...colors};
  
-  delete updatedTexts.text;
-  delete updatedTexts.text2;
-  delete updatedColors.SelectColor;
+  // delete updatedTexts.text;
+  // delete updatedTexts.text2;
+  // delete updatedColors.SelectColor;
 
-  localStorage.setItem("Texts",JSON.stringify(updatedTexts));
-  localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
+  localStorage.setItem("text",JSON.stringify(updatedTexts));
+  localStorage.setItem("text2",JSON.stringify(updatedTexts));
+  localStorage.setItem("SelectColor",JSON.stringify(updatedColors));
 
   navigate("/ReservationPage")
 }
@@ -120,12 +390,13 @@ const BacktoPage2 = () => {
     const updatedTexts = {...texts};
     const updatedColors = {...colors};
    
-    delete updatedTexts.text3;
-    delete updatedTexts.text4;
-    delete updatedColors.SelectColor2;
+    // delete updatedTexts.text3;
+    // delete updatedTexts.text4;
+    // delete updatedColors.SelectColor2;
   
-    localStorage.setItem("Texts",JSON.stringify(updatedTexts));
-    localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
+    localStorage.setItem("text3",JSON.stringify(updatedTexts));
+    localStorage.setItem("text4",JSON.stringify(updatedTexts));
+    localStorage.setItem("SelectColor2",JSON.stringify(updatedColors));
   
     navigate("/ReservationPage2")
   }
@@ -135,12 +406,13 @@ const BacktoPage3 = () => {
     const updatedTexts = {...texts};
     const updatedColors = {...colors};
    
-    delete updatedTexts.text5;
-    delete updatedTexts.text6;
-    delete updatedColors.SelectColor3;
+    // delete updatedTexts.text5;
+    // delete updatedTexts.text6;
+    // delete updatedColors.SelectColor3;
   
-    localStorage.setItem("Texts",JSON.stringify(updatedTexts));
-    localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
+    localStorage.setItem("text5",JSON.stringify(updatedTexts));
+    localStorage.setItem("text6",JSON.stringify(updatedTexts));
+    localStorage.setItem("SelectColor3",JSON.stringify(updatedColors));
   
     navigate("/ReservationPage3")
   }
@@ -152,7 +424,7 @@ const BacktoPage4 = () => {
    
     delete updatedTexts.text7;
     delete updatedTexts.text8;
-    delete updatedColors.SelectColor3;
+    delete updatedColors.SelectColor4;
   
     localStorage.setItem("Texts",JSON.stringify(updatedTexts));
     localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
@@ -167,7 +439,7 @@ const BacktoPage5 = () => {
    
     delete updatedTexts.text9;
     delete updatedTexts.text10;
-    delete updatedColors.SelectColor4;
+    delete updatedColors.SelectColor5;
   
     localStorage.setItem("Texts",JSON.stringify(updatedTexts));
     localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
@@ -182,7 +454,7 @@ const BacktoPage6 = () => {
    
     delete updatedTexts.text11;
     delete updatedTexts.text12;
-    delete updatedColors.SelectColor5;
+    delete updatedColors.SelectColor6;
   
     localStorage.setItem("Texts",JSON.stringify(updatedTexts));
     localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
@@ -197,7 +469,7 @@ const BacktoPage7 = () => {
    
     delete updatedTexts.text13;
     delete updatedTexts.text14;
-    delete updatedColors.SelectColor6;
+    delete updatedColors.SelectColor7;
   
     localStorage.setItem("Texts",JSON.stringify(updatedTexts));
     localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
@@ -212,7 +484,7 @@ const BacktoPage8 = () => {
    
     delete updatedTexts.text15;
     delete updatedTexts.text16;
-    delete updatedColors.SelectColor7;
+    delete updatedColors.SelectColor8;
   
     localStorage.setItem("Texts",JSON.stringify(updatedTexts));
     localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
@@ -227,7 +499,7 @@ const BacktoPage9 = () => {
    
     delete updatedTexts.text17;
     delete updatedTexts.text18;
-    delete updatedColors.SelectColor8;
+    delete updatedColors.SelectColor9;
   
     localStorage.setItem("Texts",JSON.stringify(updatedTexts));
     localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
@@ -242,7 +514,7 @@ const BacktoPage10 = () => {
    
     delete updatedTexts.text19;
     delete updatedTexts.text20;
-    delete updatedColors.SelectColor9;
+    delete updatedColors.SelectColor10;
   
     localStorage.setItem("Texts",JSON.stringify(updatedTexts));
     localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
@@ -257,7 +529,7 @@ const BacktoPage11 = () => {
    
     delete updatedTexts.text21;
     delete updatedTexts.text22;
-    delete updatedColors.SelectColor10;
+    delete updatedColors.SelectColor11;
   
     localStorage.setItem("Texts",JSON.stringify(updatedTexts));
     localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
@@ -272,7 +544,7 @@ const BacktoPage12 = () => {
    
     delete updatedTexts.text23;
     delete updatedTexts.text24;
-    delete updatedColors.SelectColor11;
+    delete updatedColors.SelectColor12;
   
     localStorage.setItem("Texts",JSON.stringify(updatedTexts));
     localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
@@ -287,7 +559,7 @@ const BacktoPage13 = () => {
    
     delete updatedTexts.text25;
     delete updatedTexts.text26;
-    delete updatedColors.SelectColor12;
+    delete updatedColors.SelectColor13;
   
     localStorage.setItem("Texts",JSON.stringify(updatedTexts));
     localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
@@ -302,7 +574,7 @@ const BacktoPage14 = () => {
    
     delete updatedTexts.text27;
     delete updatedTexts.text28;
-    delete updatedColors.SelectColor13;
+    delete updatedColors.SelectColor14;
   
     localStorage.setItem("Texts",JSON.stringify(updatedTexts));
     localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
@@ -317,7 +589,7 @@ const BacktoPage15 = () => {
    
     delete updatedTexts.text29;
     delete updatedTexts.text30;
-    delete updatedColors.SelectColor14;
+    delete updatedColors.SelectColor15;
   
     localStorage.setItem("Texts",JSON.stringify(updatedTexts));
     localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
@@ -332,7 +604,7 @@ const BacktoPage16 = () => {
    
     delete updatedTexts.text31;
     delete updatedTexts.text32;
-    delete updatedColors.SelectColor15;
+    delete updatedColors.SelectColor16;
   
     localStorage.setItem("Texts",JSON.stringify(updatedTexts));
     localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
@@ -347,7 +619,7 @@ const BacktoPage17 = () => {
    
     delete updatedTexts.text33;
     delete updatedTexts.text34;
-    delete updatedColors.SelectColor16;
+    delete updatedColors.SelectColor17;
   
     localStorage.setItem("Texts",JSON.stringify(updatedTexts));
     localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
@@ -356,133 +628,136 @@ const BacktoPage17 = () => {
   }
   }
 
-
-
-
-// const loadStoredData = () => {
-//   const storedTexts = localStorage.getItem("Texts");
-//   const storedColors = localStorage.getItem("SelectColors");
-
-//   if (storedTexts && storedColors) {
-//     const texts: Texts = JSON.parse(storedTexts);
-//     const colors: SelectColors = JSON.parse(storedColors);
-
-//     // 取得したデータを使用して必要な処理を行う
-//     console.log("Loaded Texts:", texts);
-//     console.log("Loaded SelectColors:", colors);
-//   }
-// }
-
    
    return(
     <div>
       <STable border={1}>
         <tr>
-         <STd STdColor={colors?.SelectColor || locationState.SelectColor} onClick={BacktoPage} >
+         <STd STdColor={colors?.SelectColor || locationState.SelectColor}  >
             {texts?.text || locationState.text} {texts?.text2 || locationState.text2}
           <br />
           </STd>
          </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor2 || locationState.SelectColor2} onClick={BacktoPage2}>
+            <STd STdColor={colors?.SelectColor2 || locationState.SelectColor2} >
              {texts?.text3 ||locationState.text3}  {texts?.text4 ||locationState.text4}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor3 || locationState.SelectColor3} onClick={BacktoPage3}>
+            <STd STdColor={colors?.SelectColor3 || locationState.SelectColor3}>
               {texts?.text5 ||locationState.text5}  {texts?.text6 ||locationState.text6}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor4 || locationState.SelectColor4} onClick={BacktoPage4}>
+            <STd STdColor={colors?.SelectColor4 || locationState.SelectColor4} >
               {texts?.text7 ||locationState.text7}  {texts?.text8 ||locationState.text8}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor5 || locationState.SelectColor5} onClick={BacktoPage5}>
+            <STd STdColor={colors?.SelectColor5 || locationState.SelectColor5} >
               {texts?.text9 ||locationState.text9}  {texts?.text10 ||locationState.text10}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor6 || locationState.SelectColor6} onClick={BacktoPage6}>
+            <STd STdColor={colors?.SelectColor6 || locationState.SelectColor6} >
               {texts?.text11 || locationState.text11}  {texts?.text12 ||locationState.text12}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor7 || locationState.SelectColor7} onClick={BacktoPage7}>
+            <STd STdColor={colors?.SelectColor7 || locationState.SelectColor7} >
               {texts?.text13 ||locationState.text13}  {texts?.text14 ||locationState.text14}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor8 || locationState.SelectColor8} onClick={BacktoPage8}>
+            <STd STdColor={colors?.SelectColor8 || locationState.SelectColor8} >
               {texts?.text15 ||locationState.text15}  {texts?.text16 ||locationState.text16}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor9 || locationState.SelectColor9} onClick={BacktoPage9}>
+            <STd STdColor={colors?.SelectColor9 || locationState.SelectColor9} >
               {texts?.text17 ||locationState.text17}  {texts?.text18 ||locationState.text18}
               <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor10 || locationState.SelectColor10} onClick={BacktoPage10}>
+            <STd STdColor={colors?.SelectColor10 || locationState.SelectColor10} >
               {texts?.text19 ||locationState.text19}  {texts?.text20 ||locationState.text20}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor11 || locationState.SelectColor11} onClick={BacktoPage11}>
+            <STd STdColor={colors?.SelectColor11 || locationState.SelectColor11} >
               {texts?.text21 ||locationState.text21}  {texts?.text22 ||locationState.text22}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor12 || locationState.SelectColor12} onClick={BacktoPage12}>
+            <STd STdColor={colors?.SelectColor12 || locationState.SelectColor12} >
               {texts?.text23 ||locationState.text23}  {texts?.text24 ||locationState.text24}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor13 || locationState.SelectColor13} onClick={BacktoPage13}>
+            <STd STdColor={colors?.SelectColor13 || locationState.SelectColor13} >
               {texts?.text25 ||locationState.text25}  {texts?.text26 ||locationState.text26}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor14 || locationState.SelectColor14} onClick={BacktoPage14}>
+            <STd STdColor={colors?.SelectColor14 || locationState.SelectColor14} >
               {texts?.text27 ||locationState.text27}  {texts?.text28 ||locationState.text28}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor15 || locationState.SelectColor15} onClick={BacktoPage15}>
+            <STd STdColor={colors?.SelectColor15 || locationState.SelectColor15} >
               {texts?.text29 ||locationState.text29}  {texts?.text30 ||locationState.text30}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor16 || locationState.SelectColor16} onClick={BacktoPage16}>
+            <STd STdColor={colors?.SelectColor16 || locationState.SelectColor16} >
               {texts?.text31 ||locationState.text31}  {texts?.text32 ||locationState.text32}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor17 || locationState.SelectColor17} onClick={BacktoPage17}>
+            <STd STdColor={colors?.SelectColor17 || locationState.SelectColor17} >
               {texts?.text33 ||locationState.text33}  {texts?.text34 ||locationState.text34}
             <br />
             </STd>
           </tr>
       </STable>
 
-      <Sbutton BgColor="" hoverBgColor="green" textColor="" hovertextColor="" onClick={handleStored}>保存します</Sbutton>
-      <Sbutton2 BgColor="" hoverBgColor="green" textColor="" hovertextColor="" onClick={handleDeleted}>削除します</Sbutton2>
+      <Storedbutton BgColor="" hoverBgColor="green" textColor="" hovertextColor="" onClick={handleStored}>保存します</Storedbutton>
+      <Deletebutton BgColor="" hoverBgColor="green" textColor="" hovertextColor="" onClick={handleDeleted}>削除します</Deletebutton>
+      <div>
+      <Sbutton id="reservebutton"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage}>予約を変更する</Sbutton>
+      <Sbutton2 id="reservebutton2"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage2}>予約を変更する</Sbutton2>
+      <Sbutton3 id="reservebutton3"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage3}>予約を変更する</Sbutton3>
+      <Sbutton4 id="reservebutton4"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage4}>予約を変更する</Sbutton4>
+      <Sbutton5 id="reservebutton5"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage5}>予約を変更する</Sbutton5>
+      <Sbutton6 id="reservebutton6"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage6}>予約を変更する</Sbutton6>
+      <Sbutton7 id="reservebutton7"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage7}>予約を変更する</Sbutton7>
+      <Sbutton8 id="reservebutton8"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage8}>予約を変更する</Sbutton8>
+      <Sbutton9 id="reservebutton9"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage9}>予約を変更する</Sbutton9>
+      <Sbutton10 id="reservebutton10"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage10}>予約を変更する</Sbutton10>
+      <Sbutton11 id="reservebutton11"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage11}>予約を変更する</Sbutton11>
+      <Sbutton12 id="reservebutton12"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage12}>予約を変更する</Sbutton12>
+      <Sbutton13 id="reservebutton13"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage13}>予約を変更する</Sbutton13>
+      <Sbutton14 id="reservebutton14"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage14}>予約を変更する</Sbutton14>
+      <Sbutton15 id="reservebutton15"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage15}>予約を変更する</Sbutton15>
+      <Sbutton16 id="reservebutton16"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage16}>予約を変更する</Sbutton16>
+      <Sbutton17 id="reservebutton17"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage17}>予約を変更する</Sbutton17>
+      </div>
+      
     </div>
    ) 
 }
@@ -519,23 +794,7 @@ const BacktoPage17 = () => {
  `
  
  
-
- export const Sbutton = styled.button<Props2>`
-  border-radius: 16px;
-  background-color: ${props => props.BgColor || 'white'};
-   color: ${props => props.textColor || 'black'};
-   &:hover{
-    cursor: pointer;
-    background-color: ${props => props.hoverBgColor || 'white'};
-    color: ${props => props.hovertextColor || 'black'};
-   };
-
-   position: fixed;
-   top: 110px;
-   right: -275px;
-   /* display: none; */
- `
- export const Sbutton2 = styled.button<Props2>`
+ export const Storedbutton = styled.button<Props2>`
  border-radius: 16px;
  background-color: ${props => props.BgColor || 'white'};
   color: ${props => props.textColor || 'black'};
@@ -547,50 +806,302 @@ const BacktoPage17 = () => {
 
   position: fixed;
   top: 110px;
-  right: -380px;
+  right: -400px;
+  /* display: none; */
+`
+export const Deletebutton = styled.button<Props2>`
+border-radius: 16px;
+background-color: ${props => props.BgColor || 'white'};
+ color: ${props => props.textColor || 'black'};
+ &:hover{
+  cursor: pointer;
+  background-color: ${props => props.hoverBgColor || 'white'};
+  color: ${props => props.hovertextColor || 'black'};
+ };
+
+ position: fixed;
+ top: 110px;
+ right: -500px;
+ /* display: none; */
+`
+
+export const Sbutton = styled.button<Props2>`
+ border-radius: 16px;
+ background-color: ${props => props.BgColor || 'white'};
+  color: ${props => props.textColor || 'black'};
+  &:hover{
+   cursor: pointer;
+   background-color: ${props => props.hoverBgColor || 'white'};
+   color: ${props => props.hovertextColor || 'black'};
+  };
+
+  position: fixed;
+  top: 110px;
+  right: -180px;
+  margin-bottom: 5px;
+  /* display: none; */
+`
+export const Sbutton2 = styled.button<Props2>`
+ border-radius: 16px;
+ background-color: ${props => props.BgColor || 'white'};
+  color: ${props => props.textColor || 'black'};
+  &:hover{
+   cursor: pointer;
+   background-color: ${props => props.hoverBgColor || 'white'};
+   color: ${props => props.hovertextColor || 'black'};
+  };
+
+  position: fixed;
+  top: 150px;
+  right: -180px;
+  margin-bottom: 5px;
+  /* display: none; */
+`
+export const Sbutton3 = styled.button<Props2>`
+ border-radius: 16px;
+ background-color: ${props => props.BgColor || 'white'};
+  color: ${props => props.textColor || 'black'};
+  &:hover{
+   cursor: pointer;
+   background-color: ${props => props.hoverBgColor || 'white'};
+   color: ${props => props.hovertextColor || 'black'};
+  };
+
+  position: fixed;
+  top: 185px;
+  right: -180px;
+  margin-bottom: 5px;
+  /* display: none; */
+`
+export const Sbutton4 = styled.button<Props2>`
+ border-radius: 16px;
+ background-color: ${props => props.BgColor || 'white'};
+  color: ${props => props.textColor || 'black'};
+  &:hover{
+   cursor: pointer;
+   background-color: ${props => props.hoverBgColor || 'white'};
+   color: ${props => props.hovertextColor || 'black'};
+  };
+
+  position: fixed;
+  top: 223px;
+  right: -180px;
+  margin-bottom: 5px;
+  /* display: none; */
+`
+export const Sbutton5 = styled.button<Props2>`
+ border-radius: 16px;
+ background-color: ${props => props.BgColor || 'white'};
+  color: ${props => props.textColor || 'black'};
+  &:hover{
+   cursor: pointer;
+   background-color: ${props => props.hoverBgColor || 'white'};
+   color: ${props => props.hovertextColor || 'black'};
+  };
+
+  position: fixed;
+  top: 260px;
+  right: -180px;
+  margin-bottom: 5px;
+  /* display: none; */
+`
+export const Sbutton6 = styled.button<Props2>`
+ border-radius: 16px;
+ background-color: ${props => props.BgColor || 'white'};
+  color: ${props => props.textColor || 'black'};
+  &:hover{
+   cursor: pointer;
+   background-color: ${props => props.hoverBgColor || 'white'};
+   color: ${props => props.hovertextColor || 'black'};
+  };
+
+  position: fixed;
+  top: 295px;
+  right: -180px;
+  margin-bottom: 5px;
+  /* display: none; */
+`
+export const Sbutton7 = styled.button<Props2>`
+ border-radius: 16px;
+ background-color: ${props => props.BgColor || 'white'};
+  color: ${props => props.textColor || 'black'};
+  &:hover{
+   cursor: pointer;
+   background-color: ${props => props.hoverBgColor || 'white'};
+   color: ${props => props.hovertextColor || 'black'};
+  };
+
+  position: fixed;
+  top: 333px;
+  right: -180px;
+  margin-bottom: 5px;
+  /* display: none; */
+`
+export const Sbutton8 = styled.button<Props2>`
+ border-radius: 16px;
+ background-color: ${props => props.BgColor || 'white'};
+  color: ${props => props.textColor || 'black'};
+  &:hover{
+   cursor: pointer;
+   background-color: ${props => props.hoverBgColor || 'white'};
+   color: ${props => props.hovertextColor || 'black'};
+  };
+
+  position: fixed;
+  top: 370px;
+  right: -180px;
+  margin-bottom: 5px;
+  /* display: none; */
+`
+export const Sbutton9 = styled.button<Props2>`
+ border-radius: 16px;
+ background-color: ${props => props.BgColor || 'white'};
+  color: ${props => props.textColor || 'black'};
+  &:hover{
+   cursor: pointer;
+   background-color: ${props => props.hoverBgColor || 'white'};
+   color: ${props => props.hovertextColor || 'black'};
+  };
+
+  position: fixed;
+  top: 408px;
+  right: -180px;
+  margin-bottom: 5px;
+  /* display: none; */
+`
+export const Sbutton10 = styled.button<Props2>`
+ border-radius: 16px;
+ background-color: ${props => props.BgColor || 'white'};
+  color: ${props => props.textColor || 'black'};
+  &:hover{
+   cursor: pointer;
+   background-color: ${props => props.hoverBgColor || 'white'};
+   color: ${props => props.hovertextColor || 'black'};
+  };
+
+  position: fixed;
+  top: 445px;
+  right: -180px;
+  margin-bottom: 5px;
+  /* display: none; */
+`
+export const Sbutton11 = styled.button<Props2>`
+ border-radius: 16px;
+ background-color: ${props => props.BgColor || 'white'};
+  color: ${props => props.textColor || 'black'};
+  &:hover{
+   cursor: pointer;
+   background-color: ${props => props.hoverBgColor || 'white'};
+   color: ${props => props.hovertextColor || 'black'};
+  };
+
+  position: fixed;
+  top: 482px;
+  right: -180px;
+  margin-bottom: 5px;
+  /* display: none; */
+`
+export const Sbutton12 = styled.button<Props2>`
+ border-radius: 16px;
+ background-color: ${props => props.BgColor || 'white'};
+  color: ${props => props.textColor || 'black'};
+  &:hover{
+   cursor: pointer;
+   background-color: ${props => props.hoverBgColor || 'white'};
+   color: ${props => props.hovertextColor || 'black'};
+  };
+
+  position: fixed;
+  top: 520px;
+  right: -180px;
+  margin-bottom: 5px;
+  /* display: none; */
+`
+export const Sbutton13 = styled.button<Props2>`
+ border-radius: 16px;
+ background-color: ${props => props.BgColor || 'white'};
+  color: ${props => props.textColor || 'black'};
+  &:hover{
+   cursor: pointer;
+   background-color: ${props => props.hoverBgColor || 'white'};
+   color: ${props => props.hovertextColor || 'black'};
+  };
+
+  position: fixed;
+  top: 555px;
+  right: -180px;
+  margin-bottom: 5px;
+  /* display: none; */
+`
+export const Sbutton14 = styled.button<Props2>`
+ border-radius: 16px;
+ background-color: ${props => props.BgColor || 'white'};
+  color: ${props => props.textColor || 'black'};
+  &:hover{
+   cursor: pointer;
+   background-color: ${props => props.hoverBgColor || 'white'};
+   color: ${props => props.hovertextColor || 'black'};
+  };
+
+  position: fixed;
+  top: 592px;
+  right: -180px;
+  margin-bottom: 5px;
+  /* display: none; */
+`
+export const Sbutton15 = styled.button<Props2>`
+ border-radius: 16px;
+ background-color: ${props => props.BgColor || 'white'};
+  color: ${props => props.textColor || 'black'};
+  &:hover{
+   cursor: pointer;
+   background-color: ${props => props.hoverBgColor || 'white'};
+   color: ${props => props.hovertextColor || 'black'};
+  };
+
+  position: fixed;
+  top: 630px;
+  right: -180px;
+  margin-bottom: 5px;
+  /* display: none; */
+`
+export const Sbutton16 = styled.button<Props2>`
+ border-radius: 16px;
+ background-color: ${props => props.BgColor || 'white'};
+  color: ${props => props.textColor || 'black'};
+  &:hover{
+   cursor: pointer;
+   background-color: ${props => props.hoverBgColor || 'white'};
+   color: ${props => props.hovertextColor || 'black'};
+  };
+
+  position: fixed;
+  top: 667px;
+  right: -180px;
+  margin-bottom: 5px;
+  /* display: none; */
+`
+export const Sbutton17 = styled.button<Props2>`
+ border-radius: 16px;
+ background-color: ${props => props.BgColor || 'white'};
+  color: ${props => props.textColor || 'black'};
+  &:hover{
+   cursor: pointer;
+   background-color: ${props => props.hoverBgColor || 'white'};
+   color: ${props => props.hovertextColor || 'black'};
+  };
+
+  position: fixed;
+  top: 705px;
+  right: -180px;
+  margin-bottom: 5px;
   /* display: none; */
 `
 
 
-// const [stored, setStored] = useState({
-//   text: "",
-//   text2: "",
-//   SelectColor : "",
-// });
 
-// useEffect(() => {
-// setStored({
-//   text: localStorage.getItem('text',text) || text,
-//   text2: localStorage.getItem('text2',text2) || text2,
-//   SelectColor: localStorage.getItem('SelectColor',SelectColor) || SelectColor
-// });
-// },[text,text2,SelectColor])
 
-// useEffect(() => {
-// localStorage.setItem('text',stored.text)
-// localStorage.setItem('text2',stored.text2)
-// localStorage.setItem('SelectColor',stored.SelectColor)
-
-// },[stored])
+ 
 
 
 
-// const loadStoredData = () => {
-//   const storedTexts = localStorage.getItem("Texts");
-//   const storedColors = localStorage.getItem("SelectColors");
-
-//   if (storedTexts && storedColors) {
-//     const texts: Texts = JSON.parse(storedTexts);
-//     const colors: SelectColors = JSON.parse(storedColors);
-
-//     // 取得したデータを使用して必要な処理を行う
-//     console.log("Loaded Texts:", texts);
-//     console.log("Loaded SelectColors:", colors);
-//   }
-// }
-
-// const MyComponents = () => {
-  //   useEffect(() => {
-  //     loadStoredData()
-  //   },[])
-  // }

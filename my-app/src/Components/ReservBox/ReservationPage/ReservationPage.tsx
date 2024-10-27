@@ -18,7 +18,22 @@ interface Props {
   hovertextColor?: string,
 }
  
+interface Texts {
+  text:string, text2:string,text3:string, text4:string, text5:string, 
+  text6:string, text7:string, text8:string,text9:string,text10:string,
+    text11:string, text12:string, text13:string, text14:string, text15:string, 
+    text16:string, text17:string, text18:string,text19:string,text20:string,
+     text21:string, text22:string, text23:string,text24:string, text25:string, 
+     text26:string, text27:string, text28:string, text29:string, text30:string,
+     text31:string, text32:string, text33:string, text34:string,
+};
 
+interface SelectColors {
+  SelectColor:string, SelectColor2:string,SelectColor3:string, SelectColor4:string,SelectColor5:string, 
+  SelectColor6:string,SelectColor7:string, SelectColor8:string,SelectColor9:string, SelectColor10:string,
+  SelectColor11:string, SelectColor12:string,SelectColor13:string, SelectColor14:string,SelectColor15:string, 
+  SelectColor16:string,SelectColor17:string, 
+}
 
 
  export const ReservationPage = () => {
@@ -28,6 +43,8 @@ interface Props {
     const text2 = params.get('r') || '';
     const SelectColor = params.get('color') || '';
     const Form = params.get('Form') || '';
+
+    
 
     const textInput = (e:ChangeEvent<HTMLInputElement>) => {
       setParams(prevParams => ({
@@ -67,6 +84,18 @@ interface Props {
     navigate("/")
    }
    const okButton = () => {
+   
+   if(text === "" && text2 === "" && SelectColor === "") {
+    localStorage.removeItem("text")
+    localStorage.removeItem("text2")
+    localStorage.removeItem("SelectColor")
+    console.log("localStorageから削除されました")
+   }else{
+    localStorage.setItem("text",JSON.stringify(text));
+   localStorage.setItem("text2",JSON.stringify(text2));
+   localStorage.setItem("SelectColor",JSON.stringify(SelectColor));
+   }
+  
     navigate("/ShowText",{
       state:{
         text:text || '',
@@ -74,6 +103,21 @@ interface Props {
         SelectColor:SelectColor || '',
       }
     });
+
+    
+    // const existingTexts = JSON.parse(localStorage.getItem("Texts") || "{}");
+    // const existingColors = JSON.parse(localStorage.getItem("SelectColors") || "{}");
+
+    
+    // const texts: Texts = locationState;
+    // const colors: SelectColors = locationState;
+    
+
+    // const updatedTexts = {...existingTexts,...texts};
+    // const updatedColors = {...existingColors,...colors};
+    
+    // localStorage.setItem("Texts",JSON.stringify(updatedTexts));
+    // localStorage.setItem("SelectColors",JSON.stringify(updatedColors))
    };
 
    
@@ -145,7 +189,7 @@ const STh = styled.th`
 const STr = styled.tr`
   margin-right: 40px;
 `
- const SResevButton = styled.button<Props>`
+ export const SResevButton = styled.button<Props>`
   margin: 5px;
   border-radius: 16px;
   text-align  : center ;

@@ -65,6 +65,15 @@ interface Props {
 
       }
     })
+    if(text7 === "" && text8 === "" && SelectColor4 === "") {
+      localStorage.removeItem("text7")
+      localStorage.removeItem("text8")
+      localStorage.removeItem("SelectColor4")
+     }else{
+      localStorage.setItem("text7",JSON.stringify(text7));
+     localStorage.setItem("text8",JSON.stringify(text8));
+     localStorage.setItem("SelectColor3",JSON.stringify(SelectColor4));
+     }
    }
     return (
       <div>
