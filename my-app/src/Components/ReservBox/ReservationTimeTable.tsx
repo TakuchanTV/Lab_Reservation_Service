@@ -105,18 +105,16 @@ export const ReservationTimeTable = () => {
       if (localStorage.hasOwnProperty("text9") || (localStorage.hasOwnProperty("text10")
        || localStorage.hasOwnProperty("SelectColor5"))){
         button5.style.display = "block"
+        handleStored5();
       }else {
         button5.style.display = "none"
       }
 
       if (localStorage.hasOwnProperty("text11") || (localStorage.hasOwnProperty("text12")) ||
        (localStorage.hasOwnProperty("SelectColor6"))){
-        const btn6 = button6.style.display = "block"
-        localStorage.setItem("btn6",btn6)
-        // console.log("保存されました")
+         button6.style.display = "block"
       }else {
-        const btn6 =  button6.style.display = "none"
-        localStorage.removeItem(btn6)
+        button6.style.display = "none"
       }
 
       if ((localStorage.hasOwnProperty("text13")) || (localStorage.hasOwnProperty("text14")) ||
@@ -328,6 +326,26 @@ export const ReservationTimeTable = () => {
   setTexts(prevText7 => ({...prevText7,...updatedText7}))
   setTexts(prevText8 => ({...prevText8,...updatedText8}))
   setColors(prevColor4 => ({...prevColor4,...updatedColor4}))
+}
+  const handleStored5 = () => {
+
+  const existingText9 = JSON.parse(localStorage.getItem("text9") || "{}");
+  const existingText10 = JSON.parse(localStorage.getItem("text10") || "{}");
+  const existingColor5 = JSON.parse(localStorage.getItem("SelectColor5") || "{}");
+  
+  const texts: Texts = locationState;
+  const colors: SelectColors = locationState;
+
+  const updatedText9 = { ...existingText9, ...texts };
+  const updatedText10 = { ...existingText10, ...texts };
+  const updatedColor5 = { ...existingColor5, ...colors };
+
+  localStorage.setItem("text9", JSON.stringify(updatedText9));
+  localStorage.setItem("text10", JSON.stringify(updatedText10));
+  localStorage.setItem("SelectColor5", JSON.stringify(updatedColor5));
+  setTexts(prevText9 => ({...prevText9,...updatedText9}))
+  setTexts(prevText10 => ({...prevText10,...updatedText10}))
+  setColors(prevColor5 => ({...prevColor5,...updatedColor5}))
 }
 
 
