@@ -6,7 +6,7 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 
 interface Props {
-  STdColor:string | undefined,
+  STdColor:string,
 };
 
 interface Props2 {
@@ -44,18 +44,6 @@ interface Location extends Texts, SelectColors, Button {}
 export const ReservationTimeTable = () => {
   const location = useLocation();
   const navigate = useNavigate();
-
-  function useLocalStorage (localItem) {
-    const [localText,setText] = useState(localStorage.getItem(localItem));
-
-    function setLocalText (newItem) {
-      // localStorage.setItem()
-    }
-
-    return [localText,setLocalText]
-  }
-
-
 
   const [texts, setTexts] = useState<Texts | null>(null);
   const [colors, setColors] = useState<SelectColors | null>(null);
@@ -313,15 +301,10 @@ export const ReservationTimeTable = () => {
     localStorage.setItem("text", JSON.stringify(updatedText));
     localStorage.setItem("text2", JSON.stringify(updatedText2));
     localStorage.setItem("SelectColor", JSON.stringify(updatedColor));
-    if (existingText) {
-      setTexts(existingText)
-     }
-     if (existingText2) {
-      setTexts(existingText2)
-     }
-     if (existingColor) {
-      setColors(existingColor)
-     }
+    setTexts(prevText => ({...prevText,...updatedText}))
+    setTexts(prevText2 => ({...prevText2,...updatedText2}))
+    setColors(prevColor => ({...prevColor,...updatedColor}))
+    
     
   
 };
@@ -344,10 +327,10 @@ export const ReservationTimeTable = () => {
       localStorage.setItem("text3", JSON.stringify(updatedText3));
       localStorage.setItem("text4", JSON.stringify(updatedText4));
       localStorage.setItem("SelectColor2", JSON.stringify(updatedColor2));
+      setTexts(prevText3 => ({...prevText3,...updatedText3}))
+      setTexts(prevText4 => ({...prevText4,...updatedText4}))
+      setColors(prevColor2 => ({...prevColor2,...updatedColor2}))
 
-     
-
-      
 };
   
   const handleStored3 = () => {
@@ -366,6 +349,7 @@ export const ReservationTimeTable = () => {
   localStorage.setItem("text5", JSON.stringify(updatedText5));
   localStorage.setItem("text6", JSON.stringify(updatedText6));
   localStorage.setItem("SelectColor3", JSON.stringify(updatedColor3));
+  
  
 }
 
@@ -645,104 +629,104 @@ const BacktoPage17 = () => {
     <div>
       <STable border={1}>
         <tr>
-         <STd STdColor={colors?.SelectColor}  >
-            {texts?.text} {texts?.text2 }
+         <STd STdColor={colors?.SelectColor || locationState.SelectColor}  >
+            {texts?.text || locationState.text} {texts?.text2 || locationState.text2}
           <br />
           </STd>
          </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor2} >
-             {texts?.text3 }  {texts?.text4 }
+            <STd STdColor={colors?.SelectColor2 || locationState.SelectColor2} >
+             {texts?.text3 ||locationState.text3}  {texts?.text4 ||locationState.text4}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor3}>
-              {texts?.text5}  {texts?.text6}
+            <STd STdColor={colors?.SelectColor3 || locationState.SelectColor3}>
+              {texts?.text5 ||locationState.text5}  {texts?.text6 ||locationState.text6}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor4 } >
-              {texts?.text7 }  {texts?.text8}
+            <STd STdColor={colors?.SelectColor4 || locationState.SelectColor4} >
+              {texts?.text7 ||locationState.text7}  {texts?.text8 ||locationState.text8}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor5} >
-              {texts?.text9}  {texts?.text10}
+            <STd STdColor={colors?.SelectColor5 || locationState.SelectColor5} >
+              {texts?.text9 ||locationState.text9}  {texts?.text10 ||locationState.text10}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor6} >
-              {texts?.text11}  {texts?.text12}
+            <STd STdColor={colors?.SelectColor6 || locationState.SelectColor6} >
+              {texts?.text11 || locationState.text11}  {texts?.text12 ||locationState.text12}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor7} >
-              {texts?.text13}  {texts?.text14}
+            <STd STdColor={colors?.SelectColor7 || locationState.SelectColor7} >
+              {texts?.text13 ||locationState.text13}  {texts?.text14 ||locationState.text14}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor8} >
-              {texts?.text15}  {texts?.text16}
+            <STd STdColor={colors?.SelectColor8 || locationState.SelectColor8} >
+              {texts?.text15 ||locationState.text15}  {texts?.text16 ||locationState.text16}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor9} >
-              {texts?.text17}  {texts?.text18}
+            <STd STdColor={colors?.SelectColor9 || locationState.SelectColor9} >
+              {texts?.text17 ||locationState.text17}  {texts?.text18 ||locationState.text18}
               <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor10} >
-              {texts?.text19}  {texts?.text20}
+            <STd STdColor={colors?.SelectColor10 || locationState.SelectColor10} >
+              {texts?.text19 ||locationState.text19}  {texts?.text20 ||locationState.text20}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor11} >
-              {texts?.text21}  {texts?.text22}
+            <STd STdColor={colors?.SelectColor11 || locationState.SelectColor11} >
+              {texts?.text21 ||locationState.text21}  {texts?.text22 ||locationState.text22}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor12} >
-              {texts?.text23}  {texts?.text24}
+            <STd STdColor={colors?.SelectColor12 || locationState.SelectColor12} >
+              {texts?.text23 ||locationState.text23}  {texts?.text24 ||locationState.text24}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor13} >
-              {texts?.text25}  {texts?.text26}
+            <STd STdColor={colors?.SelectColor13 || locationState.SelectColor13} >
+              {texts?.text25 ||locationState.text25}  {texts?.text26 ||locationState.text26}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor14} >
-              {texts?.text27}  {texts?.text28}
+            <STd STdColor={colors?.SelectColor14 || locationState.SelectColor14} >
+              {texts?.text27 ||locationState.text27}  {texts?.text28 ||locationState.text28}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor15} >
-              {texts?.text29}  {texts?.text30}
+            <STd STdColor={colors?.SelectColor15 || locationState.SelectColor15} >
+              {texts?.text29 ||locationState.text29}  {texts?.text30 ||locationState.text30}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor16} >
-              {texts?.text31}  {texts?.text32}
+            <STd STdColor={colors?.SelectColor16 || locationState.SelectColor16} >
+              {texts?.text31 ||locationState.text31}  {texts?.text32 ||locationState.text32}
             <br />
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor17} >
-              {texts?.text33}  {texts?.text34}
+            <STd STdColor={colors?.SelectColor17 || locationState.SelectColor17} >
+              {texts?.text33 ||locationState.text33}  {texts?.text34 ||locationState.text34}
             <br />
             </STd>
           </tr>
@@ -801,7 +785,9 @@ const BacktoPage17 = () => {
   background-color: ${props => props.STdColor|| 'white'};
  `
 
- 
+ const TimeNumber = styled.td`
+  padding-right: 30px;
+ `
  
  
  export const Storedbutton = styled.button<Props2>`
