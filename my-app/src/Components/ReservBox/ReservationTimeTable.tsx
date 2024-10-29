@@ -72,22 +72,7 @@ export const ReservationTimeTable = () => {
       if (localStorage.hasOwnProperty("text") || localStorage.hasOwnProperty("text2") 
       || localStorage.hasOwnProperty("SelectColor")) {
          button.style.display = "block"
-
-         const existingText = JSON.parse(localStorage.getItem("text") || "{}");
-         const existingText2 = JSON.parse(localStorage.getItem("text2") || "{}");
-         const existingColor = JSON.parse(localStorage.getItem("SelectColor") || "{}");
         handleStored();
-
-        // if (existingText) {
-        //   setTexts(existingText)
-        //  }
-        //  if (existingText2) {
-        //   setTexts(existingText2)
-        //  }
-        //  if (existingColor) {
-        //   setColors(existingColor)
-        //  }
-
       }else {
       button.style.display = "none"
       }
@@ -95,55 +80,33 @@ export const ReservationTimeTable = () => {
       if (localStorage.hasOwnProperty("text3") || localStorage.hasOwnProperty("text4") 
         || localStorage.hasOwnProperty("SelectColor2")){
          button2.style.display = "block"
-
-         const existingText3 = JSON.parse(localStorage.getItem("text3") || "{}");
-         const existingText4 = JSON.parse(localStorage.getItem("text4") || "{}");
-         const existingColor2 = JSON.parse(localStorage.getItem("SelectColor2") || "{}");
         handleStored2();
-        // if (existingText3) {
-        //   setTexts(existingText3)
-        //  }
-        //  if (existingText4) {
-        //   setTexts(existingText4)
-        //  }
-        //  if (existingColor2) {
-        //   setColors(existingColor2)
-        //  }
-        
-        
       }else {
         button2.style.display = "none"
       } 
 
       if (localStorage.hasOwnProperty("text5") || localStorage.hasOwnProperty("text6") 
         || localStorage.hasOwnProperty("SelectColor3")){
-        const btn3 = button3.style.display = "block"
-        localStorage.setItem("btn3",btn3);
+        button3.style.display = "block"
         handleStored3();
       }else {
-        const btn3 =  button3.style.display = "none"
-        localStorage.removeItem(btn3);
+        button3.style.display = "none"
       }
 
       if (localStorage.hasOwnProperty("text7") || localStorage.hasOwnProperty("text8") 
         || localStorage.hasOwnProperty("SelectColor4")){
-        const btn4 = button4.style.display = "block"
-        localStorage.setItem("btn4",btn4);
-        // console.log("保存されました");
+        button4.style.display = "block"
+        handleStored4();
       }else {
-        const btn4 =  button4.style.display = "none"
-        localStorage.removeItem(btn4);
+        button4.style.display = "none"
 
       }
 
       if (localStorage.hasOwnProperty("text9") || (localStorage.hasOwnProperty("text10")
        || localStorage.hasOwnProperty("SelectColor5"))){
-        const btn5 = button5.style.display = "block"
-        localStorage.setItem("btn5",btn5);
+        button5.style.display = "block"
       }else {
-        const btn5 =  button5.style.display = "none"
-        localStorage.removeItem(btn5);
-
+        button5.style.display = "none"
       }
 
       if (localStorage.hasOwnProperty("text11") || (localStorage.hasOwnProperty("text12")) ||
@@ -304,21 +267,15 @@ export const ReservationTimeTable = () => {
     setTexts(prevText => ({...prevText,...updatedText}))
     setTexts(prevText2 => ({...prevText2,...updatedText2}))
     setColors(prevColor => ({...prevColor,...updatedColor}))
-    
-    
-  
 };
     
-
     const handleStored2 = () => {
       const existingText3 = JSON.parse(localStorage.getItem("text3") || "{}");
       const existingText4 = JSON.parse(localStorage.getItem("text4") || "{}");
       const existingColor2 = JSON.parse(localStorage.getItem("SelectColor2") || "{}");
-      
 
       const texts: Texts = locationState;
       const colors: SelectColors = locationState;
-      
 
       const updatedText3 = { ...existingText3,...texts};
       const updatedText4 = { ...existingText4,...texts};
@@ -330,7 +287,6 @@ export const ReservationTimeTable = () => {
       setTexts(prevText3 => ({...prevText3,...updatedText3}))
       setTexts(prevText4 => ({...prevText4,...updatedText4}))
       setColors(prevColor2 => ({...prevColor2,...updatedColor2}))
-
 };
   
   const handleStored3 = () => {
@@ -342,15 +298,36 @@ export const ReservationTimeTable = () => {
   const texts: Texts = locationState;
   const colors: SelectColors = locationState;
 
-  const updatedText5 = { ...existingText5, ...texts };
-  const updatedText6 = { ...existingText6, ...texts };
-  const updatedColor3 = { ...existingColor3, ...colors };
+  const updatedText5 = { ...existingText5,...texts};
+  const updatedText6 = { ...existingText6,...texts};
+  const updatedColor3 = { ...existingColor3,...colors};
 
   localStorage.setItem("text5", JSON.stringify(updatedText5));
   localStorage.setItem("text6", JSON.stringify(updatedText6));
   localStorage.setItem("SelectColor3", JSON.stringify(updatedColor3));
+  setTexts(prevText5 => ({...prevText5,...updatedText5}))
+  setTexts(prevText6 => ({...prevText6,...updatedText6}))
+  setColors(prevColor3 => ({...prevColor3,...updatedColor3}))
+}
+  const handleStored4 = () => {
+
+  const existingText7 = JSON.parse(localStorage.getItem("text7") || "{}");
+  const existingText8 = JSON.parse(localStorage.getItem("text8") || "{}");
+  const existingColor4 = JSON.parse(localStorage.getItem("SelectColor4") || "{}");
   
- 
+  const texts: Texts = locationState;
+  const colors: SelectColors = locationState;
+
+  const updatedText7 = { ...existingText7, ...texts };
+  const updatedText8 = { ...existingText8, ...texts };
+  const updatedColor4 = { ...existingColor4, ...colors };
+
+  localStorage.setItem("text7", JSON.stringify(updatedText7));
+  localStorage.setItem("text8", JSON.stringify(updatedText8));
+  localStorage.setItem("SelectColor4", JSON.stringify(updatedColor4));
+  setTexts(prevText7 => ({...prevText7,...updatedText7}))
+  setTexts(prevText8 => ({...prevText8,...updatedText8}))
+  setColors(prevColor4 => ({...prevColor4,...updatedColor4}))
 }
 
 
@@ -366,261 +343,88 @@ const handleDeleted = () => {
 
 const BacktoPage = () => {
 if(window.confirm("予約のページに戻りますか?")){
-  const updatedTexts = {...texts};
-  const updatedColors = {...colors};
- 
-  // delete updatedTexts.text;
-  // delete updatedTexts.text2;
-  // delete updatedColors.SelectColor;
-
-  localStorage.setItem("text",JSON.stringify(updatedTexts));
-  localStorage.setItem("text2",JSON.stringify(updatedTexts));
-  localStorage.setItem("SelectColor",JSON.stringify(updatedColors));
-
   navigate("/ReservationPage")
 }
 }
 
 const BacktoPage2 = () => {
   if(window.confirm("予約のページに戻りますか?")){
-    const updatedTexts = {...texts};
-    const updatedColors = {...colors};
-   
-    // delete updatedTexts.text3;
-    // delete updatedTexts.text4;
-    // delete updatedColors.SelectColor2;
-  
-    localStorage.setItem("text3",JSON.stringify(updatedTexts));
-    localStorage.setItem("text4",JSON.stringify(updatedTexts));
-    localStorage.setItem("SelectColor2",JSON.stringify(updatedColors));
-  
     navigate("/ReservationPage2")
   }
   }
 const BacktoPage3 = () => {
   if(window.confirm("予約のページに戻りますか?")){
-    const updatedTexts = {...texts};
-    const updatedColors = {...colors};
-   
-    // delete updatedTexts.text5;
-    // delete updatedTexts.text6;
-    // delete updatedColors.SelectColor3;
-  
-    localStorage.setItem("text5",JSON.stringify(updatedTexts));
-    localStorage.setItem("text6",JSON.stringify(updatedTexts));
-    localStorage.setItem("SelectColor3",JSON.stringify(updatedColors));
-  
-    navigate("/ReservationPage3")
+     navigate("/ReservationPage3")
   }
   }
 const BacktoPage4 = () => {
   if(window.confirm("予約のページに戻りますか?")){
-    const updatedTexts = {...texts};
-    const updatedColors = {...colors};
-   
-    delete updatedTexts.text7;
-    delete updatedTexts.text8;
-    delete updatedColors.SelectColor4;
-  
-    localStorage.setItem("Texts",JSON.stringify(updatedTexts));
-    localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
-  
     navigate("/ReservationPage4")
   }
   }
 const BacktoPage5 = () => {
   if(window.confirm("予約のページに戻りますか?")){
-    const updatedTexts = {...texts};
-    const updatedColors = {...colors};
-   
-    delete updatedTexts.text9;
-    delete updatedTexts.text10;
-    delete updatedColors.SelectColor5;
-  
-    localStorage.setItem("Texts",JSON.stringify(updatedTexts));
-    localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
-  
-    navigate("/ReservationPage5")
+     navigate("/ReservationPage5")
   }
   }
 const BacktoPage6 = () => {
   if(window.confirm("予約のページに戻りますか?")){
-    const updatedTexts = {...texts};
-    const updatedColors = {...colors};
-   
-    delete updatedTexts.text11;
-    delete updatedTexts.text12;
-    delete updatedColors.SelectColor6;
-  
-    localStorage.setItem("Texts",JSON.stringify(updatedTexts));
-    localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
-  
     navigate("/ReservationPage6")
   }
   }
 const BacktoPage7 = () => {
   if(window.confirm("予約のページに戻りますか?")){
-    const updatedTexts = {...texts};
-    const updatedColors = {...colors};
-   
-    delete updatedTexts.text13;
-    delete updatedTexts.text14;
-    delete updatedColors.SelectColor7;
-  
-    localStorage.setItem("Texts",JSON.stringify(updatedTexts));
-    localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
-  
     navigate("/ReservationPage7")
   }
   }
 const BacktoPage8 = () => {
   if(window.confirm("予約のページに戻りますか?")){
-    const updatedTexts = {...texts};
-    const updatedColors = {...colors};
-   
-    delete updatedTexts.text15;
-    delete updatedTexts.text16;
-    delete updatedColors.SelectColor8;
-  
-    localStorage.setItem("Texts",JSON.stringify(updatedTexts));
-    localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
-  
-    navigate("/ReservationPage8")
+     navigate("/ReservationPage8")
   }
   }
 const BacktoPage9 = () => {
   if(window.confirm("予約のページに戻りますか?")){
-    const updatedTexts = {...texts};
-    const updatedColors = {...colors};
-   
-    delete updatedTexts.text17;
-    delete updatedTexts.text18;
-    delete updatedColors.SelectColor9;
-  
-    localStorage.setItem("Texts",JSON.stringify(updatedTexts));
-    localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
-  
-    navigate("/ReservationPage9")
+   navigate("/ReservationPage9")
   }
   }
 const BacktoPage10 = () => {
   if(window.confirm("予約のページに戻りますか?")){
-    const updatedTexts = {...texts};
-    const updatedColors = {...colors};
-   
-    delete updatedTexts.text19;
-    delete updatedTexts.text20;
-    delete updatedColors.SelectColor10;
-  
-    localStorage.setItem("Texts",JSON.stringify(updatedTexts));
-    localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
-  
-    navigate("/ReservationPage10")
+   navigate("/ReservationPage10")
   }
   }
 const BacktoPage11 = () => {
   if(window.confirm("予約のページに戻りますか?")){
-    const updatedTexts = {...texts};
-    const updatedColors = {...colors};
-   
-    delete updatedTexts.text21;
-    delete updatedTexts.text22;
-    delete updatedColors.SelectColor11;
-  
-    localStorage.setItem("Texts",JSON.stringify(updatedTexts));
-    localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
-  
-    navigate("/ReservationPage11")
+   navigate("/ReservationPage11")
   }
   }
 const BacktoPage12 = () => {
   if(window.confirm("予約のページに戻りますか?")){
-    const updatedTexts = {...texts};
-    const updatedColors = {...colors};
-   
-    delete updatedTexts.text23;
-    delete updatedTexts.text24;
-    delete updatedColors.SelectColor12;
-  
-    localStorage.setItem("Texts",JSON.stringify(updatedTexts));
-    localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
-  
     navigate("/ReservationPage12")
   }
   }
 const BacktoPage13 = () => {
   if(window.confirm("予約のページに戻りますか?")){
-    const updatedTexts = {...texts};
-    const updatedColors = {...colors};
-   
-    delete updatedTexts.text25;
-    delete updatedTexts.text26;
-    delete updatedColors.SelectColor13;
-  
-    localStorage.setItem("Texts",JSON.stringify(updatedTexts));
-    localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
-  
     navigate("/ReservationPage13")
   }
   }
 const BacktoPage14 = () => {
   if(window.confirm("予約のページに戻りますか?")){
-    const updatedTexts = {...texts};
-    const updatedColors = {...colors};
-   
-    delete updatedTexts.text27;
-    delete updatedTexts.text28;
-    delete updatedColors.SelectColor14;
-  
-    localStorage.setItem("Texts",JSON.stringify(updatedTexts));
-    localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
-  
-    navigate("/ReservationPage14")
+   navigate("/ReservationPage14")
   }
   }
 const BacktoPage15 = () => {
   if(window.confirm("予約のページに戻りますか?")){
-    const updatedTexts = {...texts};
-    const updatedColors = {...colors};
-   
-    delete updatedTexts.text29;
-    delete updatedTexts.text30;
-    delete updatedColors.SelectColor15;
-  
-    localStorage.setItem("Texts",JSON.stringify(updatedTexts));
-    localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
-  
     navigate("/ReservationPage15")
   }
   }
 const BacktoPage16 = () => {
   if(window.confirm("予約のページに戻りますか?")){
-    const updatedTexts = {...texts};
-    const updatedColors = {...colors};
-   
-    delete updatedTexts.text31;
-    delete updatedTexts.text32;
-    delete updatedColors.SelectColor16;
-  
-    localStorage.setItem("Texts",JSON.stringify(updatedTexts));
-    localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
-  
     navigate("/ReservationPage16")
   }
   }
 const BacktoPage17 = () => {
   if(window.confirm("予約のページに戻りますか?")){
-    const updatedTexts = {...texts};
-    const updatedColors = {...colors};
-   
-    delete updatedTexts.text33;
-    delete updatedTexts.text34;
-    delete updatedColors.SelectColor17;
-  
-    localStorage.setItem("Texts",JSON.stringify(updatedTexts));
-    localStorage.setItem("SelectColors",JSON.stringify(updatedColors));
-  
-    navigate("/ReservationPage17")
+     navigate("/ReservationPage17")
   }
   }
 
