@@ -72,7 +72,7 @@ interface Props {
      }else{
       localStorage.setItem("text7",JSON.stringify(text7));
      localStorage.setItem("text8",JSON.stringify(text8));
-     localStorage.setItem("SelectColor3",JSON.stringify(SelectColor4));
+     localStorage.setItem("SelectColor4",JSON.stringify(SelectColor4));
      }
    }
     return (
