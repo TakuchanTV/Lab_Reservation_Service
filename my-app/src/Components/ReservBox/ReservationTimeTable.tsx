@@ -119,108 +119,81 @@ export const ReservationTimeTable = () => {
 
       if ((localStorage.hasOwnProperty("text13")) || (localStorage.hasOwnProperty("text14")) ||
        (localStorage.hasOwnProperty("SelectColor7"))){
-        const btn7 = button7.style.display = "block"
-        localStorage.setItem("btn7",btn7)
-        // console.log("保存されました")
+        button7.style.display = "block"
       }else {
-        const btn7 =  button7.style.display = "none"
-        localStorage.removeItem(btn7)
+        button7.style.display = "none"
       }
 
       if (localStorage.hasOwnProperty("text15") || (localStorage.hasOwnProperty("text16")) ||
        (localStorage.hasOwnProperty("SelectColor8"))){
-        const btn8 = button8.style.display = "block"
-        localStorage.setItem("btn8",btn8)
-        // console.log("保存されました")
+        button8.style.display = "block"
       }else {
-        const btn8 =  button8.style.display = "none"
-        localStorage.removeItem(btn8)
+        button8.style.display = "none"
       }
 
       if ((localStorage.hasOwnProperty("text17")) || (localStorage.hasOwnProperty("text18")) ||
        (localStorage.hasOwnProperty("SelectColor9"))){
-        const btn9 = button9.style.display = "block"
-        localStorage.setItem("btn9",btn9)
-        // console.log("保存されました")
+        button9.style.display = "block"
       }else {
-        const btn9 =  button9.style.display = "none"
-        localStorage.removeItem(btn9)
+       button9.style.display = "none"
       }
 
       if ((localStorage.hasOwnProperty("text19")) || (localStorage.hasOwnProperty("text20")) ||
        (localStorage.hasOwnProperty("SelectColor10"))){
-        const btn10 = button10.style.display = "block"
-        localStorage.setItem("btn10",btn10)
-        // console.log("保存されました")
+       button10.style.display = "block"
       }else {
-        const btn10 = button10.style.display = "none"
-        localStorage.removeItem(btn10)
+        button10.style.display = "none"
       }
 
       if ((localStorage.hasOwnProperty("text21")) || (localStorage.hasOwnProperty("text22")) ||
        (localStorage.hasOwnProperty("SelectColor11"))){
-        const btn11 = button11.style.display = "block"
-        localStorage.setItem("btn11",btn11)
-        // console.log("保存されました")
+        button11.style.display = "block"
+       
       }else {
-        const btn11 =  button11.style.display = "none"
-        localStorage.removeItem(btn11)
+         button11.style.display = "none"
       }
 
       if ((localStorage.hasOwnProperty("text23")) || (localStorage.hasOwnProperty("text24")) ||
        (localStorage.hasOwnProperty("SelectColor12"))){
-        const btn12 = button12.style.display = "block"
-        localStorage.setItem("btn12",btn12)
-        // console.log("保存されました")
+         button12.style.display = "block"
+       
       }else {
-        const btn12 =  button12.style.display = "none"
-        localStorage.removeItem(btn12)
+        button12.style.display = "none"
       }
 
       if ((localStorage.hasOwnProperty("text25")) || (localStorage.hasOwnProperty("text26")) ||
        (localStorage.hasOwnProperty("SelectColor13"))){
-        const btn13 = button13.style.display = "block"
-        localStorage.setItem("btn13",btn13)
-        // console.log("保存されました")
+        button13.style.display = "block"
       }else {
-        const btn13 =  button13.style.display = "none"
-        localStorage.removeItem(btn13)
+        button13.style.display = "none"
       }
 
       if ((localStorage.hasOwnProperty("text27")) || (localStorage.hasOwnProperty("text28")) ||
        (localStorage.hasOwnProperty("SelectColor14"))){
-        const btn14 =  button14.style.display = "block"
-        localStorage.setItem("btn14",btn14)
+       button14.style.display = "block"
       }else {
-        const btn14 =  button14.style.display = "none"
-        localStorage.removeItem(btn14)
+        button14.style.display = "none"
       }
 
       if ((localStorage.hasOwnProperty("text29")) || (localStorage.hasOwnProperty("text30")) ||
        (localStorage.hasOwnProperty("SelectColor15"))){
-        const btn15 =  button15.style.display = "block"
-        localStorage.setItem("btn15",btn15)
+        button15.style.display = "block"
       }else {
-        const btn15 =  button15.style.display = "none"
-        localStorage.removeItem(btn15)
+       button15.style.display = "none"
       }
 
       if ((localStorage.hasOwnProperty("text31")) || (localStorage.hasOwnProperty("text32")) ||
        (localStorage.hasOwnProperty("SelectColor16"))){
-        const btn16 =  button16.style.display = "block"
-        localStorage.setItem("btn16",btn16)
+       button16.style.display = "block"
       }else {
-        const btn16 =  button16.style.display = "none"
-        localStorage.removeItem(btn16)
+        button16.style.display = "none"
       }
 
       if ((localStorage.hasOwnProperty("text33")) || (localStorage.hasOwnProperty("text34")) ||
        (localStorage.hasOwnProperty("SelectColor17"))){
-        const btn17 =  button17.style.display = "block"
-        localStorage.setItem("btn17",btn17)
+        button17.style.display = "block"
       }else {
-        const btn17 =  button17.style.display = "none"
-        localStorage.removeItem(btn17)
+        button17.style.display = "none"
       } 
     }else{
       console.log("buttonはfalse")
