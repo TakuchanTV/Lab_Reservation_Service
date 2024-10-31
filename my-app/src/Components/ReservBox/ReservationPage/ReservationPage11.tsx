@@ -55,6 +55,16 @@ import React, {ChangeEvent} from "react";
     navigate("/")
    }
    const okButton = () => {
+    if(text21 === "" && text22 === "" && SelectColor11 === "") {
+      localStorage.removeItem("text21")
+      localStorage.removeItem("text22")
+      localStorage.removeItem("SelectColor11")
+      console.log("localStorageから削除されました")
+     }else{
+      localStorage.setItem("text21",JSON.stringify(text21));
+     localStorage.setItem("text22",JSON.stringify(text22));
+     localStorage.setItem("SelectColor11",JSON.stringify(SelectColor11));
+     }
     navigate("/ShowText",{
       state:{ 
         text21:text21 || '',
@@ -106,7 +116,7 @@ import React, {ChangeEvent} from "react";
             <SResevButton hoverBgColor="#f48f8f"onClick={okButton}>OK</SResevButton>
             <SResevButton hoverBgColor="#72b6ff" onClick={CancelConfirm}>キャンセル</SResevButton>
           </ResrvButtondiv>
-          <Sbutton onClick={returnButton} >戻る</Sbutton>
+          {/* <Sbutton onClick={returnButton} >戻る</Sbutton> */}
         </div>
   </div>
     )
