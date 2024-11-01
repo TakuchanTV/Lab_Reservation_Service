@@ -578,17 +578,6 @@ const handleStored17 = () => {
   setColors(prevColor17 => ({...prevColor17, ...updatedColor17}));
 }
 
-
-const handleDeleted = () => {
- localStorage.removeItem("Texts");
- localStorage.removeItem("SelectColors")
-
- setTexts(null);
- setColors(null);
-}
-
-
-
 const BacktoPage = () => {
 if(window.confirm("予約のページに戻りますか?")){
   navigate("/ReservationPage")
@@ -784,8 +773,6 @@ const BacktoPage17 = () => {
           </tr>
       </STable>
 
-      <Storedbutton BgColor="" hoverBgColor="green" textColor="" hovertextColor="" onClick={handleStored}>保存します</Storedbutton>
-      <Deletebutton BgColor="" hoverBgColor="green" textColor="" hovertextColor="" onClick={handleDeleted}>削除します</Deletebutton>
       <div>
       <Sbutton id="reservebutton"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage}>予約を変更する</Sbutton>
       <Sbutton2 id="reservebutton2"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage2}>予約を変更する</Sbutton2>
