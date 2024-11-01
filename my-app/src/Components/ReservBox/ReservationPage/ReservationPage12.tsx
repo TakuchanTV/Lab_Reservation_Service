@@ -60,9 +60,9 @@ interface Props {
       localStorage.removeItem("SelectColor12")
       console.log("localStorageから削除されました")
      }else{
-      localStorage.setItem("text13",JSON.stringify(text23));
-     localStorage.setItem("text14",JSON.stringify(text24));
-     localStorage.setItem("SelectColor7",JSON.stringify(SelectColor12));
+      localStorage.setItem("text23",JSON.stringify(text23));
+     localStorage.setItem("text24",JSON.stringify(text24));
+     localStorage.setItem("SelectColor12",JSON.stringify(SelectColor12));
      }
     navigate("/ShowText",{
       state:{
