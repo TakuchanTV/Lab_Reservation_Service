@@ -72,7 +72,7 @@ interface Props {
      }else{
       localStorage.setItem("text7",JSON.stringify(text7));
      localStorage.setItem("text8",JSON.stringify(text8));
-     localStorage.setItem("SelectColor3",JSON.stringify(SelectColor4));
+     localStorage.setItem("SelectColor4",JSON.stringify(SelectColor4));
      }
    }
     return (
@@ -117,7 +117,7 @@ interface Props {
             <SResevButton hoverBgColor="#f48f8f"onClick={okButton}>OK</SResevButton>
             <SResevButton hoverBgColor="#72b6ff" onClick={CancelConfirm}>キャンセル</SResevButton>
           </ResrvButtondiv>
-          <Sbutton onClick={returnButton} >戻る</Sbutton>
+          {/* <Sbutton onClick={returnButton} >戻る</Sbutton> */}
         </div>
   </div>
     )

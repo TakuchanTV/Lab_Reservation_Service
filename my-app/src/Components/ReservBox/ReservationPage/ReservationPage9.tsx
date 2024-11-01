@@ -56,6 +56,16 @@ import { SelectDays } from "../ReservCustomhooks/SelectDays";
     navigate("/")
    }
    const okButton = () => {
+    if(text17 === "" && text18 === "" && SelectColor9 === "") {
+      localStorage.removeItem("text17")
+      localStorage.removeItem("text18")
+      localStorage.removeItem("SelectColor9")
+      console.log("localStorageから削除されました")
+     }else{
+      localStorage.setItem("text17",JSON.stringify(text17));
+     localStorage.setItem("text18",JSON.stringify(text18));
+     localStorage.setItem("SelectColor9",JSON.stringify(SelectColor9));
+     }
     navigate("/ShowText",{
       state:{
         text17:text17 || '',
@@ -107,7 +117,7 @@ import { SelectDays } from "../ReservCustomhooks/SelectDays";
             <SResevButton hoverBgColor="#f48f8f"onClick={okButton}>OK</SResevButton>
             <SResevButton hoverBgColor="#72b6ff" onClick={CancelConfirm}>キャンセル</SResevButton>
           </ResrvButtondiv>
-          <Sbutton onClick={returnButton} >戻る</Sbutton>
+          {/* <Sbutton onClick={returnButton} >戻る</Sbutton> */}
         </div>
   </div>
     )

@@ -103,21 +103,6 @@ interface SelectColors {
         SelectColor:SelectColor || '',
       }
     });
-
-    
-    // const existingTexts = JSON.parse(localStorage.getItem("Texts") || "{}");
-    // const existingColors = JSON.parse(localStorage.getItem("SelectColors") || "{}");
-
-    
-    // const texts: Texts = locationState;
-    // const colors: SelectColors = locationState;
-    
-
-    // const updatedTexts = {...existingTexts,...texts};
-    // const updatedColors = {...existingColors,...colors};
-    
-    // localStorage.setItem("Texts",JSON.stringify(updatedTexts));
-    // localStorage.setItem("SelectColors",JSON.stringify(updatedColors))
    };
 
    
@@ -168,7 +153,7 @@ interface SelectColors {
             <SResevButton hoverBgColor="#f48f8f"onClick={okButton}>OK</SResevButton>
             <SResevButton hoverBgColor="#72b6ff" onClick={CancelConfirm}>キャンセル</SResevButton>
           </ResrvButtondiv>
-          <Sbutton onClick={returnButton} >戻る</Sbutton>
+          {/* <Sbutton onClick={returnButton} >戻る</Sbutton> */}
         </div>
   </div>
     )

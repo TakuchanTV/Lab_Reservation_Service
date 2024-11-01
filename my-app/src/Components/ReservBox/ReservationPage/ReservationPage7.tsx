@@ -55,6 +55,16 @@ interface Props {
     navigate("/")
    }
    const okButton = () => {
+    if(text13 === "" && text14 === "" && SelectColor7 === "") {
+      localStorage.removeItem("text13")
+      localStorage.removeItem("text14")
+      localStorage.removeItem("SelectColor7")
+      console.log("localStorageから削除されました")
+     }else{
+      localStorage.setItem("text13",JSON.stringify(text13));
+     localStorage.setItem("text14",JSON.stringify(text14));
+     localStorage.setItem("SelectColor7",JSON.stringify(SelectColor7));
+     }
     navigate("/ShowText",{
       state:{
         text13:text13 || '',
@@ -107,7 +117,7 @@ interface Props {
             <SResevButton hoverBgColor="#f48f8f"onClick={okButton}>OK</SResevButton>
             <SResevButton hoverBgColor="#72b6ff" onClick={CancelConfirm}>キャンセル</SResevButton>
           </ResrvButtondiv>
-          <Sbutton onClick={returnButton} >戻る</Sbutton>
+          {/* <Sbutton onClick={returnButton} >戻る</Sbutton> */}
         </div>
   </div>
     )
