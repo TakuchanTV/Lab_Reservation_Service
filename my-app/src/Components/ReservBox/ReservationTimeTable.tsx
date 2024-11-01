@@ -404,6 +404,164 @@ export const ReservationTimeTable = () => {
   setTexts(prevText18 => ({...prevText18,...updatedText18}))
   setColors(prevColor9 => ({...prevColor9,...updatedColor9}))
 }
+  const handleStored10 = () => {
+
+  const existingText19 = JSON.parse(localStorage.getItem("text19") || "{}");
+  const existingText20 = JSON.parse(localStorage.getItem("text20") || "{}");
+  const existingColor10 = JSON.parse(localStorage.getItem("SelectColor10") || "{}");
+  
+  const texts: Texts = locationState;
+  const colors: SelectColors = locationState;
+
+  const updatedText19 = { ...existingText19, ...texts };
+  const updatedText20 = { ...existingText20, ...texts };
+  const updatedColor10 = { ...existingColor10, ...colors };
+
+  localStorage.setItem("text19", JSON.stringify(updatedText19));
+  localStorage.setItem("text20", JSON.stringify(updatedText20));
+  localStorage.setItem("SelectColor10", JSON.stringify(updatedColor10));
+  setTexts(prevText19 => ({...prevText19,...updatedText19}))
+  setTexts(prevText20 => ({...prevText20,...updatedText20}))
+  setColors(prevColor10 => ({...prevColor10,...updatedColor10}))
+}
+  const handleStored11 = () => {
+
+  const existingText21 = JSON.parse(localStorage.getItem("text21") || "{}");
+  const existingText22 = JSON.parse(localStorage.getItem("text22") || "{}");
+  const existingColor11 = JSON.parse(localStorage.getItem("SelectColor11") || "{}");
+  
+  const texts: Texts = locationState;
+  const colors: SelectColors = locationState;
+
+  const updatedText21 = { ...existingText21, ...texts };
+  const updatedText22 = { ...existingText22, ...texts };
+  const updatedColor11 = { ...existingColor11, ...colors };
+
+  localStorage.setItem("text21", JSON.stringify(updatedText21));
+  localStorage.setItem("text22", JSON.stringify(updatedText22));
+  localStorage.setItem("SelectColor11", JSON.stringify(updatedColor11));
+  setTexts(prevText21 => ({...prevText21,...updatedText21}))
+  setTexts(prevText22 => ({...prevText22,...updatedText22}))
+  setColors(prevColor11 => ({...prevColor11,...updatedColor11}))
+}
+  const handleStored12 = () => {
+
+  const existingText23 = JSON.parse(localStorage.getItem("text23") || "{}");
+  const existingText24 = JSON.parse(localStorage.getItem("text24") || "{}");
+  const existingColor12 = JSON.parse(localStorage.getItem("SelectColor12") || "{}");
+  
+  const texts: Texts = locationState;
+  const colors: SelectColors = locationState;
+
+  const updatedText23 = { ...existingText23, ...texts };
+  const updatedText24 = { ...existingText24, ...texts };
+  const updatedColor12 = { ...existingColor12, ...colors };
+
+  localStorage.setItem("text23", JSON.stringify(updatedText23));
+  localStorage.setItem("text24", JSON.stringify(updatedText24));
+  localStorage.setItem("SelectColor12", JSON.stringify(updatedColor12));
+  setTexts(prevText23 => ({...prevText23,...updatedText23}))
+  setTexts(prevText24 => ({...prevText24,...updatedText24}))
+  setColors(prevColor12 => ({...prevColor12,...updatedColor12}))
+}
+  const handleStored13 = () => {
+
+  const existingText25 = JSON.parse(localStorage.getItem("text25") || "{}");
+  const existingText26 = JSON.parse(localStorage.getItem("text26") || "{}");
+  const existingColor13 = JSON.parse(localStorage.getItem("SelectColor13") || "{}");
+  
+  const texts: Texts = locationState;
+  const colors: SelectColors = locationState;
+
+  const updatedText25 = { ...existingText25, ...texts };
+  const updatedText26 = { ...existingText26, ...texts };
+  const updatedColor13 = { ...existingColor13, ...colors };
+
+  localStorage.setItem("text25", JSON.stringify(updatedText25));
+  localStorage.setItem("text26", JSON.stringify(updatedText26));
+  localStorage.setItem("SelectColor13", JSON.stringify(updatedColor13));
+  setTexts(prevText25 => ({...prevText25,...updatedText25}))
+  setTexts(prevText26 => ({...prevText26,...updatedText26}))
+  setColors(prevColor13 => ({...prevColor13,...updatedColor13}))
+}
+  const handleStored14 = () => {
+
+  const existingText27 = JSON.parse(localStorage.getItem("text27") || "{}");
+  const existingText28 = JSON.parse(localStorage.getItem("text28") || "{}");
+  const existingColor14 = JSON.parse(localStorage.getItem("SelectColor14") || "{}");
+  
+  const texts: Texts = locationState;
+  const colors: SelectColors = locationState;
+
+  const updatedText27 = { ...existingText27, ...texts };
+  const updatedText28 = { ...existingText28, ...texts };
+  const updatedColor14 = { ...existingColor14, ...colors };
+
+  localStorage.setItem("text27", JSON.stringify(updatedText27));
+  localStorage.setItem("text28", JSON.stringify(updatedText28));
+  localStorage.setItem("SelectColor14", JSON.stringify(updatedColor14));
+  setTexts(prevText27 => ({...prevText27,...updatedText27}))
+  setTexts(prevText28 => ({...prevText28,...updatedText28}))
+  setColors(prevColor14 => ({...prevColor14,...updatedColor14}))
+}
+  const handleStored15 = () => {
+
+  const existingText29 = JSON.parse(localStorage.getItem("text29") || "{}");
+  const existingText30 = JSON.parse(localStorage.getItem("text30") || "{}");
+  const existingColor15 = JSON.parse(localStorage.getItem("SelectColor15") || "{}");
+  
+  const texts: Texts = locationState;
+  const colors: SelectColors = locationState;
+
+  const updatedText29 = { ...existingText29, ...texts };
+  const updatedText30 = { ...existingText30, ...texts };
+  const updatedColor15 = { ...existingColor15, ...colors };
+
+  localStorage.setItem("text29", JSON.stringify(updatedText29));
+  localStorage.setItem("text30", JSON.stringify(updatedText30));
+  localStorage.setItem("SelectColor15", JSON.stringify(updatedColor15));
+  setTexts(prevText29 => ({...prevText29,...updatedText29}))
+  setTexts(prevText30 => ({...prevText30,...updatedText30}))
+  setColors(prevColor15 => ({...prevColor15,...updatedColor15}))
+}
+const handleStored16 = () => {
+  const existingText31 = JSON.parse(localStorage.getItem("text31") || "{}");
+  const existingText32 = JSON.parse(localStorage.getItem("text32") || "{}");
+  const existingColor16 = JSON.parse(localStorage.getItem("SelectColor16") || "{}");
+
+  const texts: Texts = locationState;
+  const colors: SelectColors = locationState;
+  const updatedText31 = { ...existingText31, ...texts };
+  const updatedText32 = { ...existingText32, ...texts };
+  const updatedColor16 = { ...existingColor16, ...colors };
+
+  localStorage.setItem("text31", JSON.stringify(updatedText31));
+  localStorage.setItem("text32", JSON.stringify(updatedText32));
+  localStorage.setItem("SelectColor16", JSON.stringify(updatedColor16));
+
+  setTexts(prevText31 => ({...prevText31, ...updatedText31}));
+  setTexts(prevText32 => ({...prevText32, ...updatedText32}));
+  setColors(prevColor16 => ({...prevColor16, ...updatedColor16}));
+}
+const handleStored17 = () => {
+  const existingText33 = JSON.parse(localStorage.getItem("text33") || "{}");
+  const existingText34 = JSON.parse(localStorage.getItem("text34") || "{}");
+  const existingColor17 = JSON.parse(localStorage.getItem("SelectColor17") || "{}");
+
+  const texts: Texts = locationState;
+  const colors: SelectColors = locationState;
+  const updatedText33 = { ...existingText33, ...texts };
+  const updatedText34 = { ...existingText34, ...texts };
+  const updatedColor17 = { ...existingColor17, ...colors };
+
+  localStorage.setItem("text33", JSON.stringify(updatedText33));
+  localStorage.setItem("text34", JSON.stringify(updatedText34));
+  localStorage.setItem("SelectColor17", JSON.stringify(updatedColor17));
+
+  setTexts(prevText33 => ({...prevText33, ...updatedText33}));
+  setTexts(prevText34 => ({...prevText34, ...updatedText34}));
+  setColors(prevColor17 => ({...prevColor17, ...updatedColor17}));
+}
 
 
 const handleDeleted = () => {
