@@ -121,6 +121,7 @@ export const ReservationTimeTable = () => {
       if ((localStorage.hasOwnProperty("text13")) || (localStorage.hasOwnProperty("text14")) ||
        (localStorage.hasOwnProperty("SelectColor7"))){
         button7.style.display = "block"
+        handleStored7();
       }else {
         button7.style.display = "none"
       }
@@ -128,6 +129,7 @@ export const ReservationTimeTable = () => {
       if (localStorage.hasOwnProperty("text15") || (localStorage.hasOwnProperty("text16")) ||
        (localStorage.hasOwnProperty("SelectColor8"))){
         button8.style.display = "block"
+        handleStored8();
       }else {
         button8.style.display = "none"
       }
@@ -135,6 +137,7 @@ export const ReservationTimeTable = () => {
       if ((localStorage.hasOwnProperty("text17")) || (localStorage.hasOwnProperty("text18")) ||
        (localStorage.hasOwnProperty("SelectColor9"))){
         button9.style.display = "block"
+        handleStored9();
       }else {
        button9.style.display = "none"
       }
