@@ -113,6 +113,7 @@ export const ReservationTimeTable = () => {
       if (localStorage.hasOwnProperty("text11") || (localStorage.hasOwnProperty("text12")) ||
        (localStorage.hasOwnProperty("SelectColor6"))){
          button6.style.display = "block"
+         handleStored6();
       }else {
         button6.style.display = "none"
       }
@@ -319,6 +320,86 @@ export const ReservationTimeTable = () => {
   setTexts(prevText9 => ({...prevText9,...updatedText9}))
   setTexts(prevText10 => ({...prevText10,...updatedText10}))
   setColors(prevColor5 => ({...prevColor5,...updatedColor5}))
+}
+  const handleStored6 = () => {
+
+  const existingText11 = JSON.parse(localStorage.getItem("text11") || "{}");
+  const existingText12 = JSON.parse(localStorage.getItem("text12") || "{}");
+  const existingColor6 = JSON.parse(localStorage.getItem("SelectColor6") || "{}");
+  
+  const texts: Texts = locationState;
+  const colors: SelectColors = locationState;
+
+  const updatedText11 = { ...existingText11, ...texts };
+  const updatedText12 = { ...existingText12, ...texts };
+  const updatedColor6 = { ...existingColor6, ...colors };
+
+  localStorage.setItem("text11", JSON.stringify(updatedText11));
+  localStorage.setItem("text12", JSON.stringify(updatedText12));
+  localStorage.setItem("SelectColor6", JSON.stringify(updatedColor6));
+  setTexts(prevText11 => ({...prevText11,...updatedText11}))
+  setTexts(prevText12 => ({...prevText12,...updatedText12}))
+  setColors(prevColor6 => ({...prevColor6,...updatedColor6}))
+}
+  const handleStored7 = () => {
+
+  const existingText13 = JSON.parse(localStorage.getItem("text13") || "{}");
+  const existingText14 = JSON.parse(localStorage.getItem("text14") || "{}");
+  const existingColor7 = JSON.parse(localStorage.getItem("SelectColor7") || "{}");
+  
+  const texts: Texts = locationState;
+  const colors: SelectColors = locationState;
+
+  const updatedText13 = { ...existingText13, ...texts };
+  const updatedText14 = { ...existingText14, ...texts };
+  const updatedColor7 = { ...existingColor7, ...colors };
+
+  localStorage.setItem("text13", JSON.stringify(updatedText13));
+  localStorage.setItem("text14", JSON.stringify(updatedText14));
+  localStorage.setItem("SelectColor7", JSON.stringify(updatedColor7));
+  setTexts(prevText13 => ({...prevText13,...updatedText13}))
+  setTexts(prevText14 => ({...prevText14,...updatedText14}))
+  setColors(prevColor7 => ({...prevColor7,...updatedColor7}))
+}
+  const handleStored8 = () => {
+
+  const existingText15 = JSON.parse(localStorage.getItem("text15") || "{}");
+  const existingText16 = JSON.parse(localStorage.getItem("text16") || "{}");
+  const existingColor8 = JSON.parse(localStorage.getItem("SelectColor8") || "{}");
+  
+  const texts: Texts = locationState;
+  const colors: SelectColors = locationState;
+
+  const updatedText15 = { ...existingText15, ...texts };
+  const updatedText16 = { ...existingText16, ...texts };
+  const updatedColor8 = { ...existingColor8, ...colors };
+
+  localStorage.setItem("text15", JSON.stringify(updatedText15));
+  localStorage.setItem("text16", JSON.stringify(updatedText16));
+  localStorage.setItem("SelectColor8", JSON.stringify(updatedColor8));
+  setTexts(prevText15 => ({...prevText15,...updatedText15}))
+  setTexts(prevText16 => ({...prevText16,...updatedText16}))
+  setColors(prevColor8 => ({...prevColor8,...updatedColor8}))
+}
+  const handleStored9 = () => {
+
+  const existingText17 = JSON.parse(localStorage.getItem("text17") || "{}");
+  const existingText18 = JSON.parse(localStorage.getItem("text18") || "{}");
+  const existingColor9 = JSON.parse(localStorage.getItem("SelectColor9") || "{}");
+  
+  const texts: Texts = locationState;
+  const colors: SelectColors = locationState;
+
+  const updatedText17 = { ...existingText17, ...texts };
+  const updatedText18 = { ...existingText18, ...texts };
+  const updatedColor9 = { ...existingColor9, ...colors };
+
+  localStorage.setItem("text17", JSON.stringify(updatedText17));
+  localStorage.setItem("text18", JSON.stringify(updatedText18));
+  localStorage.setItem("SelectColor9", JSON.stringify(updatedColor9));
+  setTexts(prevText17 => ({...prevText17,...updatedText17}))
+  setTexts(prevText18 => ({...prevText18,...updatedText18}))
+  setColors(prevColor9 => ({...prevColor9,...updatedColor9}))
 }
 
 
