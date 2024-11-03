@@ -75,7 +75,13 @@ interface SelectColors {
     };
    const CancelConfirm = (e:React.MouseEvent<HTMLButtonElement,MouseEvent>) => {
     if(window.confirm("予約をキャンセルしますか")){
-      navigate("/ShowText");
+      navigate("/ShowText",{
+        state:{
+          text:text || '',
+          text2:text2 || '',
+          SelectColor:SelectColor || '',
+        }
+      });
     }else{ 
       e.preventDefault()
     }
@@ -95,7 +101,6 @@ interface SelectColors {
    localStorage.setItem("text2",JSON.stringify(text2));
    localStorage.setItem("SelectColor",JSON.stringify(SelectColor));
    }
-  
     navigate("/ShowText",{
       state:{
         text:text || '',
@@ -104,9 +109,6 @@ interface SelectColors {
       }
     });
    };
-
-   
-
     return (
       <div>
         <div>

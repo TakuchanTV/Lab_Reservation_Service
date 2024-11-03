@@ -48,7 +48,13 @@ interface Props {
     };
     const CancelConfirm = (e:React.MouseEvent<HTMLButtonElement,MouseEvent>) => {
       if(window.confirm("予約をキャンセルしますか")){
-        navigate("/ShowText");
+        navigate("/ShowText",{
+          state:{
+            text9:text9 || '',
+            text10:text10 || '',
+            SelectColor5:SelectColor5 || '',
+          }
+        });
       }else{ 
         e.preventDefault()
       }

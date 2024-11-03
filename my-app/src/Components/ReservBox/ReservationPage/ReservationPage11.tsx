@@ -49,7 +49,13 @@ import React, {ChangeEvent} from "react";
   };
   const CancelConfirm = (e:React.MouseEvent<HTMLButtonElement,MouseEvent>) => {
     if(window.confirm("予約をキャンセルしますか")){
-      navigate("/ShowText");
+      navigate("/ShowText",{
+        state:{ 
+          text21:text21 || '',
+          text22:text22 || '',
+          SelectColor11:SelectColor11 || '',
+        }
+      });
     }else{ 
       e.preventDefault()
     }
@@ -73,7 +79,6 @@ import React, {ChangeEvent} from "react";
         text21:text21 || '',
         text22:text22 || '',
         SelectColor11:SelectColor11 || '',
-
       }
     })
    }

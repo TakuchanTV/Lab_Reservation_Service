@@ -49,7 +49,13 @@ interface Props {
   };
   const CancelConfirm = (e:React.MouseEvent<HTMLButtonElement,MouseEvent>) => {
     if(window.confirm("予約をキャンセルしますか")){
-      navigate("/ShowText");
+      navigate("/ShowText",{
+        state:{
+          text5:text5 || '',
+          text6:text6 || '',
+          SelectColor3:SelectColor3 || '',
+        }
+      });
     }else{ 
       e.preventDefault()
     }
@@ -63,7 +69,6 @@ interface Props {
         text5:text5 || '',
         text6:text6 || '',
         SelectColor3:SelectColor3 || '',
-        
       }
     })
     if(text5 === "" && text6 === "" && SelectColor3 === "") {

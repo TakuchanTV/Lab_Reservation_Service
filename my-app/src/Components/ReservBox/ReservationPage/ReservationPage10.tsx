@@ -47,7 +47,13 @@ import { SelectDays } from "../ReservCustomhooks/SelectDays";
     };
     const CancelConfirm = (e:React.MouseEvent<HTMLButtonElement,MouseEvent>) => {
       if(window.confirm("予約をキャンセルしますか")){
-        navigate("/ShowText");
+        navigate("/ShowText",{
+          state:{
+            text19:text19 || '',
+            text20:text20 || '',
+            SelectColor10:SelectColor10 || '',
+          }
+        });
       }else{ 
         e.preventDefault()
       }
@@ -71,7 +77,6 @@ import { SelectDays } from "../ReservCustomhooks/SelectDays";
         text19:text19 || '',
         text20:text20 || '',
         SelectColor10:SelectColor10 || '',
-
       }
     })
    }
