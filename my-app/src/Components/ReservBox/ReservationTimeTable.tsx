@@ -233,10 +233,26 @@ export const ReservationTimeTable = () => {
     []);
   
   const locationState:Location | null = location.state;
+  const ToShowText = () => {
+    navigate("/ShowText",{
+      state:{
+        texts,
+        colors
+      } 
+    }
+    )
+  }
+  const Shotexbtn = styled.button`
+  position: fixed;
+  top: 40px;
+  right: -40px;
+`
 
   if (!locationState) {
     console.error("Location.state is null or undifined");
     return (
+       <div>
+        <Shotexbtn onClick={ToShowText}>ShowTextに遷移します</Shotexbtn>
       <STable border={1}>
         <tr>
          <STd STdColor={colors?.SelectColor || null}  >
@@ -341,11 +357,13 @@ export const ReservationTimeTable = () => {
             </STd>
           </tr>
       </STable>
+      </div>
     ) ;
     
+   
   }
-
-
+  
+ 
   const handleStored = () => {
     
     const existingText = JSON.parse(localStorage.getItem("text") || "{}");
