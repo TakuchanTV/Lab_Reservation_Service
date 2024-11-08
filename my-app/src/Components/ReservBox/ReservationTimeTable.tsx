@@ -967,7 +967,6 @@ const BacktoPage17 = () => {
   position: fixed;
   top: 110px;
   right: -400px;
-  /* display: none; */
 `
 export const Deletebutton = styled.button<Props2>`
 border-radius: 16px;
@@ -982,7 +981,6 @@ background-color: ${props => props.BgColor || 'white'};
  position: fixed;
  top: 110px;
  right: -500px;
- /* display: none; */
 `
 
 export const Sbutton = styled.button<Props2>`
@@ -999,7 +997,6 @@ export const Sbutton = styled.button<Props2>`
   top: 110px;
   right: -180px;
   margin-bottom: 5px;
-  /* display: none; */
 `
 export const Sbutton2 = styled.button<Props2>`
  border-radius: 16px;
@@ -1015,7 +1012,6 @@ export const Sbutton2 = styled.button<Props2>`
   top: 150px;
   right: -180px;
   margin-bottom: 5px;
-  /* display: none; */
 `
 export const Sbutton3 = styled.button<Props2>`
  border-radius: 16px;
@@ -1031,7 +1027,6 @@ export const Sbutton3 = styled.button<Props2>`
   top: 185px;
   right: -180px;
   margin-bottom: 5px;
-  /* display: none; */
 `
 export const Sbutton4 = styled.button<Props2>`
  border-radius: 16px;
@@ -1047,7 +1042,6 @@ export const Sbutton4 = styled.button<Props2>`
   top: 223px;
   right: -180px;
   margin-bottom: 5px;
-  /* display: none; */
 `
 export const Sbutton5 = styled.button<Props2>`
  border-radius: 16px;
@@ -1063,7 +1057,6 @@ export const Sbutton5 = styled.button<Props2>`
   top: 260px;
   right: -180px;
   margin-bottom: 5px;
-  /* display: none; */
 `
 export const Sbutton6 = styled.button<Props2>`
  border-radius: 16px;
@@ -1079,7 +1072,6 @@ export const Sbutton6 = styled.button<Props2>`
   top: 295px;
   right: -180px;
   margin-bottom: 5px;
-  /* display: none; */
 `
 export const Sbutton7 = styled.button<Props2>`
  border-radius: 16px;
@@ -1095,7 +1087,6 @@ export const Sbutton7 = styled.button<Props2>`
   top: 333px;
   right: -180px;
   margin-bottom: 5px;
-  /* display: none; */
 `
 export const Sbutton8 = styled.button<Props2>`
  border-radius: 16px;
@@ -1111,7 +1102,6 @@ export const Sbutton8 = styled.button<Props2>`
   top: 370px;
   right: -180px;
   margin-bottom: 5px;
-  /* display: none; */
 `
 export const Sbutton9 = styled.button<Props2>`
  border-radius: 16px;
@@ -1127,7 +1117,6 @@ export const Sbutton9 = styled.button<Props2>`
   top: 408px;
   right: -180px;
   margin-bottom: 5px;
-  /* display: none; */
 `
 export const Sbutton10 = styled.button<Props2>`
  border-radius: 16px;
@@ -1143,7 +1132,6 @@ export const Sbutton10 = styled.button<Props2>`
   top: 445px;
   right: -180px;
   margin-bottom: 5px;
-  /* display: none; */
 `
 export const Sbutton11 = styled.button<Props2>`
  border-radius: 16px;
@@ -1159,7 +1147,6 @@ export const Sbutton11 = styled.button<Props2>`
   top: 482px;
   right: -180px;
   margin-bottom: 5px;
-  /* display: none; */
 `
 export const Sbutton12 = styled.button<Props2>`
  border-radius: 16px;
@@ -1175,7 +1162,6 @@ export const Sbutton12 = styled.button<Props2>`
   top: 520px;
   right: -180px;
   margin-bottom: 5px;
-  /* display: none; */
 `
 export const Sbutton13 = styled.button<Props2>`
  border-radius: 16px;
@@ -1191,7 +1177,6 @@ export const Sbutton13 = styled.button<Props2>`
   top: 555px;
   right: -180px;
   margin-bottom: 5px;
-  /* display: none; */
 `
 export const Sbutton14 = styled.button<Props2>`
  border-radius: 16px;
@@ -1207,7 +1192,6 @@ export const Sbutton14 = styled.button<Props2>`
   top: 592px;
   right: -180px;
   margin-bottom: 5px;
-  /* display: none; */
 `
 export const Sbutton15 = styled.button<Props2>`
  border-radius: 16px;
@@ -1223,7 +1207,6 @@ export const Sbutton15 = styled.button<Props2>`
   top: 630px;
   right: -180px;
   margin-bottom: 5px;
-  /* display: none; */
 `
 export const Sbutton16 = styled.button<Props2>`
  border-radius: 16px;
@@ -1239,7 +1222,6 @@ export const Sbutton16 = styled.button<Props2>`
   top: 667px;
   right: -180px;
   margin-bottom: 5px;
-  /* display: none; */
 `
 export const Sbutton17 = styled.button<Props2>`
  border-radius: 16px;
@@ -1255,5 +1237,4 @@ export const Sbutton17 = styled.button<Props2>`
   top: 705px;
   right: -180px;
   margin-bottom: 5px;
-  /* display: none; */
 `
