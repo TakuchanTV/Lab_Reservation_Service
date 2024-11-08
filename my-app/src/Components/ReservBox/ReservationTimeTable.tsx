@@ -934,7 +934,7 @@ const BacktoPage17 = () => {
 `
 
   const STable = styled.table`
-    transform: translateX(279px) translateY(-220px) scale(0.70);
+    transform: translateX(215px) translateY(-220px) scale(0.70);
     border-collapse: collapse;
     background-color: #ffffff;
     border-color: purple;
