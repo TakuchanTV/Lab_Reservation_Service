@@ -995,7 +995,7 @@ export const Sbutton = styled.button<Props2>`
 
   position: fixed;
   top: 110px;
-  right: -180px;
+  right: -100px;
   margin-bottom: 5px;
 `
 export const Sbutton2 = styled.button<Props2>`
@@ -1010,7 +1010,7 @@ export const Sbutton2 = styled.button<Props2>`
 
   position: fixed;
   top: 150px;
-  right: -180px;
+  right: -100px;
   margin-bottom: 5px;
 `
 export const Sbutton3 = styled.button<Props2>`
@@ -1025,7 +1025,7 @@ export const Sbutton3 = styled.button<Props2>`
 
   position: fixed;
   top: 185px;
-  right: -180px;
+  right: -100px;
   margin-bottom: 5px;
 `
 export const Sbutton4 = styled.button<Props2>`
@@ -1040,7 +1040,7 @@ export const Sbutton4 = styled.button<Props2>`
 
   position: fixed;
   top: 223px;
-  right: -180px;
+  right: -100px;
   margin-bottom: 5px;
 `
 export const Sbutton5 = styled.button<Props2>`
@@ -1055,7 +1055,7 @@ export const Sbutton5 = styled.button<Props2>`
 
   position: fixed;
   top: 260px;
-  right: -180px;
+  right: -100px;
   margin-bottom: 5px;
 `
 export const Sbutton6 = styled.button<Props2>`
@@ -1070,7 +1070,7 @@ export const Sbutton6 = styled.button<Props2>`
 
   position: fixed;
   top: 295px;
-  right: -180px;
+  right: -100px;
   margin-bottom: 5px;
 `
 export const Sbutton7 = styled.button<Props2>`
@@ -1085,7 +1085,7 @@ export const Sbutton7 = styled.button<Props2>`
 
   position: fixed;
   top: 333px;
-  right: -180px;
+  right: -100px;
   margin-bottom: 5px;
 `
 export const Sbutton8 = styled.button<Props2>`
@@ -1100,7 +1100,7 @@ export const Sbutton8 = styled.button<Props2>`
 
   position: fixed;
   top: 370px;
-  right: -180px;
+  right: -100px;
   margin-bottom: 5px;
 `
 export const Sbutton9 = styled.button<Props2>`
@@ -1115,7 +1115,7 @@ export const Sbutton9 = styled.button<Props2>`
 
   position: fixed;
   top: 408px;
-  right: -180px;
+  right: -100px;
   margin-bottom: 5px;
 `
 export const Sbutton10 = styled.button<Props2>`
@@ -1130,7 +1130,7 @@ export const Sbutton10 = styled.button<Props2>`
 
   position: fixed;
   top: 445px;
-  right: -180px;
+  right: -100px;
   margin-bottom: 5px;
 `
 export const Sbutton11 = styled.button<Props2>`
@@ -1145,7 +1145,7 @@ export const Sbutton11 = styled.button<Props2>`
 
   position: fixed;
   top: 482px;
-  right: -180px;
+  right: -100px;
   margin-bottom: 5px;
 `
 export const Sbutton12 = styled.button<Props2>`
@@ -1160,7 +1160,7 @@ export const Sbutton12 = styled.button<Props2>`
 
   position: fixed;
   top: 520px;
-  right: -180px;
+  right: -100px;
   margin-bottom: 5px;
 `
 export const Sbutton13 = styled.button<Props2>`
@@ -1175,7 +1175,7 @@ export const Sbutton13 = styled.button<Props2>`
 
   position: fixed;
   top: 555px;
-  right: -180px;
+  right: -100px;
   margin-bottom: 5px;
 `
 export const Sbutton14 = styled.button<Props2>`
@@ -1190,7 +1190,7 @@ export const Sbutton14 = styled.button<Props2>`
 
   position: fixed;
   top: 592px;
-  right: -180px;
+  right: -100px;
   margin-bottom: 5px;
 `
 export const Sbutton15 = styled.button<Props2>`
@@ -1205,7 +1205,7 @@ export const Sbutton15 = styled.button<Props2>`
 
   position: fixed;
   top: 630px;
-  right: -180px;
+  right: -100px;
   margin-bottom: 5px;
 `
 export const Sbutton16 = styled.button<Props2>`
@@ -1220,7 +1220,7 @@ export const Sbutton16 = styled.button<Props2>`
 
   position: fixed;
   top: 667px;
-  right: -180px;
+  right: -100px;
   margin-bottom: 5px;
 `
 export const Sbutton17 = styled.button<Props2>`
@@ -1235,6 +1235,6 @@ export const Sbutton17 = styled.button<Props2>`
 
   position: fixed;
   top: 705px;
-  right: -180px;
+  right: -100px;
   margin-bottom: 5px;
 `
