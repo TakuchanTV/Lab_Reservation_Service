@@ -245,7 +245,7 @@ export const ReservationTimeTable = () => {
   const Shotexbtn = styled.button`
   position: fixed;
   top: 40px;
-  right: -40px;
+  right: 40px;
 `
 
   if (!locationState) {
@@ -934,7 +934,7 @@ const BacktoPage17 = () => {
 `
 
   const STable = styled.table`
-    transform: translateX(215px) translateY(-220px) scale(0.70);
+    transform: translateX(222px) translateY(-220px) scale(0.70);
     border-collapse: collapse;
     background-color: #ffffff;
     border-color: purple;
