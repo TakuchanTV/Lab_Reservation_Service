@@ -47,10 +47,22 @@ import React, {ChangeEvent} from "react";
       color: e.target.value
     }))
   };
-   const CancelConfirm = () => {
-    window.confirm("予約を破棄してもいいですか?");
-    navigate("/ShowText")
-   }
+  const CancelConfirm = (e:React.MouseEvent<HTMLButtonElement,MouseEvent>) => {
+    if(window.confirm("予約をキャンセルしますか")){
+      navigate("/ShowText",{
+        state:{ 
+          text21:text21 || '',
+          text22:text22 || '',
+          SelectColor11:SelectColor11 || '',
+        }
+      });
+      localStorage.removeItem("text21")
+      localStorage.removeItem("text22")
+      localStorage.removeItem("SelectColor11")
+    }else{ 
+      e.preventDefault()
+    }
+   };
    const returnButton = () => {
     navigate("/")
    }
@@ -70,7 +82,6 @@ import React, {ChangeEvent} from "react";
         text21:text21 || '',
         text22:text22 || '',
         SelectColor11:SelectColor11 || '',
-
       }
     })
    }

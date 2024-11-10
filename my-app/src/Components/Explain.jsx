@@ -7,12 +7,10 @@ import { ReservationList } from "./ReservBox/ReservationDevice"
 import { ReservationTimeTable } from "./ReservBox/ReservationTimeTable.tsx"
 export const ShowText = () => {
 
-
     const [activeDate, setActiveDate] = useState(new Date());
 
     const navigate = useNavigate();
     
-  
     useEffect(() => {
     }, [navigate])
     
@@ -23,7 +21,6 @@ export const ShowText = () => {
     const changeDay = (days) => {
       const newDate = new Date(activeDate);
       newDate.setDate(newDate.getDate() + days);
-
       setActiveDate(newDate)
     }
 
@@ -32,7 +29,7 @@ export const ShowText = () => {
     };
     return(
 <ResevTable>
-    {/* <Sh4>柴田研究室機器予約</Sh4> */}
+    <Sh2>研究室機器予約ページ</Sh2>
 <StyledCalender  locale='ja' value={activeDate} 
       format={(locale, date) => (date , 'd')} onClickDay={handleDayClick}
       tileClassName={({ date, view }) => {
@@ -49,22 +46,20 @@ export const ShowText = () => {
     <ReservationList />
     <ReservationTimeTable /> 
     </Resevdiv>
-    
-
-
 </ResevTable>
     )
 }
-
 const ResevTable = styled.table`
 transform: scale(0.85);
 height: 10px;
 
 `
-const Sh4 = styled.h4`
-    margin-top: 0px;
+const Sh2 = styled.h2`
+    top: -60px;
+    right: -10px;
+    position: fixed;
+    ;
 `
-
 const Resevdiv = styled.div`
 display: flex;
 `

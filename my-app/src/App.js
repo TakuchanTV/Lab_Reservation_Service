@@ -3,12 +3,14 @@ import React, { useState } from "react";
 import { StyledComponents } from "./Components/TopPageCss";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import { Router } from "./Components/ReservBox/router/Router";
+import { ShowText } from "./Components/Explain";
 const Home = () =>  {
     return (
       <>
 
       <div className="App">
-        <StyledComponents />
+        <ShowText />
+        {/* <StyledComponents /> */}
       </div>
       </>
     )

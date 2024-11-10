@@ -48,10 +48,22 @@ import { SelectDays } from "../ReservCustomhooks/SelectDays";
         color: e.target.value
       }))
     };
-   const CancelConfirm = () => {
-    window.confirm("予約を破棄してもいいですか?");
-    navigate("/ShowText")
-   }
+    const CancelConfirm = (e:React.MouseEvent<HTMLButtonElement,MouseEvent>) => {
+      if(window.confirm("予約をキャンセルしますか")){
+        navigate("/ShowText",{
+          state:{
+            text17:text17 || '',
+            text18:text18 || '',
+            SelectColor9:SelectColor9 || '',
+          }
+        });
+      localStorage.removeItem("text17")
+      localStorage.removeItem("text18")
+      localStorage.removeItem("SelectColor9")
+      }else{ 
+        e.preventDefault()
+      }
+     };
    const returnButton = () => {
     navigate("/")
    }
@@ -71,7 +83,6 @@ import { SelectDays } from "../ReservCustomhooks/SelectDays";
         text17:text17 || '',
         text18:text18 || '',
         SelectColor9:SelectColor9 || '',
-
       }
     })
    }

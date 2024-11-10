@@ -50,10 +50,22 @@ interface Props {
  
 
 
-   const CancelConfirm = () => {
-    window.confirm("予約を破棄してもいいですか?");
-    navigate("/ShowText")
-   }
+    const CancelConfirm = (e:React.MouseEvent<HTMLButtonElement,MouseEvent>) => {
+      if(window.confirm("予約をキャンセルしますか")){
+        navigate("/ShowText",{
+          state:{
+            text3:text3 || '',
+            text4:text4 || '',
+            SelectColor2:SelectColor2 || '',
+          }
+        });
+      localStorage.removeItem("text3")
+      localStorage.removeItem("text4")
+      localStorage.removeItem("SelectColor2")
+      }else{ 
+        e.preventDefault()
+      }
+     };
    const returnButton = () => {
     navigate("/")
    }

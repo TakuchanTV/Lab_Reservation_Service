@@ -6,7 +6,7 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 
 interface Props {
-  STdColor:string,
+  STdColor:string|null,
 };
 
 interface Props2 {
@@ -47,9 +47,18 @@ export const ReservationTimeTable = () => {
 
   const [texts, setTexts] = useState<Texts | null>(null);
   const [colors, setColors] = useState<SelectColors | null>(null);
+  const [locations, setLocations] = useState({
+    text: "" ,text2: "" ,text3: "" ,text4: "" ,text5: "" ,text6: "" ,text7: "" ,text8: "" ,text9: "" ,text10: "",
+    text11:"", text12:"", text13:"", text14:"", text15:"", text16:"", text17:"", text18:"",text19:"",text20:"",
+     text21:"", text22:"", text23:"",text24:"", text25:"", text26:"", text27:"", text28:"", text29:"", text30:"",
+     text31:"", text32:"", text33:"", text34:"",
+     SelectColor: "",SelectColor2: "",SelectColor3: "",SelectColor4: "",SelectColor5: "",SelectColor6: "",SelectColor7: "",
+     SelectColor8: "",SelectColor9: "",SelectColor10: "",SelectColor11: "",SelectColor12: "",SelectColor13: "",SelectColor14: "",
+     SelectColor15: "",SelectColor16: "",SelectColor17: "",
+  })
 
   useEffect(() => {
-    
+
     const button = document.getElementById("reservebutton") as HTMLInputElement
     const button2 = document.getElementById("reservebutton2") as HTMLInputElement
     const button3 = document.getElementById("reservebutton3") as HTMLInputElement
@@ -68,15 +77,16 @@ export const ReservationTimeTable = () => {
     const button16 = document.getElementById("reservebutton16") as HTMLInputElement
     const button17 = document.getElementById("reservebutton17") as HTMLInputElement
     
-    if (button) {
+    if (button){
       if (localStorage.hasOwnProperty("text") || localStorage.hasOwnProperty("text2") 
-      || localStorage.hasOwnProperty("SelectColor")) {
-         button.style.display = "block"
-        handleStored();
-      }else {
-      button.style.display = "none"
-      }
-
+        || localStorage.hasOwnProperty("SelectColor")) {
+           button.style.display = "block"
+          handleStored();
+        }else {
+        button.style.display = "none"
+        }
+    }
+    if (button2){
       if (localStorage.hasOwnProperty("text3") || localStorage.hasOwnProperty("text4") 
         || localStorage.hasOwnProperty("SelectColor2")){
          button2.style.display = "block"
@@ -84,7 +94,8 @@ export const ReservationTimeTable = () => {
       }else {
         button2.style.display = "none"
       } 
-
+    }
+    if (button3){
       if (localStorage.hasOwnProperty("text5") || localStorage.hasOwnProperty("text6") 
         || localStorage.hasOwnProperty("SelectColor3")){
         button3.style.display = "block"
@@ -92,152 +103,267 @@ export const ReservationTimeTable = () => {
       }else {
         button3.style.display = "none"
       }
-
+    }
+     if (button4) {
       if (localStorage.hasOwnProperty("text7") || localStorage.hasOwnProperty("text8") 
         || localStorage.hasOwnProperty("SelectColor4")){
         button4.style.display = "block"
         handleStored4();
       }else {
         button4.style.display = "none"
-
       }
-
-      if (localStorage.hasOwnProperty("text9") || (localStorage.hasOwnProperty("text10")
-       || localStorage.hasOwnProperty("SelectColor5"))){
-        button5.style.display = "block"
-        handleStored5();
-      }else {
-        button5.style.display = "none"
+     }
+      if (button5){
+        if (localStorage.hasOwnProperty("text9") || (localStorage.hasOwnProperty("text10")
+          || localStorage.hasOwnProperty("SelectColor5"))){
+           button5.style.display = "block"
+           handleStored5();
+         }else {
+           button5.style.display = "none"
+         }
       }
-
-      if (localStorage.hasOwnProperty("text11") || (localStorage.hasOwnProperty("text12")) ||
-       (localStorage.hasOwnProperty("SelectColor6"))){
-         button6.style.display = "block"
-         handleStored6();
-      }else {
-        button6.style.display = "none"
+      if (button6){
+        if (localStorage.hasOwnProperty("text11") || (localStorage.hasOwnProperty("text12")) ||
+        (localStorage.hasOwnProperty("SelectColor6"))){
+          button6.style.display = "block"
+          handleStored6();
+       }else {
+         button6.style.display = "none"
+       }
       }
-
-      if ((localStorage.hasOwnProperty("text13")) || (localStorage.hasOwnProperty("text14")) ||
-       (localStorage.hasOwnProperty("SelectColor7"))){
-        button7.style.display = "block"
-        handleStored7();
-      }else {
-        button7.style.display = "none"
+      if (button7){
+         if (localStorage.hasOwnProperty("text13") || localStorage.hasOwnProperty("text14") ||
+          localStorage.hasOwnProperty("SelectColor7")) {
+          button7.style.display = "block"; handleStored7(); 
+        } else {
+           button7.style.display = "none"; 
+        } 
       }
-
-      if (localStorage.hasOwnProperty("text15") || (localStorage.hasOwnProperty("text16")) ||
-       (localStorage.hasOwnProperty("SelectColor8"))){
-        button8.style.display = "block"
-        handleStored8();
-      }else {
-        button8.style.display = "none"
+          if (button8){
+            if (localStorage.hasOwnProperty("text15") || (localStorage.hasOwnProperty("text16")) ||
+            (localStorage.hasOwnProperty("SelectColor8"))){
+             button8.style.display = "block"
+             handleStored8();
+        }else{
+             button8.style.display = "none"
+        }
       }
-
-      if ((localStorage.hasOwnProperty("text17")) || (localStorage.hasOwnProperty("text18")) ||
-       (localStorage.hasOwnProperty("SelectColor9"))){
-        button9.style.display = "block"
-        handleStored9();
-      }else {
-       button9.style.display = "none"
+      if (button9){
+        if ((localStorage.hasOwnProperty("text17")) || (localStorage.hasOwnProperty("text18")) ||
+        (localStorage.hasOwnProperty("SelectColor9"))){
+         button9.style.display = "block"
+         handleStored9();
+       }else {
+        button9.style.display = "none"
+       }
       }
-
-      if ((localStorage.hasOwnProperty("text19")) || (localStorage.hasOwnProperty("text20")) ||
-       (localStorage.hasOwnProperty("SelectColor10"))){
-       button10.style.display = "block"
-       handleStored10();
-      }else {
-        button10.style.display = "none"
+      if (button10){
+        if ((localStorage.hasOwnProperty("text19")) || (localStorage.hasOwnProperty("text20")) ||
+        (localStorage.hasOwnProperty("SelectColor10"))){
+        button10.style.display = "block"
+        handleStored10();
+       }else {
+         button10.style.display = "none"
+       }
       }
-
-      if ((localStorage.hasOwnProperty("text21")) || (localStorage.hasOwnProperty("text22")) ||
-       (localStorage.hasOwnProperty("SelectColor11"))){
-        button11.style.display = "block"
-        handleStored11();
-
-       
-      }else {
-         button11.style.display = "none"
+      if (button11){
+        if ((localStorage.hasOwnProperty("text21")) || (localStorage.hasOwnProperty("text22")) ||
+        (localStorage.hasOwnProperty("SelectColor11"))){
+         button11.style.display = "block"
+         handleStored11();
+       }else {
+          button11.style.display = "none"
+       }
       }
-
-      if ((localStorage.hasOwnProperty("text23")) || (localStorage.hasOwnProperty("text24")) ||
-       (localStorage.hasOwnProperty("SelectColor12"))){
-         button12.style.display = "block"
-         handleStored12();
-
-       
-      }else {
-        button12.style.display = "none"
+      if (button12){
+        if ((localStorage.hasOwnProperty("text23")) || (localStorage.hasOwnProperty("text24")) ||
+        (localStorage.hasOwnProperty("SelectColor12"))){
+          button12.style.display = "block"
+          handleStored12();
+       }else {
+         button12.style.display = "none"
+       }
       }
-
-      if ((localStorage.hasOwnProperty("text25")) || (localStorage.hasOwnProperty("text26")) ||
-       (localStorage.hasOwnProperty("SelectColor13"))){
-        button13.style.display = "block"
-        handleStored13();
-
-      }else {
-        button13.style.display = "none"
+      if (button13){
+        if ((localStorage.hasOwnProperty("text25")) || (localStorage.hasOwnProperty("text26")) ||
+        (localStorage.hasOwnProperty("SelectColor13"))){
+         button13.style.display = "block"
+         handleStored13();
+       }else {
+         button13.style.display = "none"
+       }
       }
-
-      if ((localStorage.hasOwnProperty("text27")) || (localStorage.hasOwnProperty("text28")) ||
-       (localStorage.hasOwnProperty("SelectColor14"))){
-       button14.style.display = "block"
-       handleStored14();
-
-      }else {
-        button14.style.display = "none"
+      if (button14){
+        if ((localStorage.hasOwnProperty("text27")) || (localStorage.hasOwnProperty("text28")) ||
+        (localStorage.hasOwnProperty("SelectColor14"))){
+        button14.style.display = "block"
+        handleStored14();
+       }else {
+         button14.style.display = "none"
+       }
       }
-
-      if ((localStorage.hasOwnProperty("text29")) || (localStorage.hasOwnProperty("text30")) ||
-       (localStorage.hasOwnProperty("SelectColor15"))){
-        button15.style.display = "block"
-        handleStored15();
-
-      }else {
-       button15.style.display = "none"
+      if (button15){
+        if ((localStorage.hasOwnProperty("text29")) || (localStorage.hasOwnProperty("text30")) ||
+        (localStorage.hasOwnProperty("SelectColor15"))){
+         button15.style.display = "block"
+         handleStored15();
+       }else {
+        button15.style.display = "none"
+       }
       }
-
-      if ((localStorage.hasOwnProperty("text31")) || (localStorage.hasOwnProperty("text32")) ||
-       (localStorage.hasOwnProperty("SelectColor16"))){
-       button16.style.display = "block"
-       handleStored16();
-
-      }else {
-        button16.style.display = "none"
+      if (button16){
+        if ((localStorage.hasOwnProperty("text31")) || (localStorage.hasOwnProperty("text32")) ||
+        (localStorage.hasOwnProperty("SelectColor16"))){
+        button16.style.display = "block"
+        handleStored16();
+       }else {
+         button16.style.display = "none"
+       }
       }
-
-      if ((localStorage.hasOwnProperty("text33")) || (localStorage.hasOwnProperty("text34")) ||
-       (localStorage.hasOwnProperty("SelectColor17"))){
-        button17.style.display = "block"
-        handleStored17();
-
-      }else {
-        button17.style.display = "none"
-      } 
-    }else{
-      console.log("buttonはfalse")
-    } },
-    [])
-  
-  
-  
+      if (button17){
+        if ((localStorage.hasOwnProperty("text33")) || (localStorage.hasOwnProperty("text34")) ||
+        (localStorage.hasOwnProperty("SelectColor17"))){
+         button17.style.display = "block"
+         handleStored17();
+       }else {
+         button17.style.display = "none"
+       } 
+      }
+    },
+    []);
   
   const locationState:Location | null = location.state;
+  const ToShowText = () => {
+    navigate("/ShowText",{
+      state:{
+        texts,
+        colors
+      } 
+    }
+    )
+  }
+  const Shotexbtn = styled.button`
+  position: fixed;
+  top: 40px;
+  right: 40px;
+`
 
   if (!locationState) {
     console.error("Location.state is null or undifined");
-    return null;
+    return (
+       <div>
+        <Shotexbtn onClick={ToShowText}>ShowTextに遷移します</Shotexbtn>
+      <STable border={1}>
+        <tr>
+         <STd STdColor={colors?.SelectColor || null}  >
+            {texts?.text || null} {texts?.text2 || null}
+          <br />
+          </STd>
+         </tr>
+          <tr>
+            <STd STdColor={colors?.SelectColor2 || null} >
+             {texts?.text3 ||null}  {texts?.text4 ||null}
+            <br />
+            </STd>
+          </tr>
+          <tr>
+            <STd STdColor={colors?.SelectColor3 || null}>
+              {texts?.text5 ||null}  {texts?.text6 ||null}
+            <br />
+            </STd>
+          </tr>
+          <tr>
+            <STd STdColor={colors?.SelectColor4 || null} >
+              {texts?.text7 ||null}  {texts?.text8 ||null}
+            <br />
+            </STd>
+          </tr>
+          <tr>
+            <STd STdColor={colors?.SelectColor5 || null} >
+              {texts?.text9 ||null}  {texts?.text10 ||null}
+            <br />
+            </STd>
+          </tr>
+          <tr>
+            <STd STdColor={colors?.SelectColor6 || null} >
+              {texts?.text11 || null}  {texts?.text12 ||null}
+            <br />
+            </STd>
+          </tr>
+          <tr>
+            <STd STdColor={colors?.SelectColor7 || null} >
+              {texts?.text13 ||null}  {texts?.text14 ||null}
+            <br />
+            </STd>
+          </tr>
+          <tr>
+            <STd STdColor={colors?.SelectColor8 || null} >
+              {texts?.text15 ||null}  {texts?.text16 ||null}
+            <br />
+            </STd>
+          </tr>
+          <tr>
+            <STd STdColor={colors?.SelectColor9 || null} >
+              {texts?.text17 ||null}  {texts?.text18 ||null}
+              <br />
+            </STd>
+          </tr>
+          <tr>
+            <STd STdColor={colors?.SelectColor10 || null} >
+              {texts?.text19 ||null}  {texts?.text20 ||null}
+            <br />
+            </STd>
+          </tr>
+          <tr>
+            <STd STdColor={colors?.SelectColor11 || null} >
+              {texts?.text21 ||null}  {texts?.text22 ||null}
+            <br />
+            </STd>
+          </tr>
+          <tr>
+            <STd STdColor={colors?.SelectColor12 || null} >
+              {texts?.text23 ||null}  {texts?.text24 ||null}
+            <br />
+            </STd>
+          </tr>
+          <tr>
+            <STd STdColor={colors?.SelectColor13 || null} >
+              {texts?.text25 ||null}  {texts?.text26 ||null}
+            <br />
+            </STd>
+          </tr>
+          <tr>
+            <STd STdColor={colors?.SelectColor14 || null} >
+              {texts?.text27 ||null}  {texts?.text28 ||null}
+            <br />
+            </STd>
+          </tr>
+          <tr>
+            <STd STdColor={colors?.SelectColor15 || null} >
+              {texts?.text29 ||null}  {texts?.text30 ||null}
+            <br />
+            </STd>
+          </tr>
+          <tr>
+            <STd STdColor={colors?.SelectColor16 || null} >
+              {texts?.text31 ||null}  {texts?.text32 ||null}
+            <br />
+            </STd>
+          </tr>
+          <tr>
+            <STd STdColor={colors?.SelectColor17 || null} >
+              {texts?.text33 ||null}  {texts?.text34 ||null}
+            <br />
+            </STd>
+          </tr>
+      </STable>
+      </div>
+    ) ;
+    
+   
   }
-
   
-  const handleClick = () => {
-    if(window.confirm("前のページに戻りますか")) {
-      navigate("/ReservationPage")
-    }else{
-     
-    }
-  }
-
+ 
   const handleStored = () => {
     
     const existingText = JSON.parse(localStorage.getItem("text") || "{}");
@@ -578,17 +704,6 @@ const handleStored17 = () => {
   setColors(prevColor17 => ({...prevColor17, ...updatedColor17}));
 }
 
-
-const handleDeleted = () => {
- localStorage.removeItem("Texts");
- localStorage.removeItem("SelectColors")
-
- setTexts(null);
- setColors(null);
-}
-
-
-
 const BacktoPage = () => {
 if(window.confirm("予約のページに戻りますか?")){
   navigate("/ReservationPage")
@@ -676,8 +791,13 @@ const BacktoPage17 = () => {
   }
   }
 
+
+  
+  
+
    
    return(
+    
     <div>
       <STable border={1}>
         <tr>
@@ -729,7 +849,7 @@ const BacktoPage17 = () => {
             </STd>
           </tr>
           <tr>
-            <STd STdColor={colors?.SelectColor9 || locationState.SelectColor9} >
+            <STd STdColor={colors?.SelectColor9 || null} >
               {texts?.text17 ||locationState.text17}  {texts?.text18 ||locationState.text18}
               <br />
             </STd>
@@ -783,9 +903,6 @@ const BacktoPage17 = () => {
             </STd>
           </tr>
       </STable>
-
-      <Storedbutton BgColor="" hoverBgColor="green" textColor="" hovertextColor="" onClick={handleStored}>保存します</Storedbutton>
-      <Deletebutton BgColor="" hoverBgColor="green" textColor="" hovertextColor="" onClick={handleDeleted}>削除します</Deletebutton>
       <div>
       <Sbutton id="reservebutton"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage}>予約を変更する</Sbutton>
       <Sbutton2 id="reservebutton2"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage2}>予約を変更する</Sbutton2>
@@ -805,13 +922,9 @@ const BacktoPage17 = () => {
       <Sbutton16 id="reservebutton16"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage16}>予約を変更する</Sbutton16>
       <Sbutton17 id="reservebutton17"  type="button"   BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={BacktoPage17}>予約を変更する</Sbutton17>
       </div>
-      
     </div>
    ) 
 }
-
-
-
   export const SBlock  = styled.div`
     height: 55px;
     border: 2.5px solid;
@@ -821,7 +934,7 @@ const BacktoPage17 = () => {
 `
 
   const STable = styled.table`
-    transform: translateX(279px) translateY(-220px) scale(0.70);
+    transform: translateX(222px) translateY(-220px) scale(0.70);
     border-collapse: collapse;
     background-color: #ffffff;
     border-color: purple;
@@ -841,7 +954,6 @@ const BacktoPage17 = () => {
   padding-right: 30px;
  `
  
- 
  export const Storedbutton = styled.button<Props2>`
  border-radius: 16px;
  background-color: ${props => props.BgColor || 'white'};
@@ -855,7 +967,6 @@ const BacktoPage17 = () => {
   position: fixed;
   top: 110px;
   right: -400px;
-  /* display: none; */
 `
 export const Deletebutton = styled.button<Props2>`
 border-radius: 16px;
@@ -870,7 +981,6 @@ background-color: ${props => props.BgColor || 'white'};
  position: fixed;
  top: 110px;
  right: -500px;
- /* display: none; */
 `
 
 export const Sbutton = styled.button<Props2>`
@@ -885,9 +995,8 @@ export const Sbutton = styled.button<Props2>`
 
   position: fixed;
   top: 110px;
-  right: -180px;
+  right: -100px;
   margin-bottom: 5px;
-  /* display: none; */
 `
 export const Sbutton2 = styled.button<Props2>`
  border-radius: 16px;
@@ -901,9 +1010,8 @@ export const Sbutton2 = styled.button<Props2>`
 
   position: fixed;
   top: 150px;
-  right: -180px;
+  right: -100px;
   margin-bottom: 5px;
-  /* display: none; */
 `
 export const Sbutton3 = styled.button<Props2>`
  border-radius: 16px;
@@ -917,9 +1025,8 @@ export const Sbutton3 = styled.button<Props2>`
 
   position: fixed;
   top: 185px;
-  right: -180px;
+  right: -100px;
   margin-bottom: 5px;
-  /* display: none; */
 `
 export const Sbutton4 = styled.button<Props2>`
  border-radius: 16px;
@@ -933,9 +1040,8 @@ export const Sbutton4 = styled.button<Props2>`
 
   position: fixed;
   top: 223px;
-  right: -180px;
+  right: -100px;
   margin-bottom: 5px;
-  /* display: none; */
 `
 export const Sbutton5 = styled.button<Props2>`
  border-radius: 16px;
@@ -949,9 +1055,8 @@ export const Sbutton5 = styled.button<Props2>`
 
   position: fixed;
   top: 260px;
-  right: -180px;
+  right: -100px;
   margin-bottom: 5px;
-  /* display: none; */
 `
 export const Sbutton6 = styled.button<Props2>`
  border-radius: 16px;
@@ -965,9 +1070,8 @@ export const Sbutton6 = styled.button<Props2>`
 
   position: fixed;
   top: 295px;
-  right: -180px;
+  right: -100px;
   margin-bottom: 5px;
-  /* display: none; */
 `
 export const Sbutton7 = styled.button<Props2>`
  border-radius: 16px;
@@ -981,9 +1085,8 @@ export const Sbutton7 = styled.button<Props2>`
 
   position: fixed;
   top: 333px;
-  right: -180px;
+  right: -100px;
   margin-bottom: 5px;
-  /* display: none; */
 `
 export const Sbutton8 = styled.button<Props2>`
  border-radius: 16px;
@@ -997,9 +1100,8 @@ export const Sbutton8 = styled.button<Props2>`
 
   position: fixed;
   top: 370px;
-  right: -180px;
+  right: -100px;
   margin-bottom: 5px;
-  /* display: none; */
 `
 export const Sbutton9 = styled.button<Props2>`
  border-radius: 16px;
@@ -1013,9 +1115,8 @@ export const Sbutton9 = styled.button<Props2>`
 
   position: fixed;
   top: 408px;
-  right: -180px;
+  right: -100px;
   margin-bottom: 5px;
-  /* display: none; */
 `
 export const Sbutton10 = styled.button<Props2>`
  border-radius: 16px;
@@ -1029,9 +1130,8 @@ export const Sbutton10 = styled.button<Props2>`
 
   position: fixed;
   top: 445px;
-  right: -180px;
+  right: -100px;
   margin-bottom: 5px;
-  /* display: none; */
 `
 export const Sbutton11 = styled.button<Props2>`
  border-radius: 16px;
@@ -1045,9 +1145,8 @@ export const Sbutton11 = styled.button<Props2>`
 
   position: fixed;
   top: 482px;
-  right: -180px;
+  right: -100px;
   margin-bottom: 5px;
-  /* display: none; */
 `
 export const Sbutton12 = styled.button<Props2>`
  border-radius: 16px;
@@ -1061,9 +1160,8 @@ export const Sbutton12 = styled.button<Props2>`
 
   position: fixed;
   top: 520px;
-  right: -180px;
+  right: -100px;
   margin-bottom: 5px;
-  /* display: none; */
 `
 export const Sbutton13 = styled.button<Props2>`
  border-radius: 16px;
@@ -1077,9 +1175,8 @@ export const Sbutton13 = styled.button<Props2>`
 
   position: fixed;
   top: 555px;
-  right: -180px;
+  right: -100px;
   margin-bottom: 5px;
-  /* display: none; */
 `
 export const Sbutton14 = styled.button<Props2>`
  border-radius: 16px;
@@ -1093,9 +1190,8 @@ export const Sbutton14 = styled.button<Props2>`
 
   position: fixed;
   top: 592px;
-  right: -180px;
+  right: -100px;
   margin-bottom: 5px;
-  /* display: none; */
 `
 export const Sbutton15 = styled.button<Props2>`
  border-radius: 16px;
@@ -1109,9 +1205,8 @@ export const Sbutton15 = styled.button<Props2>`
 
   position: fixed;
   top: 630px;
-  right: -180px;
+  right: -100px;
   margin-bottom: 5px;
-  /* display: none; */
 `
 export const Sbutton16 = styled.button<Props2>`
  border-radius: 16px;
@@ -1125,9 +1220,8 @@ export const Sbutton16 = styled.button<Props2>`
 
   position: fixed;
   top: 667px;
-  right: -180px;
+  right: -100px;
   margin-bottom: 5px;
-  /* display: none; */
 `
 export const Sbutton17 = styled.button<Props2>`
  border-radius: 16px;
@@ -1141,15 +1235,6 @@ export const Sbutton17 = styled.button<Props2>`
 
   position: fixed;
   top: 705px;
-  right: -180px;
+  right: -100px;
   margin-bottom: 5px;
-  /* display: none; */
 `
-
-
-
-
- 
-
-
-

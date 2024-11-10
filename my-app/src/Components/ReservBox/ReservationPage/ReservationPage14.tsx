@@ -46,10 +46,22 @@ interface Props {
         color: e.target.value
       }))
     };
-   const CancelConfirm = () => {
-    window.confirm("予約を破棄してもいいですか?");
-    navigate("/ShowText")
-   }
+    const CancelConfirm = (e:React.MouseEvent<HTMLButtonElement,MouseEvent>) => {
+      if(window.confirm("予約をキャンセルしますか")){
+        navigate("/ShowText",{
+          state:{
+            text27:text27 || '',
+            text28:text28 || '',
+            SelectColor14:SelectColor14 || '',
+          }
+        });
+      localStorage.removeItem("text27")
+      localStorage.removeItem("text28")
+      localStorage.removeItem("SelectColor14")
+      }else{ 
+        e.preventDefault()
+      }
+     };
    const returnButton = () => {
     navigate("/")
    }
@@ -69,7 +81,6 @@ interface Props {
         text27:text27 || '',
         text28:text28 || '',
         SelectColor14:SelectColor14 || '',
-
       }
     })
    }
