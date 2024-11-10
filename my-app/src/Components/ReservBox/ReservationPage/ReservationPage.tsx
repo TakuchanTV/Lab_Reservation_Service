@@ -82,6 +82,9 @@ interface SelectColors {
           SelectColor:SelectColor || '',
         }
       });
+      localStorage.removeItem("text")
+      localStorage.removeItem("text2")
+      localStorage.removeItem("SelectColor")
     }else{ 
       e.preventDefault()
     }
