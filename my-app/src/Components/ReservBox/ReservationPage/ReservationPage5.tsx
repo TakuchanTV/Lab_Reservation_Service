@@ -55,6 +55,9 @@ interface Props {
             SelectColor5:SelectColor5 || '',
           }
         });
+      localStorage.removeItem("text9")
+      localStorage.removeItem("text10")
+      localStorage.removeItem("SelectColor5")
       }else{ 
         e.preventDefault()
       }

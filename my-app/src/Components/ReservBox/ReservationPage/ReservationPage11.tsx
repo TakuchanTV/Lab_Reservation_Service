@@ -56,6 +56,9 @@ import React, {ChangeEvent} from "react";
           SelectColor11:SelectColor11 || '',
         }
       });
+      localStorage.removeItem("text21")
+      localStorage.removeItem("text22")
+      localStorage.removeItem("SelectColor11")
     }else{ 
       e.preventDefault()
     }

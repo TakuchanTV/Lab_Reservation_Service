@@ -56,6 +56,9 @@ import { SelectDays } from "../ReservCustomhooks/SelectDays";
             SelectColor6:SelectColor6 || '',
           }
         });
+      localStorage.removeItem("text11")
+      localStorage.removeItem("text12")
+      localStorage.removeItem("SelectColor6")
       }else{ 
         e.preventDefault()
       }
