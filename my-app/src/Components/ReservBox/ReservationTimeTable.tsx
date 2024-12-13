@@ -1006,7 +1006,7 @@ export const Sbutton2 = styled.button<Props2>`
   };
 
   position: fixed;
-  top: 170px;
+  top: 165px;
   right: -100px;
   margin-bottom: 5px;
 `
@@ -1021,7 +1021,7 @@ export const Sbutton3 = styled.button<Props2>`
   };
 
   position: fixed;
-  top: 210px;
+  top: 202px;
   right: -100px;
   margin-bottom: 5px;
 `
@@ -1036,7 +1036,7 @@ export const Sbutton4 = styled.button<Props2>`
   };
 
   position: fixed;
-  top: 243px;
+  top: 240px;
   right: -100px;
   margin-bottom: 5px;
 `
@@ -1051,7 +1051,7 @@ export const Sbutton5 = styled.button<Props2>`
   };
 
   position: fixed;
-  top: 280px;
+  top: 275px;
   right: -100px;
   margin-bottom: 5px;
 `
@@ -1066,7 +1066,7 @@ export const Sbutton6 = styled.button<Props2>`
   };
 
   position: fixed;
-  top: 320px;
+  top: 314px;
   right: -100px;
   margin-bottom: 5px;
 `
@@ -1081,7 +1081,7 @@ export const Sbutton7 = styled.button<Props2>`
   };
 
   position: fixed;
-  top: 353px;
+  top: 350px;
   right: -100px;
   margin-bottom: 5px;
 `
@@ -1096,7 +1096,7 @@ export const Sbutton8 = styled.button<Props2>`
   };
 
   position: fixed;
-  top: 390px;
+  top: 385px;
   right: -100px;
   margin-bottom: 5px;
 `
@@ -1111,7 +1111,7 @@ export const Sbutton9 = styled.button<Props2>`
   };
 
   position: fixed;
-  top: 430px;
+  top: 425px;
   right: -100px;
   margin-bottom: 5px;
 `
@@ -1126,7 +1126,7 @@ export const Sbutton10 = styled.button<Props2>`
   };
 
   position: fixed;
-  top: 465px;
+  top: 460px;
   right: -100px;
   margin-bottom: 5px;
 `
@@ -1141,7 +1141,7 @@ export const Sbutton11 = styled.button<Props2>`
   };
 
   position: fixed;
-  top: 505px;
+  top: 495px;
   right: -100px;
   margin-bottom: 5px;
 `
@@ -1156,7 +1156,7 @@ export const Sbutton12 = styled.button<Props2>`
   };
 
   position: fixed;
-  top: 540px;
+  top: 533px;
   right: -100px;
   margin-bottom: 5px;
 `
@@ -1171,7 +1171,7 @@ export const Sbutton13 = styled.button<Props2>`
   };
 
   position: fixed;
-  top: 578px;
+  top: 570px;
   right: -100px;
   margin-bottom: 5px;
 `
@@ -1186,7 +1186,7 @@ export const Sbutton14 = styled.button<Props2>`
   };
 
   position: fixed;
-  top: 615px;
+  top: 605px;
   right: -100px;
   margin-bottom: 5px;
 `
@@ -1201,7 +1201,7 @@ export const Sbutton15 = styled.button<Props2>`
   };
 
   position: fixed;
-  top: 650px;
+  top: 643px;
   right: -100px;
   margin-bottom: 5px;
 `
@@ -1216,7 +1216,7 @@ export const Sbutton16 = styled.button<Props2>`
   };
 
   position: fixed;
-  top: 690px;
+  top: 680px;
   right: -100px;
   margin-bottom: 5px;
 `
@@ -1231,7 +1231,7 @@ export const Sbutton17 = styled.button<Props2>`
   };
 
   position: fixed;
-  top: 725px;
+  top: 715px;
   right: -100px;
   margin-bottom: 5px;
 `
