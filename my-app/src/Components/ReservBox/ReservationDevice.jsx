@@ -221,7 +221,7 @@ export const ReservationList = () => {
     background-color: #bae369;
     border-color: purple;
     position: relative;
-    bottom: 220px;
+    bottom: 20px;
     left: 362px;
   `
 

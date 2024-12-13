@@ -941,7 +941,7 @@ const BacktoPage17 = () => {
     border-width: 3px;
     padding-right: 1200px;
     position : relative;
-    bottom: 220px;
+    bottom: 20px;
     left: 230px;
   `
 
