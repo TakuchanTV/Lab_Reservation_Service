@@ -4,9 +4,10 @@ import styled from "styled-components"
 
 export const StyledCalender = styled(Calendar)`
 max-width: 320px;
-transform: translateY(150px);
 text-align: center;
-margin-bottom: 0px;
+/* margin-bottom: 0px; */
+position: absolute;
+top: 125px;
 
 
 
@@ -34,7 +35,7 @@ height: 0px;
 `
 
 export const Sbutton = styled.button`
-   transform : translateX(60px) translateY(320px);
+   transform : translateX(100px) translateY(490px);
    margin: 5px;
    margin-bottom: 90px;
    
