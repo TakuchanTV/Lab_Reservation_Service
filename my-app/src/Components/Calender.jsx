@@ -8,7 +8,7 @@ import { ReservationList } from './ReservBox/ReservationDevice';
 console.log(Sbutton);
 
 export default function CalendarPage (){
-    const [activeDate, setActiveDate] = useState(new Date());
+    const [activeDate, setActiveDate] = useState(new Date ());
 
     const navigate = useNavigate();
     
@@ -28,7 +28,7 @@ export default function CalendarPage (){
     }
 
     const setToday = () => {
-      setActiveDate(new Date());
+      setActiveDate();
     };
   
     
@@ -38,7 +38,10 @@ export default function CalendarPage (){
       format={(locale, date) => (date , 'd')} onClickDay={handleDayClick}
       tileClassName={({ date, view }) => {
         if (view === 'month' && date.getTime() === activeDate.getTime()){
-          return 'react-calendar__tile--active';
+          return (
+            'react-calendar__tile--active'
+          )
+          
         }
       }}/> 
         <Sdiv>
