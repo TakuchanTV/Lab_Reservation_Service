@@ -934,24 +934,21 @@ const BacktoPage17 = () => {
 `
 
   const STable = styled.table`
-    transform: translateX(222px) translateY(-220px) scale(0.70);
+    transform: scale(0.70);
     border-collapse: collapse;
     background-color: #ffffff;
     border-color: purple;
-    margin-top: 0;
     border-width: 3px;
     padding-right: 1200px;
-    
+    position : relative;
+    bottom: 20px;
+    left: 230px;
   `
 
  const STd = styled.td<Props>`
   padding: 15.467px;
   padding-right: 600px;
   background-color: ${props => props.STdColor|| 'white'};
- `
-
- const TimeNumber = styled.td`
-  padding-right: 30px;
  `
  
  export const Storedbutton = styled.button<Props2>`
@@ -994,7 +991,7 @@ export const Sbutton = styled.button<Props2>`
   };
 
   position: fixed;
-  top: 110px;
+  top: 130px;
   right: -100px;
   margin-bottom: 5px;
 `
@@ -1009,7 +1006,7 @@ export const Sbutton2 = styled.button<Props2>`
   };
 
   position: fixed;
-  top: 150px;
+  top: 165px;
   right: -100px;
   margin-bottom: 5px;
 `
@@ -1024,7 +1021,7 @@ export const Sbutton3 = styled.button<Props2>`
   };
 
   position: fixed;
-  top: 185px;
+  top: 202px;
   right: -100px;
   margin-bottom: 5px;
 `
@@ -1039,7 +1036,7 @@ export const Sbutton4 = styled.button<Props2>`
   };
 
   position: fixed;
-  top: 223px;
+  top: 240px;
   right: -100px;
   margin-bottom: 5px;
 `
@@ -1054,7 +1051,7 @@ export const Sbutton5 = styled.button<Props2>`
   };
 
   position: fixed;
-  top: 260px;
+  top: 275px;
   right: -100px;
   margin-bottom: 5px;
 `
@@ -1069,7 +1066,7 @@ export const Sbutton6 = styled.button<Props2>`
   };
 
   position: fixed;
-  top: 295px;
+  top: 314px;
   right: -100px;
   margin-bottom: 5px;
 `
@@ -1084,7 +1081,7 @@ export const Sbutton7 = styled.button<Props2>`
   };
 
   position: fixed;
-  top: 333px;
+  top: 350px;
   right: -100px;
   margin-bottom: 5px;
 `
@@ -1099,7 +1096,7 @@ export const Sbutton8 = styled.button<Props2>`
   };
 
   position: fixed;
-  top: 370px;
+  top: 385px;
   right: -100px;
   margin-bottom: 5px;
 `
@@ -1114,7 +1111,7 @@ export const Sbutton9 = styled.button<Props2>`
   };
 
   position: fixed;
-  top: 408px;
+  top: 425px;
   right: -100px;
   margin-bottom: 5px;
 `
@@ -1129,7 +1126,7 @@ export const Sbutton10 = styled.button<Props2>`
   };
 
   position: fixed;
-  top: 445px;
+  top: 460px;
   right: -100px;
   margin-bottom: 5px;
 `
@@ -1144,7 +1141,7 @@ export const Sbutton11 = styled.button<Props2>`
   };
 
   position: fixed;
-  top: 482px;
+  top: 495px;
   right: -100px;
   margin-bottom: 5px;
 `
@@ -1159,7 +1156,7 @@ export const Sbutton12 = styled.button<Props2>`
   };
 
   position: fixed;
-  top: 520px;
+  top: 533px;
   right: -100px;
   margin-bottom: 5px;
 `
@@ -1174,7 +1171,7 @@ export const Sbutton13 = styled.button<Props2>`
   };
 
   position: fixed;
-  top: 555px;
+  top: 570px;
   right: -100px;
   margin-bottom: 5px;
 `
@@ -1189,7 +1186,7 @@ export const Sbutton14 = styled.button<Props2>`
   };
 
   position: fixed;
-  top: 592px;
+  top: 605px;
   right: -100px;
   margin-bottom: 5px;
 `
@@ -1204,7 +1201,7 @@ export const Sbutton15 = styled.button<Props2>`
   };
 
   position: fixed;
-  top: 630px;
+  top: 643px;
   right: -100px;
   margin-bottom: 5px;
 `
@@ -1219,7 +1216,7 @@ export const Sbutton16 = styled.button<Props2>`
   };
 
   position: fixed;
-  top: 667px;
+  top: 680px;
   right: -100px;
   margin-bottom: 5px;
 `
@@ -1234,7 +1231,7 @@ export const Sbutton17 = styled.button<Props2>`
   };
 
   position: fixed;
-  top: 705px;
+  top: 715px;
   right: -100px;
   margin-bottom: 5px;
 `
