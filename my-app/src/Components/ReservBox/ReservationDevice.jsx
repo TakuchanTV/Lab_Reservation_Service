@@ -216,10 +216,13 @@ export const ReservationList = () => {
 `
 
   const STable = styled.table`
-    transform: translateX(350px) translateY(-220px) scale(0.70);
+    transform: scale(0.70);
     border-collapse: collapse;
     background-color: #bae369;
     border-color: purple;
+    position: relative;
+    bottom: 220px;
+    left: 362px;
   `
 
  
