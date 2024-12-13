@@ -934,15 +934,15 @@ const BacktoPage17 = () => {
 `
 
   const STable = styled.table`
-    transform: translateX(222px) translateY(-220px) scale(0.70);
+    transform: scale(0.70);
     border-collapse: collapse;
     background-color: #ffffff;
     border-color: purple;
-    margin-top: 0;
     border-width: 3px;
     padding-right: 1200px;
-    position : absolute
-    
+    position : relative;
+    bottom: 220px;
+    left: 230px;
   `
 
  const STd = styled.td<Props>`
