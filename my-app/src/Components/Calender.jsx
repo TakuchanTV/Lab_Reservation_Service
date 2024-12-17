@@ -5,14 +5,11 @@ import React, {useEffect, useState} from 'react';
 import {useNavigate} from "react-router-dom";
 import { StyledCalender, Sbutton, Sdiv } from './CalenderCss';
 import { ReservationList } from './ReservBox/ReservationDevice';
-console.log(Sbutton);
-
 export default function CalendarPage (){
     const [activeDate, setActiveDate] = useState(new Date ());
 
     const navigate = useNavigate();
     
-  
     useEffect(() => {
     }, [navigate])
     
