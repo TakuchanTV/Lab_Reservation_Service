@@ -47,16 +47,7 @@ export const ReservationTimeTable = () => {
 
   const [texts, setTexts] = useState<Texts | null>(null);
   const [colors, setColors] = useState<SelectColors | null>(null);
-  const [locations, setLocations] = useState({
-    text: "" ,text2: "" ,text3: "" ,text4: "" ,text5: "" ,text6: "" ,text7: "" ,text8: "" ,text9: "" ,text10: "",
-    text11:"", text12:"", text13:"", text14:"", text15:"", text16:"", text17:"", text18:"",text19:"",text20:"",
-     text21:"", text22:"", text23:"",text24:"", text25:"", text26:"", text27:"", text28:"", text29:"", text30:"",
-     text31:"", text32:"", text33:"", text34:"",
-     SelectColor: "",SelectColor2: "",SelectColor3: "",SelectColor4: "",SelectColor5: "",SelectColor6: "",SelectColor7: "",
-     SelectColor8: "",SelectColor9: "",SelectColor10: "",SelectColor11: "",SelectColor12: "",SelectColor13: "",SelectColor14: "",
-     SelectColor15: "",SelectColor16: "",SelectColor17: "",
-  })
-
+ 
   useEffect(() => {
 
     const button = document.getElementById("reservebutton") as HTMLInputElement
