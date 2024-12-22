@@ -36,7 +36,7 @@ interface SelectColors {
 }
 
 
- export const ReservationPage = () => {
+ export const ReservationPage1 = () => {
     const navigate = useNavigate();
     const [params, setParams] = useSearchParams();
     const text = params.get('q') || '';
