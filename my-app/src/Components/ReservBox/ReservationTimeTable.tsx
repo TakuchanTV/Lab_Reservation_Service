@@ -66,7 +66,7 @@ export const ReservationTimeTable = () => {
       const texts: Texts | null = locationState; 
       const colors: SelectColors | null = locationState;
 
-      const updatedTexts = existingTexts.map((existing,idx) => ({...existing, ...texts}));
+      const updatedTexts = existingTexts.map((existing) => ({...existing, ...texts}));
       const updatedColor =  {...existingColor,...colors};
 
       textKeys.forEach((key,idx) => {
@@ -353,29 +353,25 @@ export const ReservationTimeTable = () => {
           </tr>
       </STable>
           <div>
-        {[...Array(17)].map((_,index) => (
-          <>
-      <Sbutton type="button" id={`reservebutton${index + 1}`} key={index} BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={() =>handleBackToPage(index + 1)}>予約を変更する</Sbutton>
-      <Sbutton2  type="button" id={`reservebutton${index + 1}`} key={index} BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={() =>handleBackToPage(index + 1)}>予約を変更する</Sbutton2>
-      <Sbutton3  type="button" id={`reservebutton${index + 1}`} key={index} BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={() =>handleBackToPage(index + 1)}>予約を変更する</Sbutton3>
-      <Sbutton4  type="button" id={`reservebutton${index + 1}`} key={index} BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={() =>handleBackToPage(index + 1)}>予約を変更する</Sbutton4>
-      <Sbutton5  type="button" id={`reservebutton${index + 1}`} key={index} BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={() =>handleBackToPage(index + 1)}>予約を変更する</Sbutton5>
-      <Sbutton6  type="button" id={`reservebutton${index + 1}`} key={index} BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={() =>handleBackToPage(index + 1)}>予約を変更する</Sbutton6>
-      <Sbutton7  type="button" id={`reservebutton${index + 1}`} key={index} BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={() =>handleBackToPage(index + 1)}>予約を変更する</Sbutton7>
-      <Sbutton8  type="button" id={`reservebutton${index + 1}`} key={index} BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={() =>handleBackToPage(index + 1)}>予約を変更する</Sbutton8>
-      <Sbutton9  type="button" id={`reservebutton${index + 1}`} key={index} BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={() =>handleBackToPage(index + 1)}>予約を変更する</Sbutton9>
-      <Sbutton10   type="button" id={`reservebutton${index + 1}`} key={index} BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={() =>handleBackToPage(index + 1)}>予約を変更する</Sbutton10>
-      <Sbutton11   type="button" id={`reservebutton${index + 1}`} key={index} BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={() =>handleBackToPage(index + 1)}>予約を変更する</Sbutton11>
-      <Sbutton12   type="button" id={`reservebutton${index + 1}`} key={index} BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={() =>handleBackToPage(index + 1)}>予約を変更する</Sbutton12>
-      <Sbutton13   type="button" id={`reservebutton${index + 1}`} key={index} BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={() =>handleBackToPage(index + 1)}>予約を変更する</Sbutton13>
-      <Sbutton14   type="button" id={`reservebutton${index + 1}`} key={index} BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={() =>handleBackToPage(index + 1)}>予約を変更する</Sbutton14>
-      <Sbutton15   type="button" id={`reservebutton${index + 1}`} key={index} BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={() =>handleBackToPage(index + 1)}>予約を変更する</Sbutton15>
-      <Sbutton16   type="button" id={`reservebutton${index + 1}`} key={index} BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={() =>handleBackToPage(index + 1)}>予約を変更する</Sbutton16>
-      <Sbutton17   type="button" id={`reservebutton${index + 1}`} key={index} BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={() =>handleBackToPage(index + 1)}>予約を変更する</Sbutton17>
-      </>
-    ))}
+       
+      <Sbutton type="button" id={`reservebutton1`}  BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={() =>handleBackToPage(1)}>予約を変更する</Sbutton>
+      <Sbutton2  type="button" id={`reservebutton2`}  BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={() =>handleBackToPage(2)}>予約を変更する</Sbutton2>
+      <Sbutton3  type="button" id={`reservebutton3`}  BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={() =>handleBackToPage(3)}>予約を変更する</Sbutton3>
+      <Sbutton4  type="button" id={`reservebutton4`}  BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={() =>handleBackToPage(4)}>予約を変更する</Sbutton4>
+      <Sbutton5  type="button" id={`reservebutton5`}  BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={() =>handleBackToPage(5)}>予約を変更する</Sbutton5>
+      <Sbutton6  type="button" id={`reservebutton6`}  BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={() =>handleBackToPage(6)}>予約を変更する</Sbutton6>
+      <Sbutton7  type="button" id={`reservebutton7`}  BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={() =>handleBackToPage(7)}>予約を変更する</Sbutton7>
+      <Sbutton8  type="button" id={`reservebutton8`}  BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={() =>handleBackToPage(8)}>予約を変更する</Sbutton8>
+      <Sbutton9  type="button" id={`reservebutton9`}  BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={() =>handleBackToPage(9)}>予約を変更する</Sbutton9>
+      <Sbutton10   type="button" id={`reservebutton10`}  BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={() =>handleBackToPage(10)}>予約を変更する</Sbutton10>
+      <Sbutton11   type="button" id={`reservebutton11`}  BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={() =>handleBackToPage(11)}>予約を変更する</Sbutton11>
+      <Sbutton12   type="button" id={`reservebutton12`}  BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={() =>handleBackToPage(12)}>予約を変更する</Sbutton12>
+      <Sbutton13   type="button" id={`reservebutton13`}  BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={() =>handleBackToPage(13)}>予約を変更する</Sbutton13>
+      <Sbutton14   type="button" id={`reservebutton14`}  BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={() =>handleBackToPage(14)}>予約を変更する</Sbutton14>
+      <Sbutton15   type="button" id={`reservebutton15`}  BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={() =>handleBackToPage(15)}>予約を変更する</Sbutton15>
+      <Sbutton16   type="button" id={`reservebutton16`}  BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={() =>handleBackToPage(16)}>予約を変更する</Sbutton16>
+      <Sbutton17   type="button" id={`reservebutton17`}  BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={() =>handleBackToPage(17)}>予約を変更する</Sbutton17>
       </div>
-      
     </div>
    ) 
 }
