@@ -6,7 +6,7 @@ import { Ids } from "./IdModules";
 export const ReservationList = () => {
    const navigate = useNavigate();
    const handleClick_leftOil = () =>  {
-    navigate("/ReservationPage");
+    navigate("/ReservationPage1");
     localStorage.removeItem("text","text2","SelectColor")
    };
     const handleClick_middleOil = () => {
