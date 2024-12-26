@@ -39,9 +39,9 @@ interface SelectColors {
  export const ReservationPage1 = () => {
     const navigate = useNavigate();
     const [params, setParams] = useSearchParams();
-    const text = params.get('q') || '';
+    const text1 = params.get('q') || '';
     const text2 = params.get('r') || '';
-    const SelectColor = params.get('color') || '';
+    const SelectColor1 = params.get('color') || '';
     const Form = params.get('Form') || '';
 
     
@@ -77,9 +77,9 @@ interface SelectColors {
     if(window.confirm("予約をキャンセルしますか")){
       navigate("/ShowText",{
         state:{
-          text:text || '',
+          text1:text1 || '',
           text2:text2 || '',
-          SelectColor:SelectColor || '',
+          SelectColor1:SelectColor1 || '',
         }
       });
       localStorage.removeItem("text")
@@ -94,21 +94,21 @@ interface SelectColors {
    }
    const okButton = () => {
    
-   if(text === "" && text2 === "" && SelectColor === "") {
-    localStorage.removeItem("text")
+   if(text1 === "" && text2 === "" && SelectColor1 === "") {
+    localStorage.removeItem("text1")
     localStorage.removeItem("text2")
-    localStorage.removeItem("SelectColor")
+    localStorage.removeItem("SelectColor1")
     console.log("localStorageから削除されました")
    }else{
-    localStorage.setItem("text",JSON.stringify(text));
+    localStorage.setItem("text1",JSON.stringify(text1));
    localStorage.setItem("text2",JSON.stringify(text2));
-   localStorage.setItem("SelectColor",JSON.stringify(SelectColor));
+   localStorage.setItem("SelectColor1",JSON.stringify(SelectColor1));
    }
     navigate("/ShowText",{
       state:{
-        text:text || '',
+        text1:text1 || '',
         text2:text2 || '',
-        SelectColor:SelectColor || '',
+        SelectColor1:SelectColor1 || '',
       }
     });
    };
@@ -134,7 +134,7 @@ interface SelectColors {
                <STh>予約対象</STh>  <td>{Ids.leftOil}</td>
             </STr>
             <STr>
-               <STh>テキスト</STh>  <td><SInput  type="text" value={text}
+               <STh>テキスト</STh>  <td><SInput  type="text" value={text1}
                onChange={textInput} /></td>
             </STr>
             <STr>
@@ -142,7 +142,7 @@ interface SelectColors {
             onChange={textInput2} /></td>
             </STr>
             <STr>
-               <STh>色</STh> <td><input type="color" value={SelectColor}  
+               <STh>色</STh> <td><input type="color" value={SelectColor1}  
                onChange={handleColor} />
                </td>   
             </STr>
