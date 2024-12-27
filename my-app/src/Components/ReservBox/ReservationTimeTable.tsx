@@ -17,7 +17,7 @@ interface Props2 {
 };
 
 interface Texts {
-  text:string, text2:string,text3:string, text4:string, text5:string, 
+  text1:string, text2:string,text3:string, text4:string, text5:string, 
   text6:string, text7:string, text8:string,text9:string,text10:string,
     text11:string, text12:string, text13:string, text14:string, text15:string, 
     text16:string, text17:string, text18:string,text19:string,text20:string,
@@ -27,7 +27,7 @@ interface Texts {
 };
 
 interface SelectColors {
-  SelectColor:string, SelectColor2:string,SelectColor3:string, SelectColor4:string,SelectColor5:string, 
+  SelectColor1:string, SelectColor2:string,SelectColor3:string, SelectColor4:string,SelectColor5:string, 
   SelectColor6:string,SelectColor7:string, SelectColor8:string,SelectColor9:string, SelectColor10:string,
   SelectColor11:string, SelectColor12:string,SelectColor13:string, SelectColor14:string,SelectColor15:string, 
   SelectColor16:string,SelectColor17:string, 
@@ -63,56 +63,65 @@ export const ReservationTimeTable = () => {
       const existingTexts = textKeys.map(key => JSON.parse(localStorage.getItem(key) || "{}")); 
       const existingColor = JSON.parse(localStorage.getItem(colorKey) || "{}")
 
+      
+      
       const texts: Texts | null = locationState; 
       const colors: SelectColors | null = locationState;
-
+      
       const updatedTexts = existingTexts.map((existing) => ({...existing, ...texts}));
       const updatedColor =  {...existingColor,...colors};
-
+      
+     
       textKeys.forEach((key,idx) => {
         localStorage.setItem(key,JSON.stringify(updatedTexts[idx]))})
         localStorage.setItem(colorKey,JSON.stringify(updatedColor))
 
         setTexts(prevText => ({...prevText, ...updatedTexts.reduce((acc, curr)=> ({...acc, ...curr}),{})}))
         setColors(prevColor => ({...prevColor, ...updatedColor}))
+      
+        
+   
     };
-  
+    
+
     useEffect(() => {
-      const button = [
-        "reservebutton", 
-        "reservebutton2", 
-        "reservebutton3", 
-        "reservebutton4", 
-        "reservebutton5", 
-        "reservebutton6", 
-        "reservebutton7",
-         "reservebutton8", 
-         "reservebutton9", 
-         "reservebutton10", 
-         "reservebutton11", 
-         "reservebutton12", 
-         "reservebutton13", 
-         "reservebutton14", 
-         "reservebutton15", 
-         "reservebutton16", 
-         "reservebutton17"
-      ];
-      button.forEach((buttonId,index) => {
-        const button = document.getElementById(buttonId) as HTMLInputElement;
-        if (button) {
-          const textKey1 = `text${index * 2 + 1}`
-          const textKey2 = `text${index * 2 + 2}`
-          const ColorKey = `text${index + 1}`
-          if (localStorage.hasOwnProperty(textKey1) || localStorage.hasOwnProperty(textKey2) || 
-          localStorage.hasOwnProperty(ColorKey) ) {
-            button.style.display = "block";
-            handleStored(index);
-          } else {
-            button.style.display = "none";
+      
+      const btn:HTMLInputElement[] = new Array();
+      const reservbtn = () => {
+        for (let i = 1; i<18; i++){
+          const button = document.getElementById(`reservebutton${i}`) as HTMLInputElement
+          btn.push(button)
+        }
+      };
+      
+      reservbtn();
+      console.log(btn);
+            
+            const StorageKey = () => {
+              for(let i = 0; i<18; i++){
+                const textKey1 = `text${i * 2 + 1}`
+                const textKey2 = `text${i * 2 + 2}`
+                const colorKey = `SelectColor${i + 1}`
+                if (btn[i]) {
+                  if (localStorage.hasOwnProperty(textKey1) || localStorage.hasOwnProperty(textKey2) || 
+                  localStorage.hasOwnProperty(colorKey)) {
+                    btn[i].style.display = "block";
+                    handleStored(i)
+              }else {
+                btn[i].style.display = "none"
+              }
+            }
           }
         }
-      })
-    },[locationState]) 
+          StorageKey();
+         
+      
+      
+    },[]) 
+    
+    
+    
+    
  
   
   
@@ -129,8 +138,8 @@ export const ReservationTimeTable = () => {
         <Shotexbtn onClick={ToShowText}>ShowTextに遷移します</Shotexbtn>
       <STable border={1}>
         <tr>
-         <STd STdColor={colors?.SelectColor || null}  >
-            {texts?.text || null} {texts?.text2 || null}
+         <STd STdColor={colors?.SelectColor1 || null}  >
+            {texts?.text1 || null} {texts?.text2 || null}
           <br />
           </STd>
          </tr>
@@ -250,8 +259,8 @@ export const ReservationTimeTable = () => {
     <div>
       <STable border={1}>
         <tr>
-         <STd STdColor={colors?.SelectColor || locationState.SelectColor}  >
-            {texts?.text || locationState.text} {texts?.text2 || locationState.text2}
+         <STd STdColor={colors?.SelectColor1 || locationState.SelectColor1}  >
+            {texts?.text1 || locationState.text1} {texts?.text2 || locationState.text2}
           <br />
           </STd>
          </tr>
