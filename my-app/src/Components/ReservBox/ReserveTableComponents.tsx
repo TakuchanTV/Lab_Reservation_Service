@@ -1,6 +1,4 @@
-import React from "react"
-import { STable } from "./ReservationTimeTable"
-import { useState } from "react"
+import React,{ useState } from "react"
 import { useLocation } from "react-router-dom"
 import styled from "styled-components"
 
@@ -32,7 +30,7 @@ interface Props {
 
 
 
-export const ReserveTableComponents = () => {
+export  const ReserveTableComponents = () => {
       const [texts, setTexts] = useState<Texts | null>(null);
       const [colors, setColors] = useState<SelectColors | null>(null);
       const location = useLocation();
@@ -160,6 +158,7 @@ export const ReserveTableComponents = () => {
       </STable>
 
         </div>
+      
     )
 
 }
@@ -167,3 +166,15 @@ export const ReserveTableComponents = () => {
   padding: 15.467px;
   padding-right: 600px;
   background-color: ${props => props.STdColor|| 'white'}`
+
+   const STable = styled.table`
+    transform: scale(0.70);
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-color: purple;
+    border-width: 3px;
+    padding-right: 1200px;
+    position : relative;
+    bottom: 20px;
+    left: 230px;
+  `
