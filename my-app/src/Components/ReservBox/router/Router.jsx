@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom"
-import { ReservationPage } from "../ReservationPage/ReservationPage.tsx"
+import { ReservationPage1 } from "../ReservationPage/ReservationPage.tsx"
 import { ReservationPage2 } from "../ReservationPage/ReservationPage2.tsx"
 import { ReservationPage3 } from "../ReservationPage/ReservationPage3.tsx"
 import { ReservationPage4 } from "../ReservationPage/ReservationPage4.tsx"
@@ -22,7 +22,7 @@ import App from "../../../App"
 export const Router = () => {
     return(
         <Routes>
-         <Route path="/ReservationPage" element={<ReservationPage  />} />
+         <Route path="/ReservationPage1" element={<ReservationPage1  />} />
          <Route path="/ReservationPage2" element={<ReservationPage2 />} />
          <Route path="/ReservationPage3" element={<ReservationPage3  />} />
          <Route path="/ReservationPage4" element={<ReservationPage4  />} />
