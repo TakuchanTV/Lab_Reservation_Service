@@ -4,6 +4,7 @@ import styled from "styled-components"
 import { useLocation, useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import { useEffect } from "react";
+import { ReserveTableComponents } from "./ReserveTableComponents";
 
 interface Props {
   STdColor:string|null,
@@ -114,15 +115,8 @@ export const ReservationTimeTable = () => {
           }
         }
           StorageKey();
-         
-      
-      
     },[]) 
     
-    
-    
-    
- 
   
   
   const Shotexbtn = styled.button`
@@ -257,112 +251,8 @@ export const ReservationTimeTable = () => {
    return(
     
     <div>
-      <STable border={1}>
-        <tr>
-         <STd STdColor={colors?.SelectColor1 || locationState.SelectColor1}  >
-            {texts?.text1 || locationState.text1} {texts?.text2 || locationState.text2}
-          <br />
-          </STd>
-         </tr>
-          <tr>
-            <STd STdColor={colors?.SelectColor2 || locationState.SelectColor2} >
-             {texts?.text3 ||locationState.text3}  {texts?.text4 ||locationState.text4}
-            <br />
-            </STd>
-          </tr>
-          <tr>
-            <STd STdColor={colors?.SelectColor3 || locationState.SelectColor3}>
-              {texts?.text5 ||locationState.text5}  {texts?.text6 ||locationState.text6}
-            <br />
-            </STd>
-          </tr>
-          <tr>
-            <STd STdColor={colors?.SelectColor4 || locationState.SelectColor4} >
-              {texts?.text7 ||locationState.text7}  {texts?.text8 ||locationState.text8}
-            <br />
-            </STd>
-          </tr>
-          <tr>
-            <STd STdColor={colors?.SelectColor5 || locationState.SelectColor5} >
-              {texts?.text9 ||locationState.text9}  {texts?.text10 ||locationState.text10}
-            <br />
-            </STd>
-          </tr>
-          <tr>
-            <STd STdColor={colors?.SelectColor6 || locationState.SelectColor6} >
-              {texts?.text11 || locationState.text11}  {texts?.text12 ||locationState.text12}
-            <br />
-            </STd>
-          </tr>
-          <tr>
-            <STd STdColor={colors?.SelectColor7 || locationState.SelectColor7} >
-              {texts?.text13 ||locationState.text13}  {texts?.text14 ||locationState.text14}
-            <br />
-            </STd>
-          </tr>
-          <tr>
-            <STd STdColor={colors?.SelectColor8 || locationState.SelectColor8} >
-              {texts?.text15 ||locationState.text15}  {texts?.text16 ||locationState.text16}
-            <br />
-            </STd>
-          </tr>
-          <tr>
-            <STd STdColor={colors?.SelectColor9 || null} >
-              {texts?.text17 ||locationState.text17}  {texts?.text18 ||locationState.text18}
-              <br />
-            </STd>
-          </tr>
-          <tr>
-            <STd STdColor={colors?.SelectColor10 || locationState.SelectColor10} >
-              {texts?.text19 ||locationState.text19}  {texts?.text20 ||locationState.text20}
-            <br />
-            </STd>
-          </tr>
-          <tr>
-            <STd STdColor={colors?.SelectColor11 || locationState.SelectColor11} >
-              {texts?.text21 ||locationState.text21}  {texts?.text22 ||locationState.text22}
-            <br />
-            </STd>
-          </tr>
-          <tr>
-            <STd STdColor={colors?.SelectColor12 || locationState.SelectColor12} >
-              {texts?.text23 ||locationState.text23}  {texts?.text24 ||locationState.text24}
-            <br />
-            </STd>
-          </tr>
-          <tr>
-            <STd STdColor={colors?.SelectColor13 || locationState.SelectColor13} >
-              {texts?.text25 ||locationState.text25}  {texts?.text26 ||locationState.text26}
-            <br />
-            </STd>
-          </tr>
-          <tr>
-            <STd STdColor={colors?.SelectColor14 || locationState.SelectColor14} >
-              {texts?.text27 ||locationState.text27}  {texts?.text28 ||locationState.text28}
-            <br />
-            </STd>
-          </tr>
-          <tr>
-            <STd STdColor={colors?.SelectColor15 || locationState.SelectColor15} >
-              {texts?.text29 ||locationState.text29}  {texts?.text30 ||locationState.text30}
-            <br />
-            </STd>
-          </tr>
-          <tr>
-            <STd STdColor={colors?.SelectColor16 || locationState.SelectColor16} >
-              {texts?.text31 ||locationState.text31}  {texts?.text32 ||locationState.text32}
-            <br />
-            </STd>
-          </tr>
-          <tr>
-            <STd STdColor={colors?.SelectColor17 || locationState.SelectColor17} >
-              {texts?.text33 ||locationState.text33}  {texts?.text34 ||locationState.text34}
-            <br />
-            </STd>
-          </tr>
-      </STable>
-          <div>
-       
+      <ReserveTableComponents />
+        <div>
       <Sbutton type="button" id={`reservebutton1`}  BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={() =>handleBackToPage(1)}>予約を変更する</Sbutton>
       <Sbutton2  type="button" id={`reservebutton2`}  BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={() =>handleBackToPage(2)}>予約を変更する</Sbutton2>
       <Sbutton3  type="button" id={`reservebutton3`}  BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={() =>handleBackToPage(3)}>予約を変更する</Sbutton3>
@@ -380,7 +270,7 @@ export const ReservationTimeTable = () => {
       <Sbutton15   type="button" id={`reservebutton15`}  BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={() =>handleBackToPage(15)}>予約を変更する</Sbutton15>
       <Sbutton16   type="button" id={`reservebutton16`}  BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={() =>handleBackToPage(16)}>予約を変更する</Sbutton16>
       <Sbutton17   type="button" id={`reservebutton17`}  BgColor="" hoverBgColor="yellow" textColor="" hovertextColor="" onClick={() =>handleBackToPage(17)}>予約を変更する</Sbutton17>
-      </div>
+       </div>
     </div>
    ) 
 }
@@ -392,7 +282,7 @@ export const ReservationTimeTable = () => {
     padding-right: 1230px;
 `
 
-  const STable = styled.table`
+  export const STable = styled.table`
     transform: scale(0.70);
     border-collapse: collapse;
     background-color: #ffffff;
@@ -404,7 +294,7 @@ export const ReservationTimeTable = () => {
     left: 230px;
   `
 
- const STd = styled.td<Props>`
+ export const STd = styled.td<Props>`
   padding: 15.467px;
   padding-right: 600px;
   background-color: ${props => props.STdColor|| 'white'};
