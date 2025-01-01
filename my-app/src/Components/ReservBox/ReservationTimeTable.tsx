@@ -4,7 +4,7 @@ import styled from "styled-components"
 import { useLocation, useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import { useEffect } from "react";
-import { ReserveTableComponents } from "./ReserveTableComponents";
+import { ReserveTableComponents } from "./ReserveTableComponents.tsx";
 
 interface Props {
   STdColor:string|null,
@@ -57,65 +57,7 @@ export const ReservationTimeTable = () => {
         colors
       }})}
 
-      const handleStored = (index:number) => {
-      const textKeys = [`text${index * 2 + 1}`, `text${index * 2 + 2}`];
-      const colorKey = `SelectColor${index + 1}`;
-
-      const existingTexts = textKeys.map(key => JSON.parse(localStorage.getItem(key) || "{}")); 
-      const existingColor = JSON.parse(localStorage.getItem(colorKey) || "{}")
-
-      
-      
-      const texts: Texts | null = locationState; 
-      const colors: SelectColors | null = locationState;
-      
-      const updatedTexts = existingTexts.map((existing) => ({...existing, ...texts}));
-      const updatedColor =  {...existingColor,...colors};
-      
-     
-      textKeys.forEach((key,idx) => {
-        localStorage.setItem(key,JSON.stringify(updatedTexts[idx]))})
-        localStorage.setItem(colorKey,JSON.stringify(updatedColor))
-
-        setTexts(prevText => ({...prevText, ...updatedTexts.reduce((acc, curr)=> ({...acc, ...curr}),{})}))
-        setColors(prevColor => ({...prevColor, ...updatedColor}))
-      
-        
-   
-    };
     
-
-    useEffect(() => {
-      
-      const btn:HTMLInputElement[] = new Array();
-      const reservbtn = () => {
-        for (let i = 1; i<18; i++){
-          const button = document.getElementById(`reservebutton${i}`) as HTMLInputElement
-          btn.push(button)
-        }
-      };
-      
-      reservbtn();
-      console.log(btn);
-            
-            const StorageKey = () => {
-              for(let i = 0; i<18; i++){
-                const textKey1 = `text${i * 2 + 1}`
-                const textKey2 = `text${i * 2 + 2}`
-                const colorKey = `SelectColor${i + 1}`
-                if (btn[i]) {
-                  if (localStorage.hasOwnProperty(textKey1) || localStorage.hasOwnProperty(textKey2) || 
-                  localStorage.hasOwnProperty(colorKey)) {
-                    btn[i].style.display = "block";
-                    handleStored(i)
-              }else {
-                btn[i].style.display = "none"
-              }
-            }
-          }
-        }
-          StorageKey();
-    },[]) 
     
   
   
