@@ -7,7 +7,7 @@ export const ReservationList = () => {
    const navigate = useNavigate();
    const handleClick_leftOil = () =>  {
     navigate("/ReservationPage1");
-    localStorage.removeItem("text","text2","SelectColor")
+    localStorage.removeItem("text1","text2","SelectColor1")
    };
     const handleClick_middleOil = () => {
       navigate("/ReservationPage2");
